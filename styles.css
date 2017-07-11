@@ -105,6 +105,7 @@ ul.works {
 .works .glyphicon {
   color: #ccc;
   opacity: 1;
+  position: absolute;
   margin-top: 450px;
   z-index: 1;
 }
