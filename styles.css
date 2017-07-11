@@ -100,13 +100,13 @@ ul.works {
   border-radius: 0;
   background: #777;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .works .glyphicon {
   color: #ccc;
   opacity: 1;
   margin-top: 450px;
-  z-index: 0;
+  z-index: 1;
 }
 .modal-dialog {
   width: 60%;
