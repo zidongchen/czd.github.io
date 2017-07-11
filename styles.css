@@ -118,6 +118,9 @@ ul.works {
   width: 100%;
   margin: 0;
 }
+.modal-body {
+  padding: 0;
+}
 .modal-footer p.author {
   position: absolute;
   float: left;
