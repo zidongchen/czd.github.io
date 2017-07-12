@@ -134,7 +134,7 @@ $(document).ready(function(){
 //  页面滚动函数
   var scrollFunc=function(e){
     e=e || window.event;
-    if(m==1){
+    if(m===1){
       if (e.wheelDelta){
         if(e.wheelDelta/120>0){
           if(i>0.14){
