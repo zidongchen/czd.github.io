@@ -3,13 +3,6 @@ $(document).ready(function(){
   "use strict";	
   //  导航提示当前页面
   var i=0;
-  var m=1;
-    $(".modal").on('shown.bs.modal', function () {
-      m=0;
-    });
-    $(".modal").on('hidden.bs.modal', function () {
-      m=1;
-    });
   function focustab(){
     if(i>=0&&i<14){
       $(".navigation-tab").removeClass("focus");
@@ -134,10 +127,9 @@ $(document).ready(function(){
 //  页面滚动函数
   var scrollFunc=function(e){
     e=e || window.event;
-    if(m==1){
       if (e.wheelDelta){
         if(e.wheelDelta/120>0){
-          if(i>0){
+          if(i>0.14){
             i-=scrolltimes;
             TweenMax.to("main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
             TweenMax.to(".scroll-dot",0.7,{x:i*7,ease:Cubic.easeOut});
@@ -157,14 +149,11 @@ $(document).ready(function(){
       }
       else if (e.detail){
         if(e.detail/-3>0){
-          $("header").css("top","0px");
         }
         else if(e.detail/3<0){
-          $("header").css("top","-40px");
         }
       }
-    }
-   };
+    };
  	 /*注册事件*/
   if(document.addEventListener){document.addEventListener('DOMMouseScroll',scrollFunc,false);}//W3C
   window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
