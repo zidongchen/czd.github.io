@@ -54,21 +54,21 @@ $(document).ready(function(){
 //  导航链接
   $(".nav-tab1").on("click",function(){
     i=0;
-    TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+    TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	  TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     focustab();
     changetab();
   });
   $(".nav-tab2").on("click",function(){
     i=14;
-    TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+    TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	  TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     focustab();
     changetab();
   });
   $(".nav-tab3").on("click",function(){
     i=28;
-    TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+    TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	  TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     focustab();
     changetab();
@@ -78,19 +78,19 @@ $(document).ready(function(){
     if(i>=0&&i<14){
       i=14;
       resettab();
-      TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+      TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	    TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     }
       else if(i>=14&&i<28){
       i=28;
       resettab();
-      TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+      TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	    TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     }
       else if(i>=28&&i<42){
       i=42;
       resettab();
-      TweenMax.to("main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
+      TweenMax.to(".main",0.7,{y:-i*scrollheight,ease:Cubic.easeOut});
  	    TweenMax.to(".scroll-dot",0.7,{y:i*7,ease:Cubic.easeOut});
     }
   });
@@ -124,7 +124,7 @@ $(document).ready(function(){
     findDimensions();
     scrollheight=winHeight/14;
     scrollwidth=winWidth/14;
-    TweenMax.to("main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
+    TweenMax.to(".main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
   };
 //   页面滚动高度\宽度
   var scrollheight=winHeight/14; 
@@ -139,7 +139,7 @@ $(document).ready(function(){
         if(e.wheelDelta/120>0){
           if(i>0.14){
             i-=scrolltimes;
-            TweenMax.to("main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
+            TweenMax.to(".main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
             TweenMax.to(".scroll-dot",0.7,{x:i*7,ease:Cubic.easeOut});
             focustab();
             changetab();
@@ -148,7 +148,7 @@ $(document).ready(function(){
         else if(e.wheelDelta/120<0){
           if(i<28){
             i+=scrolltimes;
-            TweenMax.to("main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
+            TweenMax.to(".main",0.7,{x:-i*scrollwidth,ease:Cubic.easeOut});
             TweenMax.to(".scroll-dot",0.7,{x:i*7,ease:Cubic.easeOut});
             focustab();
             changetab();

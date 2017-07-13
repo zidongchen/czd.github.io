@@ -32,65 +32,63 @@ animation:@attr;
 body {
   overflow: hidden;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  background: #eeeeee;
 }
-main {
-  position: absolute;
-  top: 0;
-  left: 0;
+.main {
+  display: block;
   width: 300vw;
+  white-space: nowrap;
+  height: auto;
+  background: url(images/gb.png) #eeeeee;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  border: #000 1px solid;
+}
+.pages {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  min-width: 768px;
+  font-size: 14px;
+  vertical-align: top;
+  position: relative;
+}
+.page-logo {
+  width: 100vw;
   height: 100vh;
-  background: url(images/gb.png);
 }
-.scroll {
-  position: absolute;
-  bottom: 15px;
-  left: 50vw;
-  z-index: 999;
-  .transform(translate(-98px,0));
-  width: 196px;
-  height: 4px;
-  border-radius: 2px;
-  background:  rgba(77,77,77,0.60);
-  transition: 0.7s ease;
-}
-.scroll-dot {
-  position: absolute;
-  left: -5px;
-  bottom: -3px;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: #aaa;
-}
-#logo {
+.logo {
   position: absolute;
   left: 50vw;
   top: 50vh;
-  .transform(translate(-150px,-150px));
+  .transform(translate(-50%,-50%));
+}
+.page-works {
+  height: 100vh;
+  width: 100vw;
 }
 ul.works {
-  position: absolute;
-  left: 100vw;
-  top: 50vh;
-  .transform(translate(0,-50%));
+  display: block;
   list-style: none;
   padding: 0;
   text-align: center;
+  white-space: nowrap;
+  margin: 0;
 }
 .works li {
   position: relative;
+  top: 25vh;
   display: inline-block;
-  height: 500px;
-  width: 300px;
+  height: 50vh;
+  width: 15vw;
   background: #fff;
   margin: 60px;
+  margin-top: 0;
   padding: 10px;
   vertical-align: top;
-  box-shadow: 0 0 50px #ddd;
 }
 .works li img{
-  width: 280px;
+  width: 100%;
   height: auto;
 }
 .works h2 {
@@ -101,7 +99,7 @@ ul.works {
 }
 .works li button {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -112,31 +110,35 @@ ul.works {
   z-index: 2;
 }  
 .works .glyphicon {
+  margin-top: 80px;
   color: #ccc;
   opacity: 1;
-  position: absolute;
-  margin-top: 450px;
   z-index: 1;
 }
-.contant {
+.page-contact {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.contact {
   height: 200px;
   position: absolute;
   top: 50vh;
-  right: 50vw;
-  transform: translate(50%,-50%);
+  left: 50vw;
+  transform: translate(-50%,-50%);
   padding-left: 250px;
 }
 .qrcode{
   position: absolute;
   left: 0;
   top: 0;
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: 100%;
 }
-.contant h1 {
+.contact h1 {
   margin-top: 0;
 }
-.contant p {
+.contact p {
   margin-top: 14px;
 }
 .modal-dialog {
@@ -162,4 +164,59 @@ ul.works {
   left: 50%;
   transform: translate(-50%,0);
   margin-top: 8px;
+}
+.scroll {
+  position: absolute;
+  bottom: 15px;
+  left: 50vw;
+  z-index: 999;
+  .transform(translate(-98px,0));
+  width: 196px;
+  height: 4px;
+  border-radius: 2px;
+  background:  rgba(77,77,77,0.60);
+  transition: 0.7s ease;
+}
+.scroll-dot {
+  position: absolute;
+  left: -5px;
+  bottom: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #aaa;
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    width:100vw;
+    white-space: normal;
+  }
+  .pages {
+    display:block;
+  }
+  .page-works {
+    height: auto;
+  }
+  .works {
+    white-space: normal;
+    height: auto;
+  }
+  .works li {
+    position: static;
+    width: 80vw;
+    height: 80vh;
+    display: block;
+    margin-left: 10vw;
+  }
+  .contact {
+    height: 100px;
+    padding: 0;
+    padding-top: 150px;
+  }
+  .contact .qrcode {
+    display: block;
+  }
+  .scroll {
+    display: none;
+  }
 }
