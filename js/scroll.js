@@ -4,18 +4,22 @@ $(document).ready(function(){
     e=e || window.event;
     if (e.wheelDelta){
   		if(e.wheelDelta/120>0){
-  		  $("nav").css("top","0px");
+//  		  $("nav").css("top","0px");
+        $("#slideshow").carousel("prev");
   		}
   		else if(e.wheelDelta/120<0){
-  		  $("nav").css("top","-60px");
+//  		  $("nav").css("top","-60px");
+        $("#slideshow").carousel("next");
   		}
     }
     else if (e.detail){
  		  if(e.detail/-3>0){
- 				$("nav").css("top","0px");
+// 				$("nav").css("top","0px");
+        $("#slideshow").carousel("prev");
  		  }
  		  else if(e.detail/3<0){
- 				$("nav").css("top","-60px");
+// 				$("nav").css("top","-60px");
+        $("#slideshow").carousel("next");
  		  }
  		}
    };

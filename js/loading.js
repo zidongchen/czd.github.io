@@ -1,9 +1,38 @@
 // JavaScript Document
 $(document).ready(function(){
+  var brandX=$(".navbar-brand").offset().left;
   getImgLoadEd(function(){  
+//    setTimeout(function(){
+//      $(".loading").css("height","50px");  
+//    },1500);
     setTimeout(function(){
-      $(".loading").fadeOut();  
+      $(".loading").css("opacity","0");  
+    },1700);
+    setTimeout(function(){
+      $(".loading").css("z-index","-1");  
+    },2000);
+    setTimeout(function(){
+      document.getElementById("loading-logo").style.left= brandX+'px';
+    },1000);
+    setTimeout(function(){
+      document.getElementById("loading-logo").style.top= 26+'px';
+    },1000);
+    setTimeout(function(){
+      $("#loading-logo").css("transform","translate(15px,0)");
+    },1000);
+    setTimeout(function(){
+      document.getElementById("progress").style.left= brandX+54+'px';
+    },1000);
+    setTimeout(function(){
+      document.getElementById("progress").style.top= 126+'px';
+    },1000);
+    setTimeout(function(){
+      document.getElementById("progress").style.width= 10+'px';
     },500);
+    setTimeout(function(){
+      $("#progress").css("tramsform","translate(0,0)");
+    },1000);
+    
 });  
 function getImgLoadEd(callback){  
     var imgAll = [  
