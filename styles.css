@@ -30,6 +30,33 @@ ul {
   background: #ccc;
   z-index: 9999;
 }
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 10px;
+  width: 400px;
+  border-radius: 5px;
+}
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  -webkit-animation: changecolor 5s infinite alternate;
+  -moz-animation: changecolor 5s infinite alternate;
+  -ms-animation: changecolor 5s infinite alternate;
+  -o-animation: changecolor 5s infinite alternate;
+  animation: changecolor 5s infinite alternate;
+  transition: 0.5s;
+}
 nav {
   transition: 0.5s;
 }

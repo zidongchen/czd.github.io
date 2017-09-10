@@ -22,13 +22,19 @@
     <script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
 <!--    引入wow.js-->
     <script src="libs/wow.min.js"></script>
+<!--    引入图片延时加载.js-->
+<!--    <script src="libs/jquery.lazyload.min.js"></script>-->
 <!--    本地js-->
     <script type="text/javascript" src="js/scroll.js"></script>
     <script type="text/javascript" src="js/carousel-dot.js"></script>
 </head>
 
 <body>
-  <div class="loading"></div>
+  <div class="loading">
+    <div class="progress">
+      <div class="bar" id="bar"></div>
+    </div>
+  </div>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -37,7 +43,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
         </button>
-        <a href="#" class="navbar-brand"><img src="images/zidong.png" alt=""><div class="dot"></div></a>
+        <a href="" class="navbar-brand"><img src="images/zidong.png" alt=""><div class="dot"></div></a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -66,21 +72,20 @@
   </div>
   <div class="container">
     <ul class="c4d col-md-12 thumbnails">
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/01.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/02.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/03.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/04.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/05.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/06.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/07.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/08.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/09.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/10.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/11.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/12.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/13.png" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img src="images/15.png" width="100%" alt=""></a></li>
-      
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/01.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/02.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/03.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/04.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/05.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/06.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/07.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/08.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/09.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/10.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/11.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/12.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/13.png" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/15.png" width="100%" alt=""></a></li>
       
     </ul>
   </div>
@@ -93,9 +98,22 @@
         live: true
     });
     new WOW().init();
-    $(document).ready(function(){
-      $(".loading").fadeOut();
-    })
+    
+    $(document).ready(function(){   
+      var totalImg = $("img").length-1;
+      var currentImg = 0;
+      $("img").on("load",function(){
+        currentImg++;
+        console.log(currentImg);
+        var progressLoading=currentImg/totalImg*400;
+        console.log(progressLoading);
+        document.getElementById("bar").style.width=progressLoading+"px";
+        if(currentImg === totalImg){
+          $(".loading").fadeOut();
+        }
+      });
+    });
+    
   </script>
 </body>
 </html>
