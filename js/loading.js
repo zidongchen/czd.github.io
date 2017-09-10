@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
-      var totalImg = $("img").length-1;
+      var totalImg = $("img").length;
       var currentImg = 0;
       $("img").on("load",function(){
         currentImg++;
