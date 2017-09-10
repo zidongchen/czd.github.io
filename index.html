@@ -22,6 +22,7 @@
 <!--    本地js-->
 <script type="text/javascript" src="js/scroll.js"></script>
 <script type="text/javascript" src="js/carousel-dot.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
 </head>
 
 <body>
@@ -53,9 +54,9 @@
   <div class="container">
     <div class="carousel slide" data-ride="carousel" id="slideshow">
       <div class="carousel-inner">
-        <div class="item active"><img src="images/carousel_01.jpg?rand=h9xqeI" alt=""></div>
-        <div class="item"><img src="images/carousel_02.jpg?rand=h9xqeI" alt=""></div>
-        <div class="item"><img src="images/carousel_03.jpg?rand=h9xqeI" alt=""></div>
+        <div class="item active"><img src="images/carousel_01.jpg" alt=""></div>
+        <div class="item"><img src="images/carousel_02.jpg" alt=""></div>
+        <div class="item"><img src="images/carousel_03.jpg" alt=""></div>
       </div>
       <a href="#slideshow" class="left carousel-control" data-slide="prev">
         <div class="carousel-control-dot-left"></div>
@@ -67,38 +68,21 @@
   </div>
   <div class="container">
     <ul class="c4d col-md-12 thumbnails">
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/01.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/02.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/03.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/04.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/05.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/06.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/07.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/08.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/09.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/10.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/11.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/12.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/13.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/15.jpg?rand=h9xqeI" width="100%" alt=""></a></li>
-      
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/01.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/02.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/03.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/04.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/05.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/06.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/07.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/08.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/09.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/10.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/11.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/12.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/13.jpg" width="100%" alt=""></a></li>
+      <li class="col-md-2 col-sm-4"><a class="thumbnail" href=""><img class="" src="images/15.jpg" width="100%" alt=""></a></li>
     </ul>
   </div>
-  <script>
-    $(document).ready(function(){
-      var totalImg = $("img").length-1;
-      var currentImg = 0;
-      $("img").on("load",function(){
-        currentImg++;
-        console.log(currentImg);
-        var progressLoading=currentImg/totalImg*400;
-        console.log(progressLoading);
-        document.getElementById("bar").style.width=progressLoading+"px";
-        if(currentImg === totalImg){
-          $(".loading").fadeOut();
-        }
-      });
-    })
-  </script>
 </body>
 </html>
