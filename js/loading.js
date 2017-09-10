@@ -39,10 +39,10 @@ function getImgLoadEd(callback){
         //console.log('上张图片是否加载完成：' + isLoad);  
         //console.log('当前加载图片KEY：' + imgStart);  
           
-        if(!isLoad && imgStart != 0){  
+        if(!isLoad && imgStart !==0){  
             return;  
         }else{  
-            isLoad = false  
+            isLoad = false  ;
         }  
         loadImg(imgStart);  
         function loadImg(imgKey){  
@@ -54,7 +54,6 @@ function getImgLoadEd(callback){
                 imgStart++;  
                 bfb = parseInt(imgStart / imgL * 100);  
                 console.log(bfb + '%');  
-                barLength=bfb*4;
                 document.getElementById("bar").style.width=bfb*4+"px";  
             };
         }  
