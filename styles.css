@@ -264,46 +264,6 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@-webkit-keyframes indicators {
-  0% {
-    border: 10px solid #fff;
-  }
-  100% {
-    border: 1px solid #fff;
-  }
-}
-@-moz-keyframes indicators {
-  0% {
-    border: 10px solid #fff;
-  }
-  100% {
-    border: 1px solid #fff;
-  }
-}
-@-ms-keyframes indicators {
-  0% {
-    border: 10px solid #fff;
-  }
-  100% {
-    border: 1px solid #fff;
-  }
-}
-@-o-keyframes indicators {
-  0% {
-    border: 10px solid #fff;
-  }
-  100% {
-    border: 1px solid #fff;
-  }
-}
-@keyframes indicators {
-  0% {
-    border: 10px solid #fff;
-  }
-  100% {
-    border: 1px solid #fff;
-  }
-}
 @-webkit-keyframes carousel1bg {
   0% {
     background: #36afe9;
