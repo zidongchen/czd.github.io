@@ -175,7 +175,7 @@ nav {
   -o-animation: changecolor 5s infinite alternate;
   animation: changecolor 5s infinite alternate;
 }
-#carousel-container {
+#c4d-container {
   width: 100%;
   padding: 0;
   overflow: hidden;
@@ -186,15 +186,13 @@ nav {
 .carousel-control.left {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 100%);
 }
-.carousel-control-dot-left.active {
-  width: 60px;
-  height: 10px;
-  opacity: 0.7;
+.carousel-control:hover .carousel-control-dot-left {
+  height: 60px;
+  right: 160px;
 }
-.carousel-control-dot-right.active {
-  width: 60px;
-  height: 10px;
-  opacity: 0.7;
+.carousel-control:hover .carousel-control-dot-right {
+  height: 60px;
+  left: 160px;
 }
 .carousel-control-dot-left {
   position: absolute;
@@ -203,13 +201,14 @@ nav {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  -webkit-animation: changecolor 7s infinite alternate;
-  -moz-animation: changecolor 7s infinite alternate;
-  -ms-animation: changecolor 7s infinite alternate;
-  -o-animation: changecolor 7s infinite alternate;
-  animation: changecolor 7s infinite alternate;
-  opacity: 0;
-  transition: 0.5s;
+  opacity: 1;
+  background: #fff;
+  transition: 0.3s;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 .carousel-control-dot-right {
   position: absolute;
@@ -218,18 +217,53 @@ nav {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  -webkit-animation: changecolor 7s infinite alternate;
-  -moz-animation: changecolor 7s infinite alternate;
-  -ms-animation: changecolor 7s infinite alternate;
-  -o-animation: changecolor 7s infinite alternate;
-  animation: changecolor 7s infinite alternate;
-  opacity: 0;
-  transition: 0.5s;
+  opacity: 1;
+  background: #fff;
+  transition: 0.3s;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
-div.item {
+.btn-all-c4d {
+  height: 2em;
+  width: 8em;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 2em;
+  border-radius: 4em;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  z-index: 9999;
+}
+.btn-close-c4d {
+  height: 2em;
+  width: 8em;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  z-index: 9999;
+}
+.item {
   height: 100vh;
 }
-div.item img {
+.item img {
   position: relative;
   top: 50%;
   left: 50%;
@@ -415,6 +449,21 @@ div.item img {
   -ms-animation: carousel3bg 3s infinite alternate;
   -o-animation: carousel3bg 3s infinite alternate;
   animation: carousel3bg 3s infinite alternate;
+}
+.allPicc4d {
+  padding-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #FFF;
+  transition: 0.5s;
+}
+.allPicc4d.active {
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
 }
 ul.c4d {
   font-size: 0;
