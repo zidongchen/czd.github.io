@@ -1,5 +1,4 @@
 // JavaScript Document
-$(document).ready(function(){
   var brandX=$(".navbar-brand").offset().left;
   getImgLoadEd(function(){  
 //    setTimeout(function(){
@@ -35,7 +34,9 @@ $(document).ready(function(){
     
 });  
 function getImgLoadEd(callback){  
-    var imgAll = [  
+    var imgAll = [  'carousel_01_lg1920.png',
+                    'carousel_02_lg1920.png',
+                    'carousel_03_lg1920.png',
                     'images/01.jpg',  
                     'images/02.jpg',  
                     'images/03.jpg',  
@@ -89,4 +90,3 @@ function getImgLoadEd(callback){
     }  
     var loadTimer = setInterval(IfLoadImg,10);  
 }  
-});
