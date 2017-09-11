@@ -35,7 +35,9 @@ $(document).ready(function(){
     
 });  
 function getImgLoadEd(callback){  
-    var imgAll = [  
+    var imgAll = [  'images/carousel_01_lg1920.png',
+                    'images/carousel_02_lg1920.png',
+                    'images/carousel_03_lg1920.png',
                     'images/01.png',  
                     'images/02.png',  
                     'images/03.png',  
