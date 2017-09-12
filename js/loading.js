@@ -90,6 +90,6 @@ function getImgLoadEd(callback){
             };
         }  
     }  
-    var loadTimer = setInterval(IfLoadImg,100);  
+    var loadTimer = setInterval(IfLoadImg,50);  
 }  
 });
