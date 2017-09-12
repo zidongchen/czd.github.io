@@ -47,7 +47,7 @@
     </div>
   </nav>
   <div class="c4d text-center" id="c4d-container">
-    <div class="carousel slide" data-ride="carousel" id="slideshow" data-pause="false ">
+    <div class="carousel slide" data-ride="carousel" id="slideshow" data-pause="false" data-interval="7000">
       <ol class="carousel-indicators">
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1" ></li>
@@ -55,9 +55,9 @@
       </ol>
       <div class="btn-all-c4d"><span>查看全部</span></div>
       <div class="carousel-inner">
-        <div class="item active" id="carousel1bg"><img src="images/carousel_01_lg1920.png" alt=""></div>
-        <div class="item" id="carousel2bg"><img src="images/carousel_02_lg1920.png" alt=""></div>
-        <div class="item" id="carousel3bg"><img src="images/carousel_03_lg1920.png" alt=""></div>
+        <div class="item active" id="carousel1bg"><img id="carouselItem1" src="images/carousel_01_lg1920.png" alt=""></div>
+        <div class="item" id="carousel2bg"><img id="carouselItem2" src="images/carousel_02_lg1920.png" alt=""></div>
+        <div class="item" id="carousel3bg"><img id="carouselItem3" src="images/carousel_03_lg1920.png" alt=""></div>
       </div>
       <a href="#slideshow" class="left carousel-control" data-slide="prev">
         <div class="carousel-control-dot-left"></div>
@@ -102,6 +102,7 @@
 <script type="text/javascript" src="js/carousel-dot.js"></script>
 <script type="text/javascript" src="js/loading.js"></script>
 <script type="text/javascript" src="js/toseeall.js"></script>
+<script type="text/javascript" src="js/mouseMove.js"></script>
 <script type="text/javascript" charset="utf-8">
 //  $(function() {
 //      $("img.lazy").lazyload({effect: "fadeIn"});

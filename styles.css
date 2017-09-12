@@ -262,7 +262,92 @@ nav {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-animation: expand 7s infinite alternate;
+  -moz-animation: expand 7s infinite alternate;
+  -ms-animation: expand 7s infinite alternate;
+  -o-animation: expand 7s infinite alternate;
+  animation: expand 7s infinite alternate;
+  transform-origin: center;
+}
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.04) translate(-48%, -48%);
+    -moz-transform: scale(1.04) translate(-48%, -48%);
+    -o-transform: scale(1.04) translate(-48%, -48%);
+    -ms-transform: scale(1.04) translate(-48%, -48%);
+    transform: scale(1.04) translate(-48%, -48%);
+  }
+}
+@-moz-keyframes expand {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.04) translate(-48%, -48%);
+    -moz-transform: scale(1.04) translate(-48%, -48%);
+    -o-transform: scale(1.04) translate(-48%, -48%);
+    -ms-transform: scale(1.04) translate(-48%, -48%);
+    transform: scale(1.04) translate(-48%, -48%);
+  }
+}
+@-ms-keyframes expand {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.04) translate(-48%, -48%);
+    -moz-transform: scale(1.04) translate(-48%, -48%);
+    -o-transform: scale(1.04) translate(-48%, -48%);
+    -ms-transform: scale(1.04) translate(-48%, -48%);
+    transform: scale(1.04) translate(-48%, -48%);
+  }
+}
+@-o-keyframes expand {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.04) translate(-48%, -48%);
+    -moz-transform: scale(1.04) translate(-48%, -48%);
+    -o-transform: scale(1.04) translate(-48%, -48%);
+    -ms-transform: scale(1.04) translate(-48%, -48%);
+    transform: scale(1.04) translate(-48%, -48%);
+  }
+}
+@keyframes expand {
+  0% {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.04) translate(-48%, -48%);
+    -moz-transform: scale(1.04) translate(-48%, -48%);
+    -o-transform: scale(1.04) translate(-48%, -48%);
+    -ms-transform: scale(1.04) translate(-48%, -48%);
+    transform: scale(1.04) translate(-48%, -48%);
+  }
 }
 @-webkit-keyframes carousel1bg {
   0% {
@@ -385,25 +470,25 @@ nav {
   }
 }
 #carousel1bg {
-  -webkit-animation: carousel1bg 3s infinite alternate;
-  -moz-animation: carousel1bg 3s infinite alternate;
-  -ms-animation: carousel1bg 3s infinite alternate;
-  -o-animation: carousel1bg 3s infinite alternate;
-  animation: carousel1bg 3s infinite alternate;
+  -webkit-animation: carousel1bg 6s infinite alternate;
+  -moz-animation: carousel1bg 6s infinite alternate;
+  -ms-animation: carousel1bg 6s infinite alternate;
+  -o-animation: carousel1bg 6s infinite alternate;
+  animation: carousel1bg 6s infinite alternate;
 }
 #carousel2bg {
-  -webkit-animation: carousel2bg 3s infinite alternate;
-  -moz-animation: carousel2bg 3s infinite alternate;
-  -ms-animation: carousel2bg 3s infinite alternate;
-  -o-animation: carousel2bg 3s infinite alternate;
-  animation: carousel2bg 3s infinite alternate;
+  -webkit-animation: carousel2bg 6s infinite alternate;
+  -moz-animation: carousel2bg 6s infinite alternate;
+  -ms-animation: carousel2bg 6s infinite alternate;
+  -o-animation: carousel2bg 6s infinite alternate;
+  animation: carousel2bg 6s infinite alternate;
 }
 #carousel3bg {
-  -webkit-animation: carousel3bg 3s infinite alternate;
-  -moz-animation: carousel3bg 3s infinite alternate;
-  -ms-animation: carousel3bg 3s infinite alternate;
-  -o-animation: carousel3bg 3s infinite alternate;
-  animation: carousel3bg 3s infinite alternate;
+  -webkit-animation: carousel3bg 6s infinite alternate;
+  -moz-animation: carousel3bg 6s infinite alternate;
+  -ms-animation: carousel3bg 6s infinite alternate;
+  -o-animation: carousel3bg 6s infinite alternate;
+  animation: carousel3bg 6s infinite alternate;
 }
 .allPicc4d {
   padding-top: 0;
@@ -429,6 +514,9 @@ ul.c4d {
 }
 ul.c4d li {
   display: inline-block;
+}
+.thumbnail {
+  border: none;
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .progress {

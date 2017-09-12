@@ -203,8 +203,13 @@ nav {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  .animation(expand 7s infinite alternate);
+  transform-origin: center;
 }
+.keyframes(expand,{
+  0%{.transform(scale(1)translate(-50%,-50%);)}
+  100%{.transform(scale(1.04)translate(-48%,-48%);)}
+});
 .carousel-indicators li{
 }
 .keyframes (carousel1bg,{
@@ -220,13 +225,13 @@ nav {
   100%{background: #000000;}
 });
 #carousel1bg {
-  .animation(carousel1bg 3s infinite alternate);
+  .animation(carousel1bg 6s infinite alternate);
 }
 #carousel2bg {
-  .animation(carousel2bg 3s infinite alternate);
+  .animation(carousel2bg 6s infinite alternate);
 }
 #carousel3bg {
-  .animation(carousel3bg 3s infinite alternate);
+  .animation(carousel3bg 6s infinite alternate);
 }
 .allPicc4d {
   padding-top: 0;
@@ -252,6 +257,9 @@ ul.c4d {
 }
 ul.c4d li{
   display: inline-block;
+}
+.thumbnail {
+  border: none;
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
   .progress {
