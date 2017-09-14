@@ -32,6 +32,9 @@ $(document).ready(function(){
     setTimeout(function(){
       $("#progress").css("tramsform","translate(0,0)");
     },1000);
+    setTimeout(function(){
+      $("#carousel1bg").addClass("active");
+    },1700);
     
 });  
 function getImgLoadEd(callback){  

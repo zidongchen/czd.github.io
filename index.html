@@ -34,41 +34,43 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
         </button>
-        <a href="" class="navbar-brand"><img src="images/zidong.png" alt=""><div class="dot"></div></a>
+        <a href="" class="navbar-brand"><img src="images/zidong.png" alt="" id="logo"><div class="dot"></div></a>
       </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="">产品设计</a></li>
-          <li><a href="">平面作品</a></li>
-          <li><a href="">个人简介</a></li>
-          <li><a href="">联系方式</a></li>
+        <ul class="nav navbar-nav navbar-right">       
+          <li><a href="#" id="btn-graphic" class="active">GraphiC</a></li>
+          <li><a href="#" id="btn-product">ProducT</a></li>
+          <li><a href="">AbouT/ContacT</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="c4d text-center" id="c4d-container">
+  
+<!--  c4d部分-->
+  <div class="cover"></div>
+  <div class="text-center" id="main-container">
     <div class="carousel slide" data-ride="carousel" id="slideshow" data-pause="false" data-interval="7000">
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators graphic">
         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
         <li data-target="#slideshow" data-slide-to="1" ></li>
         <li data-target="#slideshow" data-slide-to="2" ></li>
       </ol>
-      <div class="btn-all-c4d"><span>查看全部</span></div>
+      <div class="btn-open graphic"><span>AndMorE</span></div>
       <div class="carousel-inner">
-        <div class="item active" id="carousel1bg"><img id="carouselItem1" src="images/carousel_01_lg1920.png" alt=""></div>
-        <div class="item" id="carousel2bg"><img id="carouselItem2" src="images/carousel_02_lg1920.png" alt=""></div>
-        <div class="item" id="carousel3bg"><img id="carouselItem3" src="images/carousel_03_lg1920.png" alt=""></div>
+        <div class="item graphic" id="carousel1bg"><img id="carouselItem1" src="images/carousel_01_lg1920.png" alt=""></div>
+        <div class="item graphic" id="carousel2bg"><img id="carouselItem2" src="images/carousel_02_lg1920.png" alt=""></div>
+        <div class="item graphic" id="carousel3bg"><img id="carouselItem3" src="images/carousel_03_lg1920.png" alt=""></div>
       </div>
       <a href="#slideshow" class="left carousel-control" data-slide="prev">
-        <div class="carousel-control-dot-left"></div>
+        <div class="carousel-control-dot left graphic"></div>
       </a>
       <a href="#slideshow" class="right carousel-control" data-slide="next">
-        <div class="carousel-control-dot-right"></div>
+        <div class="carousel-control-dot right graphic"></div>
       </a>
     </div>
-    <div class="allPicc4d">
+    <div class="allPic">
       <div class="container" id="pic-container">
-      <ul class="c4d col-md-12 thumbnails">
+      <ul class="col-md-12 thumbnails">
         <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/01.png" width="100%" alt=""></a></li>
         <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/02.png" width="100%" alt=""></a></li>
         <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/03.png" width="100%" alt=""></a></li>
@@ -85,7 +87,7 @@
         <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/15.png" width="100%" alt=""></a></li>
         <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/16.png" width="100%" alt=""></a></li>
       </ul>
-      <div class="btn-close-c4d"><span class="glyphicon glyphicon-remove"></span></div>
+      <div class="btn-close"><span class="glyphicon glyphicon-remove"></span></div>
       </div> 
     </div>
   </div>
@@ -98,10 +100,8 @@
 <!--    图片延时加载.js-->
     <script src="libs/jquery.lazyload.min.js"></script>
 <!--    本地js-->
-<script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/carousel-dot.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/loading.js"></script>
-<script type="text/javascript" src="js/toseeall.js"></script>
 <script type="text/javascript" src="js/mouseMove.js"></script>
 <script type="text/javascript" charset="utf-8">
 //  $(function() {
