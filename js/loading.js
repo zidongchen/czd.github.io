@@ -36,7 +36,7 @@ $(document).ready(function(){
       $("#carousel1bg").addClass("active");
     },1700);
     
-});  
+    });  
 function getImgLoadEd(callback){  
     var imgAll = [  "images/carousel_01_lg1920.png",
                     "images/carousel_02_lg1920.png",
