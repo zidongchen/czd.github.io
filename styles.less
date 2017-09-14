@@ -140,6 +140,12 @@ nav {
   background-color: #fff;
 }
 .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
+  background-color: #fff;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #333;
+}
+.navbar-inverse .navbar-toggle:focus .icon-bar, .navbar-inverse .navbar-toggle:hover .icon-bar{
   background-color: #333;
 }
 .navbar-brand {
@@ -162,6 +168,15 @@ nav {
   width: 8px;
   height: 8px;
   .animation(changecolor 5s infinite alternate);
+}
+.navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: rgba(0,0,0,0);
+}
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+  color: #fff;
 }
 #main-container {
   width: 100%;
@@ -264,8 +279,6 @@ nav {
   0%{.transform(scale(1)translate(-50%,-50%);)}
   100%{.transform(scale(1.04)translate(-48%,-48%);)}
 });
-.carousel-indicators li{
-}
 .keyframes (carousel1bg,{
   0%{background: #36afe9;}
   100%{background: #5389d2;}

@@ -64,14 +64,15 @@ $(document).ready(function(){
       document.getElementById("logo").src="images/zidong2.png";
       $("#btn-product").addClass("active");
       $("#btn-graphic").removeClass("active");
-      $(".btn-open,.carousel-control-dot,.item").removeClass("graphic");
-      $(".btn-open,.carousel-control-dot,.item").addClass("product");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("graphic");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("product");
       $(".navbar").removeClass("navbar-default");
       $(".navbar").addClass("navbar-inverse");
+      $(".collapse").collapse("hide");
     },600);
     setTimeout(function(){
       $(".cover").css("height","0%");
-    },700);
+    },1000);
   });
   $("#btn-graphic").on("click",function(){
     $(".cover").css("height","100%");
@@ -82,14 +83,15 @@ $(document).ready(function(){
       document.getElementById("logo").src="images/zidong.png";
       $("#btn-product").removeClass("active");
       $("#btn-graphic").addClass("active");
-      $(".btn-open,.carousel-control-dot,.item").removeClass("product");
-      $(".btn-open,.carousel-control-dot,.item").addClass("graphic");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("product");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("graphic");
       $(".navbar").addClass("navbar-default");
       $(".navbar").removeClass("navbar-inverse");
+      $(".collapse").collapse("hide");
     },600);
     setTimeout(function(){
       $(".cover").css("height","0%");
-    },700);
+    },1000);
   });
   
  });

@@ -134,6 +134,13 @@ nav {
 }
 .navbar-default .navbar-toggle:focus .icon-bar,
 .navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #fff;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #333;
+}
+.navbar-inverse .navbar-toggle:focus .icon-bar,
+.navbar-inverse .navbar-toggle:hover .icon-bar {
   background-color: #333;
 }
 .navbar-brand {
@@ -209,6 +216,19 @@ nav {
   -ms-animation: changecolor 5s infinite alternate;
   -o-animation: changecolor 5s infinite alternate;
   animation: changecolor 5s infinite alternate;
+}
+.navbar-toggle {
+  border: none;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.navbar-default .navbar-toggle:focus .icon-bar,
+.navbar-default .navbar-toggle:hover .icon-bar {
+  color: #fff;
 }
 #main-container {
   width: 100%;
