@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
+  "use strict";
 //  鼠标滚轮
       var scrollFunc=function(e){
     e=e || window.event;

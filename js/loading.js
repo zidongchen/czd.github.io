@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
+  "use strict";
   var brandX=$(".navbar-brand").offset().left;
   getImgLoadEd(function(){  
 //    setTimeout(function(){

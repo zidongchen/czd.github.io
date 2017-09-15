@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
+  "use strict";
   var winHeight;
   var winWidth;
   function findDimensions(){
