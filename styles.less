@@ -25,7 +25,6 @@ transform:@attr;
 .animation (@attr){ 
 -webkit-animation:@attr;
 -moz-animation:@attr;
--ms-animation:@attr;
 -o-animation:@attr;
 animation:@attr;
 }
@@ -35,7 +34,7 @@ animation:@attr;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 }
 body {
-  padding-top: 0px;
+  padding-top: 0;
   height: auto;
   width: 100%;
   height: 100wh;
@@ -65,6 +64,7 @@ ul {
   .transform(translate(-50%,-50%));
   transition: 0.5s;
   opacity: 1;
+  width: 167px;
 }
 .progress {
   position: absolute;
@@ -96,6 +96,16 @@ ul {
   background: #fff;
   z-index: 9999;
   transition: 0.5s;
+  overflow: hidden;
+}
+.cover-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  .transform(translate(-50%,-50%));
+  transition: 0.5s;
+  opacity: 1;
+  height: 5%;
 }
 nav {
   transition: 0.5s;
@@ -116,6 +126,11 @@ nav {
 .navbar-default .navbar-nav>li>a {
   color: #fff;
   background: rgba(255,255,255,0);
+  border-radius: 2px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #ddd;
+  background: rgba(0,0,0,0);
   border-radius: 2px;
 }
 .navbar-default .navbar-nav>li>a.active {
@@ -153,6 +168,9 @@ nav {
   padding-left: 15px;
   position: relative;
   box-sizing: border-box;
+}
+.navbar-brand img {
+  width: 167px;
 }
 .keyframes (changecolor,{
   0%{background: #FEAC5E;}

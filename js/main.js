@@ -62,7 +62,7 @@ $(document).ready(function(){
       document.getElementById("carouselItem1").src="images/carousel_04_lg1920.png";
       document.getElementById("carouselItem2").src="images/carousel_04_lg1920.png";
       document.getElementById("carouselItem3").src="images/carousel_04_lg1920.png";
-      document.getElementById("logo").src="images/zidong2.png";
+      document.getElementById("logo").src="images/zidong2.svg";
       $("#btn-product").addClass("active");
       $("#btn-graphic").removeClass("active");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("graphic");
@@ -81,7 +81,7 @@ $(document).ready(function(){
       document.getElementById("carouselItem1").src="images/carousel_01_lg1920.png";
       document.getElementById("carouselItem2").src="images/carousel_02_lg1920.png";
       document.getElementById("carouselItem3").src="images/carousel_03_lg1920.png";
-      document.getElementById("logo").src="images/zidong.png";
+      document.getElementById("logo").src="images/zidong.svg";
       $("#btn-product").removeClass("active");
       $("#btn-graphic").addClass("active");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("product");
