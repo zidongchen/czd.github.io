@@ -10,22 +10,14 @@
 }
 .keyframes (@name, @frames) {
     @-webkit-keyframes @name { @frames(); }
-    @-moz-keyframes @name { @frames(); }
-    @-ms-keyframes @name { @frames();}
-    @-o-keyframes @name { @frames(); }
     @keyframes @name { @frames(); }
 }
 .transform (@attr){
 -webkit-transform:@attr;
--moz-transform:@attr;
--o-transform:@attr;
--ms-transform:@attr;
 transform:@attr;
 }
 .animation (@attr){ 
 -webkit-animation:@attr;
--moz-animation:@attr;
--o-animation:@attr;
 animation:@attr;
 }
 * {
@@ -189,12 +181,93 @@ nav {
 }
 .navbar-toggle {
   border: none;
+  padding: 0;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
   background-color: rgba(0,0,0,0);
 }
-.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+.burger-bun {
+  display: block;
+  width: 36px;
+  height: 4px;
+  margin: 6px 0;
   color: #fff;
+  background-color: #fff;
+  border-radius: 4px;
+}
+#burger-bun-top{
+  -webkit-transform-origin: 32px 2px;
+          transform-origin: 32px 2px;
+}
+#burger-bun-bot{
+  -webkit-transform-origin: 32px 2px;
+          transform-origin: 32px 2px;
+}
+.keyframes(top-rotate,{
+  0%{
+    .transform(rotate(0deg));
+  }
+  100%{
+    .transform(rotate(-45deg));
+  }
+});
+.keyframes(mid-scale,{
+  0%{
+    .transform(scale(1));
+  }
+  100%{
+    .transform(scale(0));
+  }
+});
+.keyframes(bot-rotate,{
+  0%{
+    .transform(rotate(0deg));
+  }
+  100%{
+    .transform(rotate(45deg));
+  }
+});
+.keyframes(top-rotate-back,{
+  0%{
+    .transform(rotate(-45deg));
+  }
+  100%{
+    .transform(rotate(0deg));
+  }
+});
+.keyframes(mid-scale-back,{
+  0%{
+    .transform(scale(0));
+  }
+  100%{
+    .transform(scale(1));
+  }
+});
+.keyframes(bot-rotate-back,{
+  0%{
+    .transform(rotate(45deg));
+  }
+  100%{
+    .transform(rotate(0deg));
+  }
+});
+#burger-bun-top.is-open{
+  .animation(top-rotate 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
+}
+#burger-bun-mid.is-open{
+  .animation(mid-scale 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
+}
+#burger-bun-bot.is-open{
+  .animation(bot-rotate 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
+}
+#burger-bun-top.is-closed{
+  .animation(top-rotate-back 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
+}
+#burger-bun-mid.is-closed{
+  .animation(mid-scale-back 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
+}
+#burger-bun-bot.is-closed{
+  .animation(bot-rotate-back 0.3s cubic-bezier(0.38,-0.84, 0.65, 1.72) forwards)
 }
 #main-container {
   width: 100%;

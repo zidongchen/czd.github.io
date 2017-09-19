@@ -70,6 +70,8 @@ $(document).ready(function(){
       $(".navbar").removeClass("navbar-default");
       $(".navbar").addClass("navbar-inverse");
       $(".collapse").collapse("hide");
+      $(".burger-bun").css("background","#333");
+      burgerTime();
     },600);
     setTimeout(function(){
       $(".cover").css("height","0%");
@@ -89,10 +91,30 @@ $(document).ready(function(){
       $(".navbar").addClass("navbar-default");
       $(".navbar").removeClass("navbar-inverse");
       $(".collapse").collapse("hide");
+      $(".burger-bun").css("background","#fff");
+      burgerTime();
     },600);
     setTimeout(function(){
       $(".cover").css("height","0%");
     },1000);
   });
   
+    var trigger = $(".burger-bun"),
+        isClosed = false;
+
+    $(".navbar-toggle").click(function () {
+      burgerTime();
+    });
+
+    function burgerTime() {
+      if (isClosed === true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
  });
