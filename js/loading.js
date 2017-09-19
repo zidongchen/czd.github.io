@@ -1,7 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
   "use strict";
-  var brandX=$(".navbar-brand").offset().left;
   var loader = new resLoader({
      resources : [
           "images/carousel_01_lg1920.png",
@@ -40,7 +39,7 @@ $(document).ready(function(){
             $(".loading").css("z-index","-1");  
           },2000);
           setTimeout(function(){
-            document.getElementById("loading-logo").style.left= brandX+"px";
+            document.getElementById("loading-logo").style.left= 0+"px";
           },1000);
           setTimeout(function(){
             document.getElementById("loading-logo").style.top= 26+"px";
@@ -49,7 +48,7 @@ $(document).ready(function(){
             $("#loading-logo").css("transform","translate(15px,0)");
           },1000);
           setTimeout(function(){
-            document.getElementById("progress").style.left= brandX+54+"px";
+            document.getElementById("progress").style.left= 54+"px";
           },1000);
           setTimeout(function(){
             document.getElementById("progress").style.top= 126+"px";
