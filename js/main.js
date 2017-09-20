@@ -65,8 +65,8 @@ $(document).ready(function(){
       document.getElementById("logo").src="images/zidong2.svg";
       $("#btn-product").addClass("active");
       $("#btn-graphic").removeClass("active");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("graphic");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("product");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("white");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("black");
       $(".navbar").removeClass("navbar-default");
       $(".navbar").addClass("navbar-inverse");
       $(".collapse").collapse("hide");
@@ -83,11 +83,11 @@ $(document).ready(function(){
       document.getElementById("carouselItem1").src="images/carousel_01_lg1920.png";
       document.getElementById("carouselItem2").src="images/carousel_02_lg1920.png";
       document.getElementById("carouselItem3").src="images/carousel_03_lg1920.png";
-      document.getElementById("logo").src="images/zidong.svg";
+      document.getElementById("logo").src="images/zidong2.svg";
       $("#btn-product").removeClass("active");
       $("#btn-graphic").addClass("active");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("product");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("graphic");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("black");
+      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("white");
       $(".navbar").addClass("navbar-default");
       $(".navbar").removeClass("navbar-inverse");
       $(".collapse").collapse("hide");
