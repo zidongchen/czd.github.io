@@ -42,19 +42,19 @@ $(document).ready(function(){
             document.getElementById("loading-logo").style.left= 0+"px";
           },1000);
           setTimeout(function(){
-            document.getElementById("loading-logo").style.top= 26+"px";
+            document.getElementById("loading-logo").style.top= 27+"px";
           },1000);
           setTimeout(function(){
             $("#loading-logo").css("transform","translate(15px,0)");
           },1000);
           setTimeout(function(){
-            document.getElementById("progress").style.left= 54+"px";
+            document.getElementById("progress").style.left= 53.5+"px";
           },1000);
           setTimeout(function(){
-            document.getElementById("progress").style.top= 126+"px";
+            document.getElementById("progress").style.top= 127+"px";
           },1000);
           setTimeout(function(){
-            document.getElementById("progress").style.width= 10+"px";
+            document.getElementById("progress").style.width= 8+"px";
           },500);
           setTimeout(function(){
             $("#progress").css("tramsform","translate(0,0)");

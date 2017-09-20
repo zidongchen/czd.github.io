@@ -57,7 +57,7 @@ $(document).ready(function(){
 //  切换
   
   $("#btn-product").on("click",function(){
-    $(".cover").css("height","100%");
+    $(".cover").addClass("active");
     setTimeout(function(){
       document.getElementById("carouselItem1").src="images/carousel_04_lg1920.png";
       document.getElementById("carouselItem2").src="images/carousel_04_lg1920.png";
@@ -74,11 +74,17 @@ $(document).ready(function(){
       burgerTime();
     },600);
     setTimeout(function(){
-      $(".cover").css("height","0%");
-    },1000);
+      $(".cover-logo").css("opacity","1");
+    },800);
+    setTimeout(function(){
+      $(".cover-logo").css("opacity","0");
+    },2800);
+    setTimeout(function(){
+      $(".cover").removeClass("active");
+    },3500);
   });
   $("#btn-graphic").on("click",function(){
-    $(".cover").css("height","100%");
+    $(".cover").addClass("active");
     setTimeout(function(){
       document.getElementById("carouselItem1").src="images/carousel_01_lg1920.png";
       document.getElementById("carouselItem2").src="images/carousel_02_lg1920.png";
@@ -95,8 +101,14 @@ $(document).ready(function(){
       burgerTime();
     },600);
     setTimeout(function(){
-      $(".cover").css("height","0%");
-    },1000);
+      $(".cover-logo").css("opacity","1");
+    },800);
+    setTimeout(function(){
+      $(".cover-logo").css("opacity","0");
+    },2800);
+    setTimeout(function(){
+      $(".cover").removeClass("active");
+    },3500);
   });
   
     var trigger = $(".burger-bun"),
