@@ -67,18 +67,21 @@ $(document).ready(function(){
       $("#btn-graphic").removeClass("active");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("white");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("black");
-      $(".navbar").removeClass("navbar-default");
-      $(".navbar").addClass("navbar-inverse");
-      $(".collapse").collapse("hide");
       $(".burger-bun").css("background","#333");
       burgerTime();
     },600);
+    setTimeout(function(){
+      $(".cover-logo").css("display","block");
+    },700);
     setTimeout(function(){
       $(".cover-logo").css("opacity","1");
     },800);
     setTimeout(function(){
       $(".cover-logo").css("opacity","0");
     },2800);
+    setTimeout(function(){
+      $(".cover-logo").css("display","none");
+    },3300);
     setTimeout(function(){
       $(".cover").removeClass("active");
     },3500);
@@ -94,18 +97,21 @@ $(document).ready(function(){
       $("#btn-graphic").addClass("active");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("black");
       $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("white");
-      $(".navbar").addClass("navbar-default");
-      $(".navbar").removeClass("navbar-inverse");
-      $(".collapse").collapse("hide");
       $(".burger-bun").css("background","#fff");
       burgerTime();
     },600);
+    setTimeout(function(){
+      $(".cover-logo").css("display","block");
+    },700);
     setTimeout(function(){
       $(".cover-logo").css("opacity","1");
     },800);
     setTimeout(function(){
       $(".cover-logo").css("opacity","0");
     },2800);
+    setTimeout(function(){
+      $(".cover-logo").css("display","none");
+    },3300);
     setTimeout(function(){
       $(".cover").removeClass("active");
     },3500);
@@ -114,7 +120,7 @@ $(document).ready(function(){
     var trigger = $(".burger-bun"),
         isClosed = false;
 
-    $(".navbar-toggle").click(function () {
+    $(".nav-btn").click(function () {
       burgerTime();
     });
 
@@ -123,10 +129,22 @@ $(document).ready(function(){
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
+        $(".cover2").removeClass("active");
+        setTimeout(function(){
+          $(".nav").hide();
+        },500);
+        $(".nav").css("opacity","0");
       } else {
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
+        $(".cover2").addClass("active");
+        setTimeout(function(){
+          $(".nav").show();
+        },400);
+         setTimeout(function(){
+          $(".nav").css("opacity","1");
+        },500);
       }
     }
  });
