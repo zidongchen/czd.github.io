@@ -89,6 +89,11 @@ ul {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.cover {
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+}
 .cover .cover-logo {
   position: absolute;
   left: 50%;
