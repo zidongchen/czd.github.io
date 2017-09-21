@@ -62,8 +62,8 @@ $(document).ready(function(){
       document.getElementById("logo").src="images/zidong2.svg";
       $("#btn-product").addClass("active");
       $("#btn-graphic").removeClass("active");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("white");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("black");
+      $(".btn-open,.item,.carousel-indicators").removeClass("white");
+      $(".btn-open,.item,.carousel-indicators").addClass("black");
       $(".burger-bun").css("background","#333");
       burgerTime();
     },600);
@@ -89,8 +89,8 @@ $(document).ready(function(){
       document.getElementById("logo").src="images/zidong2.svg";
       $("#btn-product").removeClass("active");
       $("#btn-graphic").addClass("active");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").removeClass("black");
-      $(".btn-open,.carousel-control-dot,.item,.carousel-indicators").addClass("white");
+      $(".btn-open,.item,.carousel-indicators").removeClass("black");
+      $(".btn-open,.item,.carousel-indicators").addClass("white");
       $(".burger-bun").css("background","#fff");
       burgerTime();
     },600);
@@ -126,8 +126,11 @@ $(document).ready(function(){
         setTimeout(function(){
           $(".nav").hide();
         },500);
-        $(".nav").css("opacity","0");
+        setTimeout(function(){
         $(".cover2").removeClass("active");
+        },900);
+        $(".nav").removeClass("active");
+
       } else {
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
@@ -135,10 +138,10 @@ $(document).ready(function(){
         $(".cover2").addClass("active");
         setTimeout(function(){
           $(".nav").show();
-        },400);
+        },300);
          setTimeout(function(){
-          $(".nav").css("opacity","1");
-        },500);
+          $(".nav").addClass("active");
+        },400);
       }
     }
  });
