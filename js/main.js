@@ -123,11 +123,11 @@ $(document).ready(function(){
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
-        $(".cover2").removeClass("active");
         setTimeout(function(){
           $(".nav").hide();
         },500);
         $(".nav").css("opacity","0");
+        $(".cover2").removeClass("active");
       } else {
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
