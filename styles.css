@@ -89,102 +89,6 @@ ul {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.cover {
-  width: 100vw;
-  height: 100vw;
-  overflow: hidden;
-}
-.cover .cover-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 9998;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  display: none;
-}
-.cover .cover-top {
-  position: absolute;
-  top: 0;
-  left: -100vw;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0) 50%, #ffffff 50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 9997;
-}
-.cover .cover-bot {
-  position: absolute;
-  top: 0;
-  left: 100vw;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(-70deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 9997;
-}
-.cover2 .cover-top {
-  position: absolute;
-  top: 0;
-  left: -100vw;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0) 50%, #36afe9 50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.cover2 .cover-bot {
-  position: absolute;
-  top: 0;
-  left: 100vw;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(-70deg, #36afe9 50%, rgba(0, 0, 0, 0) 50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.cover.active .cover-top,
-.cover.active .cover-bot,
-.cover2.active .cover-top,
-.cover2.active .cover-bot {
-  left: 0;
-}
-.cover2 .cover-top,
-.cover2 .cover-bot {
-  z-index: 999;
-}
-.cover-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 1;
-  height: 5%;
-}
 nav {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -699,6 +603,109 @@ nav {
 .nav > li > a.active {
   background-color: rgba(255, 255, 255, 0.7);
 }
+.cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.cover2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.cover .cover-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: none;
+}
+.cover > .cover-top {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0) 50%, #ffffff 50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 9997;
+}
+.cover > .cover-bot {
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-70deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 9997;
+}
+.cover2 .cover-top {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0) 50%, #36afe9 50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.cover2 .cover-bot {
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-70deg, #36afe9 50%, rgba(0, 0, 0, 0) 50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.cover.active .cover-top,
+.cover.active .cover-bot,
+.cover2.active .cover-top,
+.cover2.active .cover-bot {
+  left: 0;
+}
+.cover2 .cover-top,
+.cover2 .cover-bot {
+  z-index: 999;
+}
+.cover-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+  height: 5%;
+}
 #main-container {
   width: 100%;
   padding: 0;
@@ -809,9 +816,10 @@ nav {
 .item {
   height: 100vh;
 }
-.item img {
+.item div {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 50%;
   left: 50%;
   -webkit-transform: scale(1) translate(-50%, -50%);
@@ -1017,6 +1025,30 @@ nav {
 #carousel3bg.white {
   background-image: linear-gradient(-70deg, #4ceee7 50%, #ffffff 50%);
 }
+.white #carouselItem1 {
+  background: url(images/carousel_01_lg1920.png) no-repeat;
+  background-size: contain;
+}
+.white #carouselItem2 {
+  background: url(images/carousel_02_lg1920.png) no-repeat;
+  background-size: contain;
+}
+.white #carouselItem3 {
+  background: url(images/carousel_03_lg1920.png) no-repeat;
+  background-size: contain;
+}
+.black #carouselItem1 {
+  background: url(images/carousel_04_lg1920.png) no-repeat;
+  background-size: contain;
+}
+.black #carouselItem2 {
+  background: url(images/carousel_04_lg1920.png) no-repeat;
+  background-size: contain;
+}
+.black #carouselItem3 {
+  background: url(images/carousel_04_lg1920.png) no-repeat;
+  background-size: contain;
+}
 .item.black {
   background: #ffffff;
 }
@@ -1070,5 +1102,29 @@ ul.thumbnails li {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .progress {
     width: 200px;
+  }
+  .white #carouselItem1 {
+    background: url(images/carousel_01_sm750@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .white #carouselItem2 {
+    background: url(images/carousel_02_sm750@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .white #carouselItem3 {
+    background: url(images/carousel_03_sm750@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .black #carouselItem1 {
+    background: url(images/carousel_04_sm750@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .black #carouselItem2 {
+    background: url(images/carousel_04_sm750@2x.png) no-repeat;
+    background-size: contain;
+  }
+  .black #carouselItem3 {
+    background: url(images/carousel_04_sm750@2x.png) no-repeat;
+    background-size: contain;
   }
 }
