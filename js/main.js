@@ -48,10 +48,25 @@ $(document).ready(function(){
 //  查看全部图片
   
     $(".btn-open").on("click",function(){
-    $(".allPic").addClass("active");
+      $(".cover").addClass("active");
+      setTimeout(function(){
+        $(".allPic").addClass("active");
+        $(".btn-close").show();
+      },700);
+      setTimeout(function(){
+        $(".btn-close").css("left","0");
+      },1001);
   });
     $(".btn-close").on("click",function(){
-    $(".allPic").removeClass("active");
+        $(".allPic").removeClass("active");
+        $(".btn-close").css("left","-40px");
+      setTimeout(function(){
+        $(".cover").removeClass("active");
+      },100);
+      setTimeout(function(){
+        $(".btn-close").hide();
+      },501);
+
   });
   
 //  切换
@@ -65,7 +80,6 @@ $(document).ready(function(){
       $(".btn-open,.item,.carousel-indicators").removeClass("white");
       $(".btn-open,.item,.carousel-indicators").addClass("black");
       $(".burger-bun").css("background","#333");
-      burgerTime();
     },600);
     setTimeout(function(){
       $(".cover-logo").css("display","block");
@@ -82,7 +96,18 @@ $(document).ready(function(){
     setTimeout(function(){
       $(".cover").removeClass("active");
     },3500);
+    trigger.removeClass('is-open');
+    trigger.addClass('is-closed');
+    isClosed = false;
+    setTimeout(function(){
+      $(".nav").hide();
+    },500);
+    setTimeout(function(){
+      $(".cover2").removeClass("active");
+    },3800);
+    $(".nav").removeClass("active");
   });
+  
   $("#btn-graphic").on("click",function(){
     $(".cover").addClass("active");
     setTimeout(function(){
@@ -92,7 +117,6 @@ $(document).ready(function(){
       $(".btn-open,.item,.carousel-indicators").removeClass("black");
       $(".btn-open,.item,.carousel-indicators").addClass("white");
       $(".burger-bun").css("background","#fff");
-      burgerTime();
     },600);
     setTimeout(function(){
       $(".cover-logo").css("display","block");
@@ -109,6 +133,16 @@ $(document).ready(function(){
     setTimeout(function(){
       $(".cover").removeClass("active");
     },3500);
+    trigger.removeClass('is-open');
+    trigger.addClass('is-closed');
+    isClosed = false;
+    setTimeout(function(){
+      $(".nav").hide();
+    },500);
+    setTimeout(function(){
+      $(".cover2").removeClass("active");
+    },3800);
+    $(".nav").removeClass("active");
   });
   
     var trigger = $(".burger-bun"),
