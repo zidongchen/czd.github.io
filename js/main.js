@@ -48,103 +48,21 @@ $(document).ready(function(){
 //  查看全部图片
   
     $(".btn-open").on("click",function(){
-      $(".cover").addClass("active");
-      setTimeout(function(){
         $(".allPic").addClass("active");
         $(".btn-close").show();
-      },700);
       setTimeout(function(){
         $(".btn-close").css("left","0");
-      },1001);
+      },1);
   });
     $(".btn-close").on("click",function(){
         $(".allPic").removeClass("active");
         $(".btn-close").css("left","-40px");
       setTimeout(function(){
-        $(".cover").removeClass("active");
-      },100);
-      setTimeout(function(){
         $(".btn-close").hide();
       },501);
 
   });
-  
-//  切换
-  
-  $("#btn-product").on("click",function(){
-    $(".cover").addClass("active");
-    setTimeout(function(){
-      document.getElementById("logo").src="images/zidong2.svg";
-      $("#btn-product").addClass("active");
-      $("#btn-graphic").removeClass("active");
-      $(".btn-open,.item,.carousel-indicators").removeClass("white");
-      $(".btn-open,.item,.carousel-indicators").addClass("black");
-      $(".burger-bun").css("background","#333");
-    },600);
-    setTimeout(function(){
-      $(".cover-logo").css("display","block");
-    },700);
-    setTimeout(function(){
-      $(".cover-logo").css("opacity","1");
-    },800);
-    setTimeout(function(){
-      $(".cover-logo").css("opacity","0");
-    },2800);
-    setTimeout(function(){
-      $(".cover-logo").css("display","none");
-    },3300);
-    setTimeout(function(){
-      $(".cover").removeClass("active");
-    },3500);
-    trigger.removeClass('is-open');
-    trigger.addClass('is-closed');
-    isClosed = false;
-    setTimeout(function(){
-      $(".nav").hide();
-    },500);
-    setTimeout(function(){
-      $(".cover2").removeClass("active");
-    },3800);
-    $(".nav").removeClass("active");
-  });
-  
-  $("#btn-graphic").on("click",function(){
-    $(".cover").addClass("active");
-    setTimeout(function(){
-      document.getElementById("logo").src="images/zidong2.svg";
-      $("#btn-product").removeClass("active");
-      $("#btn-graphic").addClass("active");
-      $(".btn-open,.item,.carousel-indicators").removeClass("black");
-      $(".btn-open,.item,.carousel-indicators").addClass("white");
-      $(".burger-bun").css("background","#fff");
-    },600);
-    setTimeout(function(){
-      $(".cover-logo").css("display","block");
-    },700);
-    setTimeout(function(){
-      $(".cover-logo").css("opacity","1");
-    },800);
-    setTimeout(function(){
-      $(".cover-logo").css("opacity","0");
-    },2800);
-    setTimeout(function(){
-      $(".cover-logo").css("display","none");
-    },3300);
-    setTimeout(function(){
-      $(".cover").removeClass("active");
-    },3500);
-    trigger.removeClass('is-open');
-    trigger.addClass('is-closed');
-    isClosed = false;
-    setTimeout(function(){
-      $(".nav").hide();
-    },500);
-    setTimeout(function(){
-      $(".cover2").removeClass("active");
-    },3800);
-    $(".nav").removeClass("active");
-  });
-  
+
     var trigger = $(".burger-bun"),
         isClosed = false;
 
@@ -157,25 +75,31 @@ $(document).ready(function(){
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
+        $(".cover").removeClass("active");
+        setTimeout(function () {
+            $(".cover").hide();
+        },501);
         setTimeout(function(){
           $(".nav").hide();
         },500);
-        setTimeout(function(){
-        $(".cover2").removeClass("active");
-        },900);
         $(".nav").removeClass("active");
-
-      } else {
+        $("#main-container").removeClass("active");
+      }
+      else {
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
-        $(".cover2").addClass("active");
+          $(".cover").show();
+          setTimeout(function () {
+              $(".cover").addClass("active");
+          },1);
         setTimeout(function(){
           $(".nav").show();
         },300);
          setTimeout(function(){
           $(".nav").addClass("active");
         },400);
+        $("#main-container").addClass("active");
       }
     }
  });
