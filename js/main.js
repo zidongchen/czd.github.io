@@ -52,7 +52,7 @@ $(document).ready(function(){
         $(".btn-close").show();
       setTimeout(function(){
         $(".btn-close").css("left","0");
-      },1);
+      },301);
   });
     $(".btn-close").on("click",function(){
         $(".allPic").removeClass("active");

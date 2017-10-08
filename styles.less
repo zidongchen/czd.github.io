@@ -274,10 +274,18 @@ nav {
   background: #fff;
   border-radius: 4px;
 }
-.nav>li>a:focus::before, .nav>li>a:hover::before, .nav>li>a.active::before{
+.nav>li>a:focus::before, .nav>li>a:hover::before{
   height: 100%;
 }
-
+.keyframes (changefontcolor,{
+  0%{color: #FEAC5E;}
+  50%{color: #C779D0;}
+  100%{color: #4BC0C8;}
+}
+);
+ .nav>li>a.active {
+   .animation(changefontcolor 5s infinite alternate);
+ }
 .cover {
   position: absolute;
   width: 100vw;
@@ -293,7 +301,6 @@ nav {
 }
 .cover.active {
   background: rgba(0,0,0,0.7);
-
 }
 //轮播图_____________________________________________
 
@@ -306,10 +313,10 @@ nav {
   .transition(0.5s);
 }
 #main-container.active {
-  -webkit-filter: blur(5px); /* Chrome, Opera */
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
+  //-webkit-filter: blur(5px); /* Chrome, Opera */
+  //-ms-filter: blur(5px);
+  //filter: blur(5px);
+  //filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
 }
 .carousel-control.right {
   background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)
@@ -486,7 +493,7 @@ nav {
 });
 .keyframes (carousel2bg,{
   0%{background: #e595e9;}
-  100%{background: #ee6699;}
+  100%{background: #bb95ef;}
 });
 .keyframes (carousel3bg,{
   0%{background: #6bf1d8;}
