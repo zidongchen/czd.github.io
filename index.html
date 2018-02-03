@@ -4,108 +4,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
     <title>ZiDonG</title>
-    <!--    bootstrap样式表-->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--    样式表-->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <!--    bootstrap.js-->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!--    less.js-->
     <script src="https://cdn.bootcss.com/less.js/2.7.2/less.min.js"></script>
-    <!--预加载插件-->
-    <script type="text/javascript" src="libs/resLoader.js"></script>
     <!--    本地js-->
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/loading.js"></script>
-    <!--<script type="text/javascript" src="js/mouseMove.js"></script>-->
 </head>
 
 <body>
-    <div class="loading">
-        <div class="container" id="loading-container">
-            <img src="images/zidong2.svg" alt="" class="loading-logo" id="loading-logo">
-            <div class="progress" id="progress">
-                <div class="bar" id="bar"></div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container" id="nav-container">
-            <div class="navbar-header">
-                <div class="nav-btn closed" >
-                    <span class="burger-bun is-closed" id="burger-bun-top"></span>
-                    <span class="burger-bun is-closed" id="burger-bun-mid"></span>
-                    <span class="burger-bun is-closed" id="burger-bun-bot"></span>
-                </div>
-                <a href="" class="navbar-brand"><img src="images/zidong.svg" alt="" id="logo"><div class="dot"></div></a>
-            </div>
-        </div>
-    </nav>
-    <ul class="nav">
-        <li><a href="#" id="btn-graphic" class="active">GraphiC</a></li>
-        <li><a href="#" id="btn-product">ProducT</a></li>
-        <li><a href="" id="btn-about">AbouT/ContacT</a></li>
-    </ul>
-
-
-    <div class="cover">
-    </div>
-
-
-    <div class="text-center" id="main-container">
-
-        <div class="carousel slide" data-ride="carousel" id="slideshow" data-pause="false" data-interval="7000">
-            <ol class="carousel-indicators white">
-                <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-                <li data-target="#slideshow" data-slide-to="1" ></li>
-                <li data-target="#slideshow" data-slide-to="2" ></li>
-            </ol>
-            <div class="btn-open white"><span>MorE</span></div>
-            <div class="carousel-inner">
-                <div class="item white" id="carousel1bg"><div id="carouselItem1"></div></div>
-                <div class="item white" id="carousel2bg"><div id="carouselItem2"></div></div>
-                <div class="item white" id="carousel3bg"><div id="carouselItem3"></div></div>
-            </div>
-            <a href="#slideshow" class="left carousel-control" data-slide="prev">
-                <div class="carousel-control-dot left white"></div>
-            </a>
-            <a href="#slideshow" class="right carousel-control" data-slide="next">
-                <div class="carousel-control-dot right white"></div>
-            </a>
-        </div>
-        <div class="allPic">
-            <div class="container" id="pic-container">
-                <ul class="col-md-12 thumbnails">
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href="" data-toggle="modal" data-target="#pic-modal-1"><img class="lazy" src="images/01.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/02.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/03.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/04.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/05.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/06.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/07.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/09.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/10.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/11.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/12.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/13.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/15.png" width="100%" alt=""></a></li>
-                    <li class="col-md-3 col-sm-4"><a class="thumbnail" href=""><img class="lazy" src="images/16.png" width="100%" alt=""></a></li>
+    <div id="header-wrapper">
+        <header>
+            <nav class="nav-bar">
+                <a href="" class="logo-container">
+                    <img src="images/logo/SVG/logo_1.svg" alt="" class="logo">
+                </a>
+                <ul class="nav-container">
+                    <li class="nav-option" id="scourse"><a href="">课程设计</a></li>
+                    <li class="nav-option" id="personal"><a href="">个人作品</a></li>
                 </ul>
-                <div class="btn-close"><span class="glyphicon glyphicon-remove"></span></div>
-            </div>
-            <div class="modal fade" id="pic-modal-1">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <img src="images/modal/01.png" alt="" width="100%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-
+            </nav>
+        </header>
     </div>
+    <div class="fakefeader" style="height: 160px;width: 100%"></div>
+    <main>
+        <div class="works-container">
+            <ul class="works-list">
+                <li class="works-item _w-item-1x1"><a href=""></a></li>
+                <li class="works-item _w-item-2x1"><a href="" class="daminchu"></a></li>
+                <li class="works-item _w-item-2x2"><a href="" class="Gemini"></a></li>
+                <li class="works-item _w-item-1x1"><a href="" class="dang"></a></li>
+                <li class="works-item _w-item-1x2" style="float: right"><a href="" class="dengpao"></a></li>
+                <li class="works-item _w-item-1x1"><a href=""></a></li>
+                <li class="works-item _w-item-1x1"><a href=""></a></li>
+
+
+
+                <div style="clear: both"></div>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="contact-container">
+            <div class="weixin">
+                <i class="fa fa-weixin"></i>
+                <div class="qrcode"></div>
+            </div>
+            <a class="email" href="mailto:zidong.chen@outlook.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
