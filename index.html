@@ -31,14 +31,13 @@
     <main>
         <div class="works-container">
             <ul class="works-list">
-                <li class="works-item _w-item-1x1"><a href=""></a></li>
-                <li class="works-item _w-item-2x1"><a href="" class="daminchu"></a></li>
-                <li class="works-item _w-item-2x2"><a href="" class="Gemini"></a></li>
-                <li class="works-item _w-item-1x1"><a href="" class="dang"></a></li>
-                <li class="works-item _w-item-1x2" style="float: right"><a href="" class="dengpao"></a></li>
-                <li class="works-item _w-item-1x1"><a href=""></a></li>
-                <li class="works-item _w-item-1x1"><a href=""></a></li>
-
+                <li class="works-item _w-item-1x1"></li>
+                <li class="works-item _w-item-2x1"><a href="" class="daminchu"><img class="lazy" src="" data-echo="images/daminchu.png"></a></li>
+                <li class="works-item _w-item-2x2"><a href="" class="Gemini"><img class="lazy" src="" data-echo="images/Gemini.png"></a></li>
+                <li class="works-item _w-item-1x1"><a href=""><img class="lazy" src="" data-echo="images/dang.png"></a></li>
+                <li class="works-item _w-item-1x2" style="float: right"><a href="" class="dengpao"><img class="lazy" src="" data-echo="images/dengpao.png"></a></li>
+                <li class="works-item _w-item-1x1"></li>
+                <li class="works-item _w-item-1x1"><a href=""><img class="lazy" src="" data-echo="images/dang.png"></a></li>
 
 
                 <div style="clear: both"></div>
@@ -55,4 +54,13 @@
     </footer>
     <a href="##" class="overlay" id="qrcode"><div class="qrcode"></div></a>
 </body>
+<script>
+
+    Echo.init({
+        offset: 0,//离可视区域多少像素的图片可以被加载
+        throttle: 1000 //图片延时多少毫秒加载
+    });
+
+</script>
+
 </html>

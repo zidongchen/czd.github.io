@@ -119,9 +119,7 @@ main {
   bottom: 1px;
   right: 1px;
   background-color: #eeeeee;
-}
-.works-item.active a {
-  display: none;
+  overflow: hidden;
 }
 ._w-item-1x1 {
   width: 33.33%;
@@ -153,19 +151,36 @@ main {
   -ms-transition: all 0.3s 0.1s ease-in-out;
   -o-transition: all 0.3s 0.1s ease-in-out;
   transition: all 0.3s 0.1s ease-in-out;
-  background-size: 100% auto;
+  background-image: url("images/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
+}
+.works-list a img {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s 0.1s ease-in-out;
+  -moz-transition: all 0.3s 0.1s ease-in-out;
+  -ms-transition: all 0.3s 0.1s ease-in-out;
+  -o-transition: all 0.3s 0.1s ease-in-out;
+  transition: all 0.3s 0.1s ease-in-out;
+}
+.works-list a:hover img {
+  width: 105%;
 }
 .works-list a:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -o-filter: grayscale(0%);
-  background-size: 105% auto;
 }
 .works-list a.Gemini {
-  background-image: url("images/Gemini.png");
   font-family: Helvetica;
   text-decoration: none;
 }
@@ -184,15 +199,12 @@ main {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.works-list a.dengpao {
-  background-image: url("images/dengpao.png");
-  background-size: auto 100%;
-  font-weight: 900;
-  position: relative;
+.works-list a.dengpao img {
+  width: auto;
+  height: 100%;
 }
-.works-list a.dengpao:hover {
-  background-size: auto 105%;
-  color: #331111;
+.works-list a.dengpao:hover img {
+  height: 105%;
 }
 .works-list a.dengpao:after {
   display: inline-block;
@@ -210,9 +222,6 @@ main {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.works-list a.dang {
-  background-image: url("images/dang.png");
-}
 .works-list a.dang:after {
   display: inline-block;
   width: 100%;
@@ -229,9 +238,6 @@ main {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-.works-list a.daminchu {
-  background-image: url("images/daminchu.png");
 }
 footer {
   position: relative;
