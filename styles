@@ -1,3 +1,6 @@
+html,body {
+  font-size: 16px;
+}
 body {
   margin:0;
   font-family: Helvetica;
@@ -59,7 +62,7 @@ header {
   display: inline-block;
   margin: 0;
   padding-left:40px;
-  font-size: 14px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   text-align: right;
 }
@@ -113,7 +116,12 @@ main {
 .works-container .works-list .works-item {
   display: inline-block;
   position: relative;
+}
+.works-container .works-list ._w-item-floatleft {
   float: left;
+}
+.works-container .works-list ._w-item-floatright {
+  float: right;
 }
 .works-container .works-list .works-item a{
   display: block;
@@ -185,6 +193,14 @@ main {
   -moz-filter: grayscale(0%);
   -o-filter: grayscale(0%);
 }
+._w-item-1x2 a img {
+  width: auto;
+  height: 100%;
+}
+._w-item-1x2 a:hover img {
+  width: auto;
+  height: 105%;
+}
 //电脑支架
 .works-list a.Gemini{
   font-family: Helvetica;
@@ -192,7 +208,7 @@ main {
 }
 .works-list a.Gemini::after {
   content: "GeMini";
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bolder;
   letter-spacing: 20px;
   text-align: center;
@@ -208,17 +224,15 @@ main {
 //电脑支架
 //写实icon练习
 .works-list a.dengpao img{
-  width: auto;
-  height: 100%;
+
 }
 .works-list a.dengpao:hover img{
-  height: 105%;
 }
 .works-list a.dengpao:after {
   display: inline-block;
   width: 100%;
   content: " ";
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing:10px;
   text-align: center;
   position: absolute;
@@ -238,7 +252,7 @@ main {
   display: inline-block;
   width: 100%;
   content: " ";
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing:10px;
   text-align: center;
   color: #eeeeee;
@@ -290,7 +304,7 @@ footer {
 .contact-container i {
   cursor: pointer;
   display: inline-block;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #cccccc;
   -webkit-transition:all 0.2s ease-in-out;
   -moz-transition:all 0.2s ease-in-out;
@@ -391,9 +405,9 @@ footer {
   }
 }
 @media screen and (max-width: 479px){
-  //.works-container ,.nav-bar,.contact-container{
-  //  width: 400px;
-  //}
+  html,body {
+    font-size: 12px;
+  };
   .works-container .works-list .works-item {
     width: 100%;
     height: 0;
