@@ -19,12 +19,12 @@ $(document).ready(function() {
             }
         }
         else if (e.detail) {
-            if (e.detail / -3 > 0 && i > 0) {
+            if (e.detail / 3 < 0 && i > 0) {
                 i=0;
                 headerWrapper.style.top=0;
                 navBar.style.height=140+'px';
             }
-            else if (e.detail / 3 < 0 && i<7) {
+            else if (e.detail / 3 > 0 && i<7) {
                 i++;
                 headerWrapper.style.top=-i*13 +'px';
                 navBar.style.height=140-i*i+'px';
