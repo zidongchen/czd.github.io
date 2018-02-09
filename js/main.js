@@ -27,8 +27,8 @@ $(document).ready(function() {
         }, false);
         //监听touchend，监听touch结束，可判断是上滑，还是下滑
         document.addEventListener('touchend', function(e){
-            if(moveY < 0 || moveY == 0 && i<7 ){//向上(或者不动——例如双击)
-                i++;
+            if(moveY < 0 || moveY == 0){//向上(或者不动——例如双击)
+                i=7;
                 headerWrapper.style.top=-i*13 +'px';
                 navBar.style.height=140-i*i+'px';
             }else{//向下
@@ -43,12 +43,12 @@ $(document).ready(function() {
         var scrollFunc = function (e) {
             e = e || window.event;
             if (e.wheelDelta) {
-                if (e.wheelDelta / 120 > 0) {
+                if (e.wheelDelta / 120 > 0 && i>0) {
                     i=0;
                     headerWrapper.style.top=0;
                     navBar.style.height=140 + 'px';
                 }
-                else if (e.wheelDelta / 120 < 0) {
+                else if (e.wheelDelta / 120 < 0 && i<7) {
                     i=7;
                     headerWrapper.style.top=-i*13 +'px';
                     navBar.style.height=140-i*i+'px';
