@@ -29,10 +29,10 @@ header {
 .nav-bar {
   display: flex;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1120px;
   height: 140px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
   align-items: center;
   background: #ffffff;
   -webkit-transition: all 1s ease-in-out;
@@ -259,9 +259,9 @@ footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
   align-items: center;
   height: 160px;
   padding-top: 70px;
@@ -270,7 +270,7 @@ footer {
 .contact-container i {
   cursor: pointer;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 30px;
   color: #cccccc;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
