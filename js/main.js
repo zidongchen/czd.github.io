@@ -72,6 +72,45 @@ $(document).ready(function() {
         }//W3C
         window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome/Safari
     }
+    var worksShow = 0;
+        $("#course").on("click",function (){
+            if (worksShow==0||worksShow==2){
+                resetline();
+                $("#course a").css("color","#ffffff");
+                $("#course .line").addClass("active");
+                $(".course-works").css("display","inline-block");
+                $(".personal-works").css("display","none");
+                worksShow=1;
+            }
+            else if (worksShow==1){
+                resetline();
+                $(".course-works").css("display","inline-block");
+                $(".personal-works").css("display","inline-block");
+                worksShow=0;
+            }
+        });
+        $("#personal").on("click",function (){
+            if (worksShow==0||worksShow==1){
+                resetline();
+                $("#personal a").css("color","#ffffff");
+                $("#personal .line").addClass("active");
+                $(".course-works").css("display","none");
+                $(".personal-works").css("display","inline-block");
+                worksShow=2;
+            }
+            else if (worksShow==2){
+                resetline();
+                $(".course-works").css("display","inline-block");
+                $(".personal-works").css("display","inline-block");
+                worksShow=0;
+            }
+        });
+    function resetline() {
+        $(".nav-option a").css("color","#555656");
+        $(".nav-option .line").removeClass("active");
+
+    }
+
 });
 
 /*!
