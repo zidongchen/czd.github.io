@@ -14,14 +14,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="36" column="108" lean-forward="false" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
+            <state relative-caret-position="380">
+              <caret line="38" column="191" lean-forward="false" selection-start-line="38" selection-start-column="191" selection-end-line="38" selection-end-column="191" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guisu.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/guisu/guisu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="111" column="112" lean-forward="false" selection-start-line="111" selection-start-column="112" selection-end-line="111" selection-end-column="112" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guisu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guisu/guisu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1521441613989" expanded="true" signature="20:4120960" ph="{...}" />
+                <marker date="1521441613989" expanded="true" signature="3456438:3456570" ph="{...}" />
+                <marker date="1521441613989" expanded="true" signature="4120544:4120728" ph="{...}" />
+                <marker date="1521441613989" expanded="true" signature="4120767:4120888" ph="{...}" />
+                <marker date="1521441613989" expanded="true" signature="4120850:4120886" ph="{...}" />
+                <marker date="1521441613989" expanded="true" signature="4120923:4120955" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,6 +170,7 @@
         <option value="$PROJECT_DIR$/imuc.html" />
         <option value="$PROJECT_DIR$/IMUC/imuc.html" />
         <option value="$PROJECT_DIR$/daminchu/daminchu.html" />
+        <option value="$PROJECT_DIR$/guisu/guisu.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -194,6 +230,11 @@
               <item name="zidongchen.github.io" type="cbb8eebc:String" user="zidongchen.github.io" />
               <item name="daminchu" type="cbb8eebc:String" user="daminchu" />
             </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zidongchen.github.io" type="cbb8eebc:String" user="zidongchen.github.io" />
+              <item name="guisu" type="cbb8eebc:String" user="guisu" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -210,6 +251,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="LESS&#10;CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/guisu" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -249,12 +295,12 @@
       <workItem from="1518151340415" duration="4898000" />
       <workItem from="1520870852007" duration="897000" />
       <workItem from="1521197439604" duration="2260000" />
-      <workItem from="1521253025808" duration="13954000" />
+      <workItem from="1521253025808" duration="15669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124884000" />
+    <option name="totallyTimeSpent" value="126599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="26" y="28" width="1581" height="943" extended-state="0" />
@@ -292,18 +338,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles.less" />
     <entry file="file://$PROJECT_DIR$/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -607,13 +641,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/guisu/guisu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521441613989" expanded="true" signature="20:4120960" ph="{...}" />
+            <marker date="1521441613989" expanded="true" signature="3456438:3456570" ph="{...}" />
+            <marker date="1521441613989" expanded="true" signature="4120544:4120728" ph="{...}" />
+            <marker date="1521441613989" expanded="true" signature="4120767:4120888" ph="{...}" />
+            <marker date="1521441613989" expanded="true" signature="4120850:4120886" ph="{...}" />
+            <marker date="1521441613989" expanded="true" signature="4120923:4120955" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="36" column="108" lean-forward="false" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
+        <state relative-caret-position="380">
+          <caret line="38" column="191" lean-forward="false" selection-start-line="38" selection-start-column="191" selection-end-line="38" selection-end-column="191" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guisu/guisu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="111" column="112" lean-forward="false" selection-start-line="111" selection-start-column="112" selection-end-line="111" selection-end-column="112" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
