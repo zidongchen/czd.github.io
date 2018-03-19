@@ -16,11 +16,11 @@ body {
   top: 0;
   width: 100%;
   z-index: 10000;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
 }
 header {
   left: 0;
@@ -35,11 +35,11 @@ header {
   padding: 0 20px;
   align-items: center;
   background: #ffffff;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 1s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .logo-container {
   flex-grow: 1;
@@ -79,11 +79,11 @@ header {
   position: absolute;
   top: -2px;
   background-color: #33bbbc;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   transform: scaleX(0);
   z-index: 1;
 }
@@ -101,11 +101,11 @@ header {
   color: #555656;
   font-size: 1rem;
   font-weight: 800;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -175,11 +175,11 @@ main {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -o-filter: grayscale(0%);
-  -webkit-transition: all 0.3s 0.1s ease-in-out;
-  -moz-transition: all 0.3s 0.1s ease-in-out;
-  -ms-transition: all 0.3s 0.1s ease-in-out;
-  -o-transition: all 0.3s 0.1s ease-in-out;
-  transition: all 0.3s 0.1s ease-in-out;
+  -webkit-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   background-image: url("images/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -194,11 +194,11 @@ main {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s 0.1s ease-in-out;
-  -moz-transition: all 0.3s 0.1s ease-in-out;
-  -ms-transition: all 0.3s 0.1s ease-in-out;
-  -o-transition: all 0.3s 0.1s ease-in-out;
-  transition: all 0.3s 0.1s ease-in-out;
+  -webkit-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .works-list a:hover img {
   width: 105%;
@@ -276,11 +276,11 @@ footer {
   display: inline-block;
   font-size: 30px;
   color: #cccccc;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .fa-weixin,
 .fa-envelope {
@@ -292,11 +292,11 @@ footer {
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   opacity: 1;
   height: 270px;
   width: 270px;

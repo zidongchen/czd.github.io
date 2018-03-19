@@ -49,7 +49,7 @@ $(document).ready(function() {
                     navBar.style.height=140 + 'px';
                 }
                 else if (e.wheelDelta / 120 < 0 && i<7) {
-                    i++;
+                    i=7;
                     headerWrapper.style.top=-i*13 +'px';
                     navBar.style.height=140-i*i+'px';
                 }
@@ -61,7 +61,7 @@ $(document).ready(function() {
                     navBar.style.height=140+'px';
                 }
                 else if (e.detail / 3 > 0 && i<7) {
-                    i++;
+                    i=7;
                     headerWrapper.style.top=-i*13 +'px';
                     navBar.style.height=140-i*i+'px';
                 }
