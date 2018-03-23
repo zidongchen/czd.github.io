@@ -7,8 +7,10 @@
     <!--    样式表-->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="libs/animate.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/less.js/2.7.2/less.min.js"></script>
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
     <!--    本地js-->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -31,12 +33,12 @@
     <main>
         <div class="works-container">
             <ul class="works-list">
-                <li class="works-item _w-item-1x1 _w-item-floatleft course-works"><a href="IMUC/imuc.html" class="imuc"><img class="lazy" src="images/loading.png" data-echo="images/imuc.png"></a></a></li>
-                <li class="works-item _w-item-2x1 _w-item-floatleft course-works"><a href="daminchu/daminchu.pdf" class="daminchu"><img class="lazy" src="images/loading.png" data-echo="images/daminchu.png"></a></li>
-                <li class="works-item _w-item-2x1 _w-item-floatleft personal-works"><a href="##" class="darkness"><img class="lazy" src="images/loading.png" data-echo="images/darkness.png"></a></li>
-                <li class="works-item _w-item-1x1 _w-item-floatleft course-works"><a href="gemini/gemini.pdf" class="Gemini"><img class="lazy" src="images/loading.png" data-echo="images/Gemini.png"></a></li>
-                <li class="works-item _w-item-1x1 _w-item-floatleft course-works"><a href="youling/youling.pdf" class="youling"><img class="lazy" src="images/loading.png" data-echo="images/youling.png"></a></li>
-                <li class="works-item _w-item-1x1 _w-item-floatleft course-works"><a href="guisu/guisu.html" class="youling"><img class="lazy" src="images/loading.png" data-echo="images/guisu.png"></a></li>
+                <li class="works-item _w-item-1x1 _w-item-floatleft course-works wow fadeIn"><a href="IMUC/imuc.html" class="imuc"><img class="lazy" src="images/loading.png" data-echo="images/imuc.png"></a></a></li>
+                <li class="works-item _w-item-2x1 _w-item-floatleft course-works wow fadeIn"><a href="daminchu/daminchu.pdf" class="daminchu"><img class="lazy" src="images/loading.png" data-echo="images/daminchu.png"></a></li>
+                <li class="works-item _w-item-2x1 _w-item-floatleft personal-works wow fadeIn"><a href="##" class="darkness"><img class="lazy" src="images/loading.png" data-echo="images/darkness.png"></a></li>
+                <li class="works-item _w-item-1x1 _w-item-floatleft course-works wow fadeIn"><a href="gemini/gemini.pdf" class="Gemini"><img class="lazy" src="images/loading.png" data-echo="images/Gemini.png"></a></li>
+                <li class="works-item _w-item-1x1 _w-item-floatleft course-works wow fadeIn"><a href="youling/youling.pdf" class="youling"><img class="lazy" src="images/loading.png" data-echo="images/youling.png"></a></li>
+                <li class="works-item _w-item-1x1 _w-item-floatleft personal-works wow fadeIn"><a href="guisu/guisu.html" class="youling"><img class="lazy" src="images/loading.png" data-echo="images/guisu.png"></a></li>
                 <div style="clear: both"></div>
             </ul>
         </div>
@@ -57,7 +59,7 @@
         offset: 300,//离可视区域多少像素的图片可以被加载
         throttle: 0 //图片延时多少毫秒加载
     });
-
+    new WOW().init();
 </script>
 
 </html>

@@ -86,6 +86,7 @@ $(document).ready(function() {
                 resetline();
                 $(".course-works").css("display","inline-block");
                 $(".personal-works").css("display","inline-block");
+                $(".personal-works").addClass("animated fadeIn");
                 worksShow=0;
             }
         });
@@ -102,6 +103,7 @@ $(document).ready(function() {
                 resetline();
                 $(".course-works").css("display","inline-block");
                 $(".personal-works").css("display","inline-block");
+                $(".course-works").addClass("animated fadeIn");
                 worksShow=0;
             }
         });
