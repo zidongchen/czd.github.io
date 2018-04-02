@@ -302,11 +302,9 @@ footer {
   box-sizing: border-box;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 70px 40px;
   align-items: center;
-  height: 160px;
-  padding-top: 70px;
-  text-align: right;
+  text-align: center;
 }
 .contact-container i {
   cursor: pointer;
@@ -320,7 +318,7 @@ footer {
   transition:all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .fa-weixin,.fa-envelope {
-  text-align: right;
+  text-align: center;
 
 }
 .qrcode {
@@ -343,13 +341,13 @@ footer {
 .weixin {
   cursor: pointer;
   display: inline-block;
-  margin-left: 40px;
+  margin: 40px;
   position: relative;
 }
 .email {
   cursor: pointer;
   display: inline-block;
-  margin-left: 40px;
+  margin: 40px;
   position: relative;
 }
 .weixin:hover i {

@@ -196,6 +196,9 @@ main {
   -ms-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   -o-transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   transition: all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  background-image: url("images/loading.gif");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .works-list a:hover img {
   width: 105%;
@@ -262,11 +265,9 @@ footer {
   box-sizing: border-box;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 70px 40px;
   align-items: center;
-  height: 160px;
-  padding-top: 70px;
-  text-align: right;
+  text-align: center;
 }
 .contact-container i {
   cursor: pointer;
@@ -281,7 +282,7 @@ footer {
 }
 .fa-weixin,
 .fa-envelope {
-  text-align: right;
+  text-align: center;
 }
 .qrcode {
   display: inline-block;
@@ -303,13 +304,13 @@ footer {
 .weixin {
   cursor: pointer;
   display: inline-block;
-  margin-left: 40px;
+  margin: 40px;
   position: relative;
 }
 .email {
   cursor: pointer;
   display: inline-block;
-  margin-left: 40px;
+  margin: 40px;
   position: relative;
 }
 .weixin:hover i {

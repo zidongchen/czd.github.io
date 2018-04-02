@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ZIDONG-大民厨</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi" />
+    <title>ZIDONG</title>
+    <!--    样式表-->
+    <link rel="stylesheet" type="text/css" href="styles_daminchu.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/less.js/2.7.2/less.min.js"></script>
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
-
+    <div id="header-wrapper" class="animated slideInDown">
+        <header>
+            <nav class="nav-bar" id="nav-bar">
+                <a href="" class="logo-container">
+                    <img src="../images/logo@2x.png" alt="" class="logo">
+                </a>
+                <ul class="nav-container">
+                    <li class="nav-option" id="personal"><a href="../index.html">BACK TO HOME</a><div class="line"></div></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="fakeheader" style="height: 160px;width: 100%"></div>
+    <main>
+        <img src="images/2x/logo_daminchu.png" alt="" class="lazyload wow fadeInDown" style="width: 20%;min-width: 200px;">
+        <img src="images/2x/1@2x.png" alt="" class="lazyload wow fadeInUp" style="width: 100%;margin-top: 10px;">
+        <h3 class="wow fadeInUp" style="text-align: center">需求分析</h3>
+        <p class="wow fadeInUp" style="text-align: center">人们担心外卖的食品安全问题，想吃安全放心的家常菜的人越来越多</p>
+        <p class="wow fadeInUp" style="text-align: center">家庭主妇们希望通过分享自己做的菜获得认同感与补贴家用</p>
+        <p class="wow fadeInUp" style="text-align: center">人工配送成本逐渐上升</p>
+        <img src="images/2x/43@2x.png" alt="" class="lazyload wow fadeInDown" style="width: 5%;margin-top: 10px">
+        <img src="images/2x/8@2x.png" alt="" class="lazyload wow fadeInUp" style="width: 10%;margin-top: 10px">
+        <p class="wow fadeInUp" style="text-align: center">通过线上APP，构建沟通做饭方和吃饭方的信息互通平台。做饭方在大民厨APP上发布将来一段时间内计划制作的菜单，买饭方亦可在APP上发布希望吃到的饭菜，双方可以互相沟通后建立订单。订单建立后，做饭方可以在 APP上看到买饭方的需求和补充要求，并收到APP配置的食材清单。买饭方可以通过APP随时与做饭方沟通并补充需求或更改需求，过程通过APP全程记录。</p>
+        <h3 class="wow fadeInUp" style="text-align: center">系统地图</h3>
+        <img src="images/SVG/46.svg" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <h3 class="wow fadeInUp" style="text-align: center">食品安全信息管理系统</h3>
+        <img src="images/SVG/47.svg" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <h3 class="wow fadeInUp" style="text-align: center">订单管理系统</h3>
+        <img src="images/SVG/48.svg" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <h3 class="wow fadeInUp" style="text-align: center">故事版</h3>
+        <img src="images/2x/49@2x.png" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <h3 class="wow fadeInUp" style="text-align: center">商业画布</h3>
+        <img src="images/2x/50@2x.png" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <h3 class="wow fadeInUp" style="text-align: center">APP</h3>
+        <img src="images/2x/51@2x.png" alt="" class="lazyload wow fadeInUp" style="width: 70%;margin-top: 10px">
+        <div style="clear: both"></div>
+    </main>
+    <footer>
+        <div class="contact-container">
+            <a class="weixin" href="#qrcode" id="wenxinIcon">
+                <i class="fa fa-weixin"></i>
+            </a>
+            <a class="email" href="mailto:zidong.chen@outlook.com"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
+    <a href="##" class="overlay" id="qrcode"><div class="qrcode"></div></a>
 </body>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+    Echo.init({
+        offset: 00,
+        throttle: 0
+    });
+</script>
 </html>
