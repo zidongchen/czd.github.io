@@ -5,6 +5,7 @@ $(document).ready(function() {
     var navBar=document.getElementById("nav-bar");
     var startY = 0;
     var moveY = 0;
+    var carouselPageNum=1;
 //  鼠标滚轮
     /*注册事件*/
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -72,47 +73,77 @@ $(document).ready(function() {
         }//W3C
         window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome/Safari
     }
-    var worksShow = 0;
-        $("#course").on("click",function (){
-            if (worksShow==0||worksShow==2){
-                resetline();
-                $("#course a").css("color","#ffffff");
-                $("#course .line").addClass("active");
-                $(".course-works").css("display","inline-block");
-                $(".personal-works").css("display","none");
-                worksShow=1;
-            }
-            else if (worksShow==1){
-                resetline();
-                $(".course-works").css("display","inline-block");
-                $(".personal-works").css("display","inline-block");
-                $(".personal-works").addClass("animated fadeIn");
-                worksShow=0;
-            }
-        });
-        $("#personal").on("click",function (){
-            if (worksShow==0||worksShow==1){
-                resetline();
-                $("#personal a").css("color","#ffffff");
-                $("#personal .line").addClass("active");
-                $(".course-works").css("display","none");
-                $(".personal-works").css("display","inline-block");
-                worksShow=2;
-            }
-            else if (worksShow==2){
-                resetline();
-                $(".course-works").css("display","inline-block");
-                $(".personal-works").css("display","inline-block");
-                $(".course-works").addClass("animated fadeIn");
-                worksShow=0;
-            }
-        });
-    function resetline() {
-        $(".nav-option a").css("color","#555656");
-        $(".nav-option .line").removeClass("active");
+    // var worksShow = 0;
+    //     $("#course").on("click",function (){
+    //         if (worksShow==0||worksShow==2){
+    //             resetline();
+    //             $("#course a").css("color","#ffffff");
+    //             $("#course .line").addClass("active");
+    //             $(".course-works").css("display","inline-block");
+    //             $(".personal-works").css("display","none");
+    //             worksShow=1;
+    //         }
+    //         else if (worksShow==1){
+    //             resetline();
+    //             $(".course-works").css("display","inline-block");
+    //             $(".personal-works").css("display","inline-block");
+    //             $(".personal-works").addClass("animated fadeIn");
+    //             worksShow=0;
+    //         }
+    //     });
+    //     $("#personal").on("click",function (){
+    //         if (worksShow==0||worksShow==1){
+    //             resetline();
+    //             $("#personal a").css("color","#ffffff");
+    //             $("#personal .line").addClass("active");
+    //             $(".course-works").css("display","none");
+    //             $(".personal-works").css("display","inline-block");
+    //             worksShow=2;
+    //         }
+    //         else if (worksShow==2){
+    //             resetline();
+    //             $(".course-works").css("display","inline-block");
+    //             $(".personal-works").css("display","inline-block");
+    //             $(".course-works").addClass("animated fadeIn");
+    //             worksShow=0;
+    //         }
+    //     });
+    // function resetline() {
+    //     $(".nav-option a").css("color","#555656");
+    //     $(".nav-option .line").removeClass("active");
+    //
+    // }
+
+    /* 点击锚点滑动 */
+    $(".anchor").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top-100},1000);
+        i=7;
+        headerWrapper.style.top=-i*13 +'px';
+        navBar.style.height=140-i*i+'px';
+        return false;
+    });
+    var carousel = function () {
+        if(carouselPageNum==1){
+            carouselPageNum+=1;
+            $(".carousel").css("left","calc(-100% )");
+            $(".carousel-point").animate({left:"10px"},1000);
+            console.log("aaa");
+        }
+        else if(carouselPageNum==2){
+            carouselPageNum+=1;
+            $(".carousel").css("left","calc(-200% )");
+            $(".carousel-point").animate({left:"20px"},1000);
+            console.log("bbb");
+        }
+        else {
+            carouselPageNum=1;
+            $(".carousel").css("left","0%");
+            $(".carousel-point").animate({left:"0px"},1000);
+        }
 
     }
-
+    setInterval(carousel,7000);
 });
 
 /*!

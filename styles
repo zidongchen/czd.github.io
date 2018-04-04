@@ -44,10 +44,10 @@ header {
 .logo-container {
   flex-grow: 1;
   align-items: center;
-  height: 20px;
+  height: 36px;
 }
 .logo {
-  height: 20px;
+  height: 36px;
 }
 .nav-container {
   bottom: 10px;
@@ -62,8 +62,6 @@ header {
   display: inline-block;
   margin: 0;
   margin-left:40px;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
   text-align: right;
   position: relative;
 }
@@ -77,8 +75,8 @@ header {
   width:100%;
   height: 2px;
   position: absolute;
-  top: -2px;
-  background-color: #33bbbc;
+  top: -4px;
+  background-color: #333333;
   -webkit-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   -moz-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   -ms-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
@@ -98,9 +96,10 @@ header {
 .nav-option a {
   display: block;
   text-decoration: none;
-  color: #555656;
+  color: #333333;
   font-size: 1rem;
   font-weight: 800;
+  letter-spacing: 1px;
   -webkit-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   -moz-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   -ms-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
@@ -116,6 +115,79 @@ main {
   left: 0;
   top: 0;
 }
+.carousel-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 0;
+  overflow: hidden;
+}
+.carousel-container .carousel {
+  position: relative;
+  list-style: none;
+  white-space: nowrap;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  font-size:0;
+  -webkit-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+}
+.carousel-container ul li {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 50%;
+  height: 0;
+}
+.carousel-container a {
+  display: block;
+  position: absolute;
+  left: 1px;
+  top: 0;
+  bottom: 0;
+  right: 1px;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+.carousel-container a img {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+}
+.carousel-point-container {
+  position: relative;
+  height: 10px;
+  width: 30px;
+  border: solid 2px #333333;
+  float: right;
+  margin: 0 20px;
+  top:-30px;
+}
+.carousel-point {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  background-color: #333333;
+}
 .works-container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -123,7 +195,7 @@ main {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 00px;
+  padding: 0 0;
 }
 .works-container .works-list {
   display: block;
@@ -151,6 +223,54 @@ main {
   right: 1px;
   background-color: #eeeeee;
   overflow: hidden;
+  border: #333333 solid 4px;
+}
+.works-container .works-item span {
+  display: block;
+  font-size: 14px;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  color: #333333;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.6);
+  padding: 0px 0px 0px  10px ;
+  opacity: 1;
+  -webkit-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  box-sizing: border-box;
+}
+.works-container span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  right: 0;
+  background-image: url("images/SVG/triangle.svg");
+}
+.works-container .title-container {
+  float: left;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 100px;
+  box-sizing: border-box;
+}
+.works-container h2{
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  height: 20px;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 //各种works的尺寸
 ._w-item-1x1 {
@@ -173,7 +293,7 @@ main {
   height: 0;
   padding-bottom: 66.66%;
 }
-.works-list a {
+.works-list a,.carousel-container a {
   filter: grayscale (100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -200,14 +320,16 @@ main {
   -ms-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   -o-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
-  background-image: url("images/loading.gif");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .works-list a:hover img {
-  width: 105%;
+  //width: 105%;
 }
-.works-list a:hover {
+.works-list a:hover span {
+  opacity: 1;
+  left: 0px;
+  bottom: 0;
+}
+.works-list a:hover,.carousel-container a:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -221,75 +343,10 @@ main {
   width: auto;
   height: 105%;
 }
-//电脑支架
-.works-list a.Gemini{
-  font-family: Helvetica;
-  text-decoration: none;
-}
-.works-list a.Gemini::after {
-}
-//电脑支架
-//写实icon练习
-.works-list a.dengpao img{
 
-}
-.works-list a.dengpao:hover img{
-}
-.works-list a.dengpao:after {
-  display: inline-block;
-  width: 100%;
-  content: " ";
-  font-size: 1.5rem;
-  letter-spacing:10px;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-//写实icon练习
-//c4d练习
-.works-list a.dang {
-}
-.works-list a.dang:after {
-  display: inline-block;
-  width: 100%;
-  content: " ";
-  font-size: 1.5rem;
-  letter-spacing:10px;
-  text-align: center;
-  color: #eeeeee;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
 
-//c4d练习
-//大民厨
-.works-list a.daminchu {
-}
-//大民厨
-.works-list>:nth-child(5) a {
 
-}
-.works-list>:nth-child(6) a {
 
-}
-.works-list>:nth-child(7) a {
-
-}
-.works-list>:nth-child(8) a {
-
-}
 
 footer {
   position: relative;
@@ -351,10 +408,10 @@ footer {
   position: relative;
 }
 .weixin:hover i {
-  color: #33bbbc;
+  color: #333333;
 }
 .email:hover i {
-  color: #33bbbc;
+  color: #333333;
 }
 .overlay {
   position: fixed;
