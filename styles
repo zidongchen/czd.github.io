@@ -29,7 +29,7 @@ header {
 .nav-bar {
   display: flex;
   box-sizing: border-box;
-  max-width: 1120px;
+  max-width: 1080px;
   height: 140px;
   margin:0 auto;
   padding: 0 20px;
@@ -69,11 +69,11 @@ header {
   position: relative;
   z-index: 2;
 }
-.nav-option .line {
+.line {
   content: "";
   display: block;
   width:100%;
-  height: 2px;
+  height: 3px;
   position: absolute;
   top: -4px;
   background-color: #333333;
@@ -85,13 +85,8 @@ header {
   transform: scaleX(0);
   z-index: 1;
 }
-.nav-option:hover .line {
+.nav-option:hover .line ,.weixin:hover .line,.email:hover .line{
   transform: scaleX(1);
-}
-.nav-option .active {
-  transform: scaleX(1);
-  height: 36px;
-  top:-10px;
 }
 .nav-option a {
   display: block;
@@ -105,10 +100,7 @@ header {
   -ms-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   -o-transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
   transition:all 0.3s cubic-bezier(0.29, 0, 0.25, 1);
-  margin-left: 10px;
-  margin-right: 10px;
 }
-
 
 main {
   position: relative;
@@ -133,11 +125,11 @@ main {
   width: 100%;
   left: 0;
   font-size:0;
-  -webkit-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
-  -moz-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
-  -ms-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
-  -o-transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
-  transition:all 2s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
+  -webkit-transition:all 2s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition:all 2s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition:all 2s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition:all 2s cubic-bezier(0.29, 0, 0.25, 1);
+  transition:all 2s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .carousel-container ul li {
   position: relative;
@@ -177,16 +169,23 @@ main {
   position: relative;
   height: 10px;
   width: 30px;
-  border: solid 2px #333333;
   float: right;
   margin: 0 20px;
-  top:-30px;
+  top: -30px;
+  background-color: #cccccc;
 }
 .carousel-point {
   position: relative;
+  left: 0px;
+  top: 0px;
   height: 10px;
   width: 10px;
   background-color: #333333;
+  -webkit-transition:all 1s 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -moz-transition:all 1s 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -ms-transition:all 1s 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  -o-transition:all 1s 0.2s cubic-bezier(0.29, 0, 0.25, 1);
+  transition:all 1s 0.2s cubic-bezier(0.29, 0, 0.25, 1);
 }
 .works-container {
   -webkit-box-sizing: border-box;
@@ -223,7 +222,7 @@ main {
   right: 1px;
   background-color: #eeeeee;
   overflow: hidden;
-  border: #333333 solid 4px;
+  border: #333333 solid 3px;
 }
 .works-container .works-item span {
   display: block;
@@ -231,13 +230,12 @@ main {
   height: 20px;
   width: 100%;
   position: absolute;
-  bottom: -20px;
-  left: 0px;
+  bottom: 0px;
   color: #333333;
   z-index: 1;
   background-color: rgba(255,255,255,0.6);
-  padding: 0px 0px 0px  10px ;
-  opacity: 1;
+  padding: 0 0 0 17px ;
+  opacity: 0;
   -webkit-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   -moz-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   -ms-transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
@@ -245,32 +243,33 @@ main {
   transition:all 0.4s 0.1s cubic-bezier(0.29, 0, 0.25, 1);
   box-sizing: border-box;
 }
-.works-container span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  top: 0;
-  right: 0;
-  background-image: url("images/SVG/triangle.svg");
-}
 .works-container .title-container {
   float: left;
   width: 100%;
   padding: 0 20px;
-  margin-top: 100px;
+  margin-top: 300px;
   box-sizing: border-box;
+  position: relative;
+  display: inline-block;
 }
-.works-container h2{
+.works-container h2 {
   display: block;
   box-sizing: border-box;
   float: left;
-  height: 20px;
   color: #333333;
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 1px;
+  padding: 2px;
+}
+.title-background {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top:0;
+  left: 2px;
+  z-index: -1;
+  border: #333333 solid 3px;
 }
 //各种works的尺寸
 ._w-item-1x1 {
@@ -326,7 +325,6 @@ main {
 }
 .works-list a:hover span {
   opacity: 1;
-  left: 0px;
   bottom: 0;
 }
 .works-list a:hover,.carousel-container a:hover {
@@ -359,9 +357,17 @@ footer {
   box-sizing: border-box;
   max-width: 1120px;
   margin: 0 auto;
+  margin-top: 230px;
   padding: 70px 40px;
   align-items: center;
   text-align: center;
+}
+.contact-container a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 800;
+  text-align: center;
+  position: relative;
 }
 .contact-container i {
   cursor: pointer;
@@ -373,10 +379,6 @@ footer {
   -ms-transition:all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
   -o-transition:all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
   transition:all 0.2s cubic-bezier(0.29, 0, 0.25, 1);
-}
-.fa-weixin,.fa-envelope {
-  text-align: center;
-
 }
 .qrcode {
   display: inline-block;
@@ -463,6 +465,9 @@ footer {
   html,body {
     font-size: 10px;
   };
+  .carousel-container ul li {
+    padding-bottom: 100%;
+  }
   .works-container .works-list .works-item {
     width: 100%;
     height: 0;
@@ -476,7 +481,7 @@ footer {
   }
   .nav-option {
     text-align: left;
-    left: -10px;
+    left: 0px;
     margin-left: 0;
     margin-right: 2rem;
   }
@@ -485,6 +490,9 @@ footer {
   html,body {
     font-size: 10px;
   };
+  .carousel-container ul li {
+    padding-bottom: 100%;
+  }
   .works-container .works-list .works-item {
     width: 100%;
     height: 0;
@@ -498,7 +506,7 @@ footer {
   }
   .nav-option {
     text-align: left;
-    left: -10px;
+    left: 0px;
     margin-left: 0;
     margin-right: 2rem;
   }

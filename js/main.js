@@ -127,19 +127,17 @@ $(document).ready(function() {
         if(carouselPageNum==1){
             carouselPageNum+=1;
             $(".carousel").css("left","calc(-100% )");
-            $(".carousel-point").animate({left:"10px"},1000);
-            console.log("aaa");
+            $(".carousel-point").css("left","10px");
         }
         else if(carouselPageNum==2){
             carouselPageNum+=1;
             $(".carousel").css("left","calc(-200% )");
-            $(".carousel-point").animate({left:"20px"},1000);
-            console.log("bbb");
+            $(".carousel-point").css("left","20px");
         }
         else {
             carouselPageNum=1;
             $(".carousel").css("left","0%");
-            $(".carousel-point").animate({left:"0px"},1000);
+            $(".carousel-point").css("left","0%");
         }
 
     }
