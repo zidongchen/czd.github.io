@@ -67,6 +67,7 @@ $(document).ready(function() {
 
     setTimeout(function () {
         document.getElementById("darkness").load();
+        document.getElementById("darkness").play();
     },100);
     $(".page1>.page-writing").addClass("active");
 
