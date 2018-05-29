@@ -185,10 +185,10 @@ ul {
   z-index: 2;
 }
 .pages-container .pages {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: relative;
 }
 .pages-container .picture {
   position: absolute;
@@ -201,6 +201,14 @@ ul {
   height: 100%;
   left: 50%;
   transform: translate(-50%, 0);
+}
+.pages-container .picture video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  object-fit: cover;
 }
 .pages-container .page-writing {
   position: absolute;
@@ -339,12 +347,9 @@ footer .logo {
   background: url("images/SVG/logo.svg");
 }
 @media screen and (min-width: 1600px) {
-  .picture > img {
-    position: absolute;
+  .pages-container .picture > img {
     height: auto;
     width: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
   }
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
