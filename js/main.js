@@ -5,6 +5,9 @@ $(document).ready(function() {
     var moveY = 0;
     var isChangingPage = false;
     var timeOutFlag=null;
+    $('body').on('touchmove touchstart', function (event) {
+        event.preventDefault();
+    });
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
@@ -103,6 +106,7 @@ $(document).ready(function() {
 
     else{
         var scrollFunc = function (e) {
+            e.preventDefault();
             e = e || window.event;
             if (e.wheelDelta) {
                 if (e.wheelDelta / 120 > 0 && i > 1) {
@@ -148,7 +152,6 @@ $(document).ready(function() {
                     },50)
                 }
             }
-            e.preventDefault();
         }
     };
         if (document.addEventListener) {
