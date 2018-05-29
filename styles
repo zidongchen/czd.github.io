@@ -213,6 +213,12 @@ ul {
       left: 0;
       height:100%;
       width:100%;
+      -ms-background-position-x: center;
+      background-position-x: center;
+      -ms-background-position-y: center;
+      background-position-y: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     video {
       position: absolute;
