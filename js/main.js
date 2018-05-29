@@ -21,7 +21,7 @@ $(document).ready(function() {
         switch (i){
             case 1 :
                 resetPageWriting();
-                document.getElementById("darkness").load();
+                // document.getElementById("darkness").load();
                 $(".page1>.page-writing").addClass("active");
                 $(".pages-container").css("top","00");
                 $(".change-num-container").css("top","00");
@@ -65,10 +65,6 @@ $(document).ready(function() {
         }
     }
 
-    setTimeout(function () {
-        document.getElementById("darkness").load();
-        document.getElementById("darkness").play();
-    },100);
     $(".page1>.page-writing").addClass("active");
 
     /*注册事件*/
