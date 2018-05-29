@@ -5,13 +5,13 @@ $(document).ready(function() {
     var moveY = 0;
     var isChangingPage = false;
     var timeOutFlag=null;
-
-    $('body').on('touchmove', function (event) {
-        event.preventDefault();
-    });
-    $('body').on('touchstart', function (event) {
-        event.preventDefault();
-    });
+    //
+    // $('body').on('touchmove', function (event) {
+    //     event.preventDefault();
+    // });
+    // $('body').on('touchstart', function (event) {
+    //     event.preventDefault();
+    // });
 
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
@@ -74,7 +74,6 @@ $(document).ready(function() {
             touch = e.targetTouches[0];
             startY = touch.pageY;
             e.preventDefault();
-            e.stopPropagation();
         }, false);
         //监听 touchmove事件，可计算出滑动的距离
         document.addEventListener('touchmove', function(e){
@@ -82,7 +81,6 @@ $(document).ready(function() {
             touch = e.targetTouches[0];
             moveY = touch.pageY - startY;//变化的量
             e.preventDefault();
-            e.stopPropagation();
         }, false);
         //监听touchend，监听touch结束，可判断是上滑，还是下滑
         document.addEventListener('touchend', function(e){
@@ -108,7 +106,6 @@ $(document).ready(function() {
                 }
             }
             e.preventDefault();
-            e.stopPropagation();
         }, false);
     }
 
