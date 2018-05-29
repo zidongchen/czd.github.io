@@ -12,6 +12,12 @@ $(document).ready(function() {
     document.querySelector('body').addEventListener('touchmove', function (ev) {
         event.preventDefault();
     });
+    document.querySelector('html').addEventListener('touchstart', function (ev) {
+        event.preventDefault();
+    });
+    document.querySelector('html').addEventListener('touchmove', function (ev) {
+        event.preventDefault();
+    });
 
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
