@@ -5,6 +5,11 @@ $(document).ready(function() {
     var moveY = 0;
     var isChangingPage = false;
     var timeOutFlag=null;
+    
+    $('body').on('touchmove touchstart', function (event) {
+        event.preventDefault();
+    });
+
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
