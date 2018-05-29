@@ -19,6 +19,12 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    var winHeight = window.innerHeight;
+
+    window.addEventListener('resize', function(event){
+        winHeight = window.innerHeight;
+    });
+    
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
