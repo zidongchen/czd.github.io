@@ -5,7 +5,7 @@ html,body {
   height: 100vh;
   overflow: hidden;
   font-family: Arial;
-  touch-action: none
+  touch-action: none;
 }
 ul {
   list-style: none;
