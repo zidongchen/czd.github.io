@@ -1,8 +1,8 @@
 html,
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   font-family: Arial;
   touch-action: none;
@@ -230,7 +230,7 @@ ul {
   padding: 0;
   padding-bottom: 20px;
   font-size: 1rem;
-  transition: 0.5s 0.7s;
+  transition: 0.5s 0.5s;
 }
 .pages-container .page-writing .readmore {
   position: relative;
