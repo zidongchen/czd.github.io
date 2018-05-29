@@ -231,7 +231,7 @@ ul {
   line-height: 6rem;
   transition: 0.5s 0.6s;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0 ;
 }
 .pages-container .page-writing p {
   position: relative;
