@@ -6,6 +6,12 @@ $(document).ready(function() {
     var isChangingPage = false;
     var timeOutFlag=null;
 
+    var winHeight = document.documentElement.clientWidth
+
+    window.addEventListener('resize', function(event){
+        winHeight = document.documentElement.clientWidth;
+    });
+
     document.querySelector('body').addEventListener('touchstart', function (ev) {
         event.preventDefault();
     });
@@ -17,12 +23,6 @@ $(document).ready(function() {
     });
     document.querySelector('html').addEventListener('touchmove', function (ev) {
         event.preventDefault();
-    });
-
-    var winHeight = window.innerHeight;
-
-    window.addEventListener('resize', function(event){
-        winHeight = window.innerHeight;
     });
 
     function resetPageWriting() {
