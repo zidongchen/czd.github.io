@@ -17,7 +17,7 @@ $(document).ready(function() {
         $(".page-writing").removeClass("active");
     }
 
-    function changePage() {
+    function changePage(i) {
         switch (i){
             case 1 :
                 resetPageWriting();
@@ -63,10 +63,12 @@ $(document).ready(function() {
                 $(".cover-1").addClass("go-up");
                 $(".page-icon-container").addClass("go-up");
         }
-        isChangingPage = false;
     }
 
-    changePage();
+    setTimeout(function () {
+        document.getElementById("darkness").load();
+    },100);
+    $(".page1>.page-writing").addClass("active");
 
     /*注册事件*/
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -97,7 +99,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i+=1;
-                        changePage();
+                        changePage(i);
                     },50)
                 }
             }else{//向下
@@ -107,7 +109,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i-=1;
-                        changePage();
+                        changePage(i);
                     },50)
                 }
             }
@@ -127,7 +129,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i-=1;
-                        changePage();
+                        changePage(i);
                         },50)
                     }
                 else if (e.wheelDelta / 120 < 0 && i < 5 ) {
@@ -137,7 +139,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i+=1;
-                        changePage();
+                        changePage(i);
                         },50)
                 }
             }
@@ -149,7 +151,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i-=1;
-                        changePage();
+                        changePage(i);
                     },50)
                 }
                 else if (e.detail / 3 > 0) {
@@ -159,7 +161,7 @@ $(document).ready(function() {
                     }
                     timeOutFlag=setTimeout(function(){
                         i+=1;
-                        changePage();
+                        changePage(i);
                     },50)
                 }
             }
@@ -178,7 +180,7 @@ $(document).ready(function() {
             }
             timeOutFlag=setTimeout(function(){
                 i-=1;
-                changePage();
+                changePage(i);
             },50)
         }
     });
@@ -189,7 +191,7 @@ $(document).ready(function() {
             }
             timeOutFlag=setTimeout(function(){
                 i+=1;
-                changePage();
+                changePage(i);
             },50)
         }
     });
