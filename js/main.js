@@ -32,7 +32,7 @@ $(document).ready(function() {
                 resetPageWriting();
                 $(".page2>.page-writing").addClass("active");
                 $(".pages-container").css("top","-100%");
-                $(".change-num-container").css("top","-40px");
+                $(".change-num-container").css("top","-2.5rem");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
                 break;
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 resetPageWriting();
                 $(".page3>.page-writing").addClass("active");
                 $(".pages-container").css("top","-200%");
-                $(".change-num-container").css("top","-80px");
+                $(".change-num-container").css("top","-5rem");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
                 break;
@@ -48,7 +48,7 @@ $(document).ready(function() {
                 resetPageWriting();
                 $(".page4>.page-writing").addClass("active");
                 $(".pages-container").css("top","-300%");
-                $(".change-num-container").css("top","-120px");
+                $(".change-num-container").css("top","-7.5rem");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
                 $(".cover-1").removeClass("go-up");
