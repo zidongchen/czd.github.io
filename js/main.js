@@ -46,7 +46,7 @@ $(document).ready(function() {
                 break;
             case 5 :
                 resetPageWriting();
-                $(".pages-container").css("top","-320vh");
+                $(".pages-container").css("top","-340vh");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","0");
                 $(".cover-1").addClass("go-up");
@@ -145,6 +145,7 @@ $(document).ready(function() {
                     },50)
                 }
             }
+            e.preventDefault();
         }
     };
         if (document.addEventListener) {

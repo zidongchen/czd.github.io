@@ -9,14 +9,15 @@ html,body {
   position: absolute;
   z-index: 9999;
   opacity: 1;
-  -webkit-transition: ease-in-out 0.7s 0.2s;
-  -moz-transition: ease-in-out 0.7s 0.2s;
-  -ms-transition: ease-in-out 0.7s 0.2s;
-  -o-transition: ease-in-out 0.7s 0.2s;
-  transition: ease-in-out 0.7s 0.2s;
+  -webkit-transition: ease-in-out 0.9s ;
+  -moz-transition: ease-in-out 0.9s ;
+  -ms-transition: ease-in-out 0.9s ;
+  -o-transition: ease-in-out 0.9s ;
+  transition: ease-in-out 0.9s ;
 }
 .cover-1.go-up {
-  transform: translate(0,-20vh);
+  transform: translate(0,-40vh);
+  opacity:0;
 }
 .logo-container {
   position: absolute;
@@ -97,8 +98,8 @@ html,body {
 .scroll-down {
   display: block;
   position: absolute;
-  width: 20px;
-  height: 100px;
+  width: 10px;
+  height: 50px;
   left: 40px;
   bottom: 200px;
   background: url("images/SVG/scrolldown.svg") no-repeat;
@@ -127,7 +128,7 @@ html,body {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: 0.7s ease-in-out;
+    transition: 0.9s ;
   }
   .prev-page {
     position: absolute;
@@ -136,7 +137,7 @@ html,body {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: 0.7s ease-in-out;
+    transition: 0.9s ;
     opacity: 0;
   }
   .next-page:after {
@@ -163,7 +164,7 @@ html,body {
     transition: 0.3s ease-in-out;
   }
   .next-page:hover:after {
-    bottom: 0px;
+    bottom: 0;
   }
   .prev-page:hover:after {
     bottom: 10px;
@@ -171,6 +172,9 @@ html,body {
 }
 .go-up>.prev-page{
   transform: translate(0,60px);
+}
+.page-icon-container.go-up {
+  opacity:1;
 }
 .pages-container {
   width: 100%;
@@ -201,55 +205,74 @@ html,body {
   .page-writing {
     position: absolute;
     width: 40%;
-    left: 35%;
-    bottom: 184px;
+    left: 30%;
+    bottom: 200px;
     font-family: Arial;
-    font-size: 4rem;
     color: #ffffff;
     opacity: 0;
     text-decoration: none;
     transition: 0.5s 0.5s;
-  }
-  .page-writing.active {
-    left: 30%;
-    opacity: 1;
-  }
+
     h1 {
+      position: relative;
+      left: 20px;
       margin: 0;
       padding: 0;
+      padding-bottom: 2rem;
       font-size: 4rem;
-      -webkit-padding-after: 0;
-      font-weight: 600;
-    }
-    h2 {
-      font-size: 2rem;
+      line-height: 6rem;
+      transition: 0.5s 0.6s;
+
     }
     p{
+      position: relative;
+      left: 20px;
       display: inline-block;
       margin: 0;
-      font-size: 1rem;
       padding: 0;
-      -webkit-margin-after: 0;
+      padding-bottom: 20px;
+      font-size: 1rem;
+      transition: 0.5s 0.7s;
     }
     .readmore {
       position: relative;
+      left: 0;
       display: inline-block;
-      line-height: 40px;
+      font-size: 1rem;
+      line-height: 1rem;
       opacity: 0.5;
       transition: 0.5s ease-in-out ;
     }
     .a-line {
       position: absolute;
       left: 0;
-      bottom: 0;
-      width: 70vw;
+      bottom: -2px;
+      width: 0;
       height: 2px;
       background: #ffffff;
       opacity: 0.8;
       transition: 0.5s ease-in-out ;
     }
+  }
+  .page-writing.active {
+    opacity: 1;
+
+    h1 {
+      left: 0;
+    }
+    p {
+      left: 0;
+    }
+    .readmore {
+      left: 0;
+    }
+    .a-line {
+      width: 0%;
+    }
+  }
+
   .page-writing:hover .a-line {
-    width: 70vw;
+    width: 100%;
     opacity: 0.8;
   }
   .page-writing:hover .readmore {
@@ -260,10 +283,10 @@ footer {
   display: block;
   position: absolute;
   width: 100%;
-  height: 20vh;
+  height: 40vh;
   bottom: 0;
   left: 0;
-  background-color: #111111;
+  background-color: #000000;
   z-index:-1;
 }
 
@@ -285,7 +308,7 @@ footer {
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html,
   body {
-    font-size: 10px;
+    font-size: 8px;
   }
   .logo-container {
     left: 40px;
@@ -299,7 +322,7 @@ footer {
 @media screen and (max-width: 479px) {
   html,
   body {
-    font-size: 10px;
+    font-size: 8px;
   }
   .logo-container {
     left: 40px;
