@@ -24,7 +24,7 @@ $(document).ready(function() {
     window.addEventListener('resize', function(event){
         winHeight = window.innerHeight;
     });
-    
+
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
@@ -41,7 +41,7 @@ $(document).ready(function() {
             case 2 :
                 resetPageWriting();
                 $(".page2>.page-writing").addClass("active");
-                $(".pages-container").css("top","-100vh");
+                $(".pages-container").css("top","-100%");
                 $(".change-num-container").css("top","-40px");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
@@ -49,7 +49,7 @@ $(document).ready(function() {
             case 3 :
                 resetPageWriting();
                 $(".page3>.page-writing").addClass("active");
-                $(".pages-container").css("top","-200vh");
+                $(".pages-container").css("top","-200%");
                 $(".change-num-container").css("top","-80px");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
@@ -57,19 +57,21 @@ $(document).ready(function() {
             case 4 :
                 resetPageWriting();
                 $(".page4>.page-writing").addClass("active");
-                $(".pages-container").css("top","-300vh");
+                $(".pages-container").css("top","-300%");
                 $(".change-num-container").css("top","-120px");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","1");
                 $(".cover-1").removeClass("go-up");
                 $(".page-icon-container").removeClass("go-up");
+                $(".page-icon-container").removeClass("go-up");
                 break;
             case 5 :
                 resetPageWriting();
-                $(".pages-container").css("top","-340vh");
+                $(".pages-container").css("top","-340%");
                 $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","0");
                 $(".cover-1").addClass("go-up");
+                $(".page-icon-container").addClass("go-up");
         }
         isChangingPage = false;
     }
