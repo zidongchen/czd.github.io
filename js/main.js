@@ -13,9 +13,9 @@ $(document).ready(function() {
         winHeight = document.documentElement.clientHeight;
     });
 
-    document.body.addEventListener('touchmove', function (event) {
-        event.preventDefault();
-    }, false);
+    // document.body.addEventListener('touchmove', function (event) {
+    //     event.preventDefault();
+    // }, false);
 
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
