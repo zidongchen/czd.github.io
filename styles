@@ -5,7 +5,8 @@ html,body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: Arial;
+  font-family: 'Poppins', serif;
+  letter-spacing: 2px;
   touch-action: none;
   left: 0;
   right: 0;
@@ -26,7 +27,7 @@ ul {
   transition: ease-in-out 0.9s ;
 }
 .cover-1.go-up {
-  transform: translate(0,-240%);
+  //transform: translate(0,-240%);
   opacity:0;
 }
 .logo-container {
@@ -138,12 +139,11 @@ ul {
     margin: 0px;
     padding: 0px;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.7s;
 
     li {
       font-size: 3rem;
       margin-bottom: 2rem;
-      font-weight: 600;
       a {
         position: relative;
         text-decoration: none;
@@ -193,7 +193,6 @@ ul {
   position: absolute;
   left: 2.5rem;
   bottom: 2.5rem;
-  font-family: Arial;
   width: 5rem;
   height: 2.5rem;
   color: #ffffff;
@@ -202,6 +201,7 @@ ul {
   .change-num-container {
     position: absolute;
     font-size: 2.5rem;
+    line-height: 2.5rem;
     width: 2.5rem;
     transition: 0.7s 0.2s;
 
@@ -211,23 +211,25 @@ ul {
     }
   }
   .unchange-num-container {
-    padding: 5px;
+    padding-top: 5px;
     width: 2.5rem;
     height: 2.5rem;
-    position: relative;
+    position: absolute;
     left: 2.5rem;
-    top: 0px;
     font-size: 1rem;
+    line-height: 1rem;
+    text-align: right;
   }
 }
 .scroll-down {
   display: block;
   position: absolute;
-  width: 1rem;
-  height: 5rem;
   right: 2.5rem;
   bottom: 14.5rem;
-  background: url("images/SVG/scrolldown.svg") no-repeat;
+  font-size: 1rem;
+  color: #ffffff;
+  transform: rotate(90deg) translate(0,1.5rem);
+  transform-origin: right bottom;
 }
 .tittle {
   display: block;
@@ -236,7 +238,6 @@ ul {
   right: 30%;
   color: #ffffff;
   font-size: 1rem;
-  font-family: Arial;
   opacity: 0.8;
 }
 .page-icon-container {
@@ -352,7 +353,6 @@ ul {
     height: 100%;
     left: 30%;
     bottom: 0;
-    font-family: Arial;
     color: #ffffff;
     opacity: 0;
     text-decoration: none;
@@ -368,8 +368,7 @@ ul {
       font-size: 4rem;
       line-height: 5rem;
       transition: 0.5s 0.6s;
-      font-weight: 600;
-      letter-spacing:0 ;
+
     }
     p{
       position: absolute;
@@ -494,12 +493,6 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
-  .pages-container{
-    .picture>img {
-      height:auto;
-      width: 100%;
-    }
-  }
 
 }
 @media screen and (max-width: 1200px) and (min-width: 980px) {
