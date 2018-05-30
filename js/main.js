@@ -13,6 +13,10 @@ $(document).ready(function() {
         winHeight = document.documentElement.clientWidth;
     });
 
+    document.body.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+    }, false);
+
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
