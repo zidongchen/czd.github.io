@@ -102,7 +102,7 @@ $(document).ready(function() {
                         changePage(i);
                     },50)
                 }
-            }else{//向下
+            }else if (moveY>20){//向下
                 if(i>1){
                     if(timeOutFlag!=null){
                         clearTimeout(timeOutFlag);
