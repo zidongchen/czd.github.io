@@ -92,7 +92,7 @@ $(document).ready(function() {
         }, false);
         //监听touchend，监听touch结束，可判断是上滑，还是下滑
         document.addEventListener('touchend', function(e){
-            if(moveY < -10){//向上(或者不动——例如双击)
+            if(moveY < -500){//向上(或者不动——例如双击)
                 if (i<5){
                     if(timeOutFlag!=null){
                         clearTimeout(timeOutFlag);
