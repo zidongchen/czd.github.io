@@ -489,6 +489,7 @@ footer {
     width: 106px;
     height: 20px;
     background: url("images/SVG/logo.svg");
+    opacity: 0.5;
   }
 }
 
