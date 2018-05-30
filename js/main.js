@@ -7,10 +7,10 @@ $(document).ready(function() {
     var timeOutFlag=null;
 
 
-    var winHeight = document.documentElement.clientWidth
+    var winHeight = document.documentElement.clientHeight
 
     window.addEventListener('resize', function(event){
-        winHeight = document.documentElement.clientWidth;
+        winHeight = document.documentElement.clientHeight;
     });
 
     document.body.addEventListener('touchmove', function (event) {

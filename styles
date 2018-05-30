@@ -7,10 +7,13 @@ html,body {
   overflow: hidden;
   font-family: Arial;
   touch-action: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 ul {
   list-style: none;
-
 }
 .cover-1 {
   position: absolute;
