@@ -82,6 +82,7 @@ ul {
   width: 20px;
   height: 2px;
   top: 0;
+  transform-origin: 0 0;
 }
 .menu-icon-container .menu-icon .bar-2 {
   width: 20px;
@@ -92,12 +93,25 @@ ul {
   width: 20px;
   height: 2px;
   top: 18px;
+  transform-origin: 0 0;
 }
-.menu-icon-container .menu-icon:hover .bar-3 {
+.menu-icon-container .menu-icon:hover .bar-2 {
   width: 15px;
+}
+.menu-icon-container .menu-icon.opened .bar-1 {
+  width: 21px;
+  transform: translate(1px, 2px) rotate(45deg);
+}
+.menu-icon-container .menu-icon.opened .bar-2 {
+  opacity: 0;
+}
+.menu-icon-container .menu-icon.opened .bar-3 {
+  width: 21px;
+  transform: translate(0px, -1px) rotate(-45deg);
 }
 .menu-container {
   position: absolute;
+  right: 0;
   width: 0;
   height: 100%;
   z-index: 9999;
@@ -215,7 +229,6 @@ ul {
   right: 2.5rem;
   width: 40px;
   height: 100%;
-  cursor: pointer;
   z-index: 9998;
   transition: 0.9s ease-in-out;
 }

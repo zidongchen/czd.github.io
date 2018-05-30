@@ -200,10 +200,12 @@ $(document).ready(function() {
     $(".menu-icon-container").on("click",function () {
         if(isMenuClosed){
             $(".menu-container").addClass("opened");
+            $(".menu-icon").addClass("opened");
             isMenuClosed=false;
         }
         else {
             $(".menu-container").removeClass("opened");
+            $(".menu-icon").removeClass("opened");
             isMenuClosed=true;
         }
     })
