@@ -18,7 +18,7 @@ ul {
 .cover-1 {
   position: absolute;
   z-index: 9998;
-  opacity: 1;
+  opacity: 0.5;
   -webkit-transition: ease-in-out 0.9s ;
   -moz-transition: ease-in-out 0.9s ;
   -ms-transition: ease-in-out 0.9s ;
@@ -45,6 +45,17 @@ ul {
     background: url("images/SVG/logo.svg") no-repeat;
   }
 }
+@keyframes icon-bar {
+  0% {
+    width: 30px;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
 
 .menu-icon-container {
   position: absolute;
@@ -59,18 +70,35 @@ ul {
     position: absolute;
     top: 0;
     right: 0;
-    width: 30px;
+    width: 20px;
     height: 20px;
     cursor: pointer;
 
     .icon-bar {
-      position: relative;
+      position: absolute;
       right: 0px;
-      top: 1px;
-      width: 30px;
-      height: 4px;
       background-color: #ffffff;
-      margin-bottom: 5px;
+      transition: 0.5s;
+    }
+    .bar-1 {
+      width: 20px;
+      height: 2px;
+      top: 0;
+    }
+    .bar-2 {
+      width: 20px;
+      height: 2px;
+      top: 9px;
+    }
+    .bar-3 {
+      width: 20px;
+      height: 2px;
+      top: 18px;
+    }
+  }
+  .menu-icon:hover {
+    .bar-3 {
+      width: 15px;
     }
   }
 }
@@ -211,6 +239,7 @@ ul {
     height: 40px;
     cursor: pointer;
     transition: 0.9s ;
+    opacity: 0.5;
   }
   .prev-page {
     position: absolute;

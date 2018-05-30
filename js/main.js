@@ -27,31 +27,31 @@ $(document).ready(function() {
                 $(".pages-container").css("top","00");
                 $(".change-num-container").css("top","00");
                 $(".prev-page").css("opacity","0");
-                $(".next-page").css("opacity","0.8");
+                $(".next-page").css("opacity","0.5");
                 break;
             case 2 :
                 resetPageWriting();
                 $(".page2>.page-writing").addClass("active");
                 $(".pages-container").css("top","-100%");
                 $(".change-num-container").css("top","-2.5rem");
-                $(".prev-page").css("opacity","0.8");
-                $(".next-page").css("opacity","0.8");
+                $(".prev-page").css("opacity","0.5");
+                $(".next-page").css("opacity","0.5");
                 break;
             case 3 :
                 resetPageWriting();
                 $(".page3>.page-writing").addClass("active");
                 $(".pages-container").css("top","-200%");
                 $(".change-num-container").css("top","-5rem");
-                $(".prev-page").css("opacity","0.8");
-                $(".next-page").css("opacity","0.8");
+                $(".prev-page").css("opacity","0.5");
+                $(".next-page").css("opacity","0.5");
                 break;
             case 4 :
                 resetPageWriting();
                 $(".page4>.page-writing").addClass("active");
                 $(".pages-container").css("top","-300%");
                 $(".change-num-container").css("top","-7.5rem");
-                $(".prev-page").css("opacity","0.8");
-                $(".next-page").css("opacity","0.8");
+                $(".prev-page").css("opacity","0.5");
+                $(".next-page").css("opacity","0.5");
                 $(".cover-1").removeClass("go-up");
                 $(".page-icon-container").removeClass("go-up");
                 $(".page-icon-container").removeClass("go-up");
@@ -59,7 +59,7 @@ $(document).ready(function() {
             case 5 :
                 resetPageWriting();
                 $(".pages-container").css("top","-340%");
-                $(".prev-page").css("opacity","0.8");
+                $(".prev-page").css("opacity","0.5");
                 $(".next-page").css("opacity","0");
                 $(".cover-1").addClass("go-up");
                 $(".page-icon-container").addClass("go-up");
