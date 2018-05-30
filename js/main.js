@@ -83,14 +83,12 @@ $(document).ready(function() {
             moveY = 0;
             touch = e.targetTouches[0];
             startY = touch.pageY;
-            // event.preventDefault();
         }, false);
         //监听 touchmove事件，可计算出滑动的距离
         document.addEventListener('touchmove', function(e){
             //获取滑动屏幕时的Y
             touch = e.targetTouches[0];
             moveY = touch.pageY - startY;//变化的量
-            // event.preventDefault();
         }, false);
         //监听touchend，监听touch结束，可判断是上滑，还是下滑
         document.addEventListener('touchend', function(e){
@@ -115,13 +113,11 @@ $(document).ready(function() {
                     },50)
                 }
             }
-            // event.preventDefault();
         }, false);
     }
     // 非移动设备
     else{
         var scrollFunc = function (e) {
-            // event.preventDefault();
             e = e || window.event;
             if (e.wheelDelta) {
                 if (e.wheelDelta / 120 > 0 && i > 1) {
