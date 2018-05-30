@@ -105,7 +105,7 @@ ul {
   width: 10px;
   height: 50px;
   left: 2.5rem;
-  bottom: 200px;
+  bottom: 12.5rem;
   background: url("images/SVG/scrolldown.svg") no-repeat;
 }
 .tittle {
@@ -224,7 +224,7 @@ ul {
   position: absolute;
   width: 40%;
   left: 30%;
-  bottom: 200px;
+  bottom: 12.5rem;
   font-family: Arial;
   color: #ffffff;
   opacity: 0;
