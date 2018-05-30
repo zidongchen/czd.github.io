@@ -42,7 +42,7 @@ ul {
   top: 0;
   width: 106px;
   height: 20px;
-  background: url("images/SVG/logo_2.svg") no-repeat;
+  background: url("images/SVG/logo.svg") no-repeat;
 }
 .menu-icon-container {
   position: absolute;
@@ -72,12 +72,13 @@ ul {
 }
 .menu-container {
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 100%;
   z-index: 9999;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   transition: 0.7s;
+  overflow: hidden;
 }
 .menu-container .menu-list {
   position: absolute;
@@ -86,6 +87,8 @@ ul {
   transform: translate(0%, -50%);
   margin: 0px;
   padding: 0px;
+  opacity: 0;
+  transition: 0.3s;
 }
 .menu-container .menu-list li {
   font-size: 3rem;
@@ -126,6 +129,10 @@ ul {
 .menu-container.opened {
   opacity: 1;
   pointer-events: auto;
+  width: 100%;
+}
+.menu-container.opened .menu-list {
+  opacity: 1;
 }
 .page-num-container {
   display: block;
@@ -160,8 +167,8 @@ ul {
 .scroll-down {
   display: block;
   position: absolute;
-  width: 10px;
-  height: 50px;
+  width: 1rem;
+  height: 5rem;
   left: 2.5rem;
   bottom: 12.5rem;
   background: url("images/SVG/scrolldown.svg") no-repeat;
@@ -170,10 +177,11 @@ ul {
   display: block;
   position: absolute;
   top: 2.5rem;
-  left: 30%;
+  right: 30%;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial;
+  opacity: 0.8;
 }
 .page-icon-container {
   position: absolute;
@@ -281,8 +289,9 @@ ul {
 .pages-container .page-writing {
   position: absolute;
   width: 40%;
+  height: 100%;
   left: 30%;
-  bottom: 12.5rem;
+  bottom: 0;
   font-family: Arial;
   color: #ffffff;
   opacity: 0;
@@ -290,20 +299,21 @@ ul {
   transition: 0.5s 0.5s;
 }
 .pages-container .page-writing h1 {
-  position: relative;
+  position: absolute;
   left: 20px;
+  bottom: 11.5rem;
   margin: 0;
   padding: 0;
-  padding-bottom: 2rem;
   font-size: 4rem;
-  line-height: 6rem;
+  line-height: 5rem;
   transition: 0.5s 0.6s;
   font-weight: 600;
   letter-spacing: 0 ;
 }
 .pages-container .page-writing p {
-  position: relative;
+  position: absolute;
   left: 20px;
+  top: 2.5rem;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -312,8 +322,9 @@ ul {
   transition: 0.5s 0.5s;
 }
 .pages-container .page-writing .readmore {
-  position: relative;
+  position: absolute;
   left: 0;
+  bottom: 2.5rem;
   display: inline-block;
   font-size: 1rem;
   line-height: 1rem;
@@ -333,7 +344,7 @@ ul {
   transition: 0.5s ease-in-out;
 }
 .pages-container .page-writing.active {
-  opacity: 1;
+  opacity: 0.8;
 }
 .pages-container .page-writing.active h1 {
   left: 0;
@@ -426,7 +437,7 @@ footer .logo {
     font-size: 8px;
   }
   .logo-container {
-    left: 40px;
+    left: 2.5rem;
   }
   .logo-container .logo {
     background: url("images/SVG/logo-small.svg") no-repeat;
