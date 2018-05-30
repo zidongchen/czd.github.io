@@ -6,6 +6,8 @@ html,body {
   overflow: hidden;
   font-family: Arial;
   touch-action: none;
+  top: 1px;
+  bottom: 1px;
 }
 ul {
   list-style: none;
