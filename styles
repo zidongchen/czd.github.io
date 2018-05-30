@@ -43,7 +43,7 @@ ul {
     top: 0;
     width: 106px;
     height: 20px;
-    background: url("images/SVG/logo.svg") no-repeat;
+    background: url("images/SVG/logo_2.svg") no-repeat;
   }
 }
 
