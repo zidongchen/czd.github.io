@@ -4,8 +4,8 @@ $(document).ready(function() {
     var startY = 0;
     var moveY = 0;
     var isMenuClosed = true;
-    var timeOutFlag=null;
-    var isChangingPage=false;
+    var isChangingPage = false;
+    var timeOutFlag = null;
     var pages=4;
 
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
                                 i+=1;
                                 isChangingPage=true;
                                 changePage(i);
-                                return false;
+
                             // },50)
                 }
                 else if (isMenuClosed && moveY > 100 && i>1 && !isChangingPage){//向下
@@ -112,7 +112,7 @@ $(document).ready(function() {
                                 i-=1;
                                 isChangingPage=true;
                                 changePage(i);
-                                return false;
+
                             // },50)
                 }
             }, false);
