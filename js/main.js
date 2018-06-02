@@ -70,7 +70,7 @@ $(document).ready(function() {
         $(".cover-1").addClass("go-up");
         $(".page-icon-container").addClass("go-up");
     }
-    isChangingPage = false;
+
   }
   // 注册第一页
   $(".page1>.page-writing").addClass("active");
@@ -116,7 +116,7 @@ $(document).ready(function() {
     }, false);
     //监听touchend，监听touch结束，可判断是上滑，还是下滑
     document.addEventListener('touchend', function(e) {
-
+      isChangingPage = false;
     }, false);
   }
   // 非移动设备
