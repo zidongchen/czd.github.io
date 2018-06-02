@@ -70,7 +70,7 @@ $(document).ready(function() {
                 $(".page-icon-container").addClass("go-up");
         }
     }
-
+    // 注册第一页
     $(".page1>.page-writing").addClass("active");
 
     /*滑动事件*/
@@ -97,23 +97,23 @@ $(document).ready(function() {
                 if(isMenuClosed){
                     if(moveY < 0){//向上
                         if (i< pages){
-                            if(timeOutFlag!=null){
-                                clearTimeout(timeOutFlag);
-                            }
-                            timeOutFlag=setTimeout(function(){
+                            // if(timeOutFlag!=null){
+                            //     clearTimeout(timeOutFlag);
+                            // }
+                            // timeOutFlag=setTimeout(function(){
                                 i+=1;
                                 changePage(i);
-                            },50)
+                            // },50)
                         }
                     }else if (moveY > 0){//向下
                         if(i>1){
-                            if(timeOutFlag!=null){
-                                clearTimeout(timeOutFlag);
-                            }
-                            timeOutFlag=setTimeout(function(){
+                            // if(timeOutFlag!=null){
+                            //     clearTimeout(timeOutFlag);
+                            // }
+                            // timeOutFlag=setTimeout(function(){
                                 i-=1;
                                 changePage(i);
-                            },50)
+                            // },50)
                         }
                     }
                 }
