@@ -92,7 +92,7 @@ $(document).ready(function() {
                 touch = e.targetTouches[0];
                 moveY = touch.pageY - startY;//变化的量
                 if(isMenuClosed){
-                    if(moveY < 0){//向上
+                    if(moveY < -200){//向上
                         if (i< pages){
                             // if(timeOutFlag!=null){
                             //     clearTimeout(timeOutFlag);
@@ -100,9 +100,10 @@ $(document).ready(function() {
                             // timeOutFlag=setTimeout(function(){
                                 i+=1;
                                 changePage(i);
+                                return false;
                             // },50)
                         }
-                    }else if (moveY > 0){//向下
+                    }else if (moveY > 200){//向下
                         if(i>1){
                             // if(timeOutFlag!=null){
                             //     clearTimeout(timeOutFlag);
@@ -110,6 +111,7 @@ $(document).ready(function() {
                             // timeOutFlag=setTimeout(function(){
                                 i-=1;
                                 changePage(i);
+                                return false;
                             // },50)
                         }
                     }
