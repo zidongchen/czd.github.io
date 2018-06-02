@@ -5,6 +5,7 @@ $(document).ready(function() {
     var moveY = 0;
     var isMenuClosed = true;
     var timeOutFlag=null;
+    var isChangingPage=false;
     var pages=4;
 
 
@@ -14,7 +15,7 @@ $(document).ready(function() {
         winHeight = document.documentElement.clientHeight;
     });
 
-
+    // 重置页面介绍文本
     function resetPageWriting() {
         $(".page-writing").removeClass("active");
     }
@@ -69,6 +70,7 @@ $(document).ready(function() {
                 $(".cover-1").addClass("go-up");
                 $(".page-icon-container").addClass("go-up");
         }
+        isChangingPage=false;
     }
     // 注册第一页
     $(".page1>.page-writing").addClass("active");
@@ -91,30 +93,27 @@ $(document).ready(function() {
                 //获取滑动屏幕时的Y
                 touch = e.targetTouches[0];
                 moveY = touch.pageY - startY;//变化的量
-                if(isMenuClosed){
-                    if(moveY < -200){//向上
-                        if (i< pages){
+                if(isMenuClosed && moveY < -100 && i< pages && !isChangingPage){
                             // if(timeOutFlag!=null){
                             //     clearTimeout(timeOutFlag);
                             // }
                             // timeOutFlag=setTimeout(function(){
                                 i+=1;
+                                isChangingPage=true;
                                 changePage(i);
                                 return false;
                             // },50)
-                        }
-                    }else if (moveY > 200){//向下
-                        if(i>1){
+                }
+                else if (isMenuClosed && moveY > 100 && i>1 && !isChangingPage){//向下
                             // if(timeOutFlag!=null){
                             //     clearTimeout(timeOutFlag);
                             // }
                             // timeOutFlag=setTimeout(function(){
                                 i-=1;
+                                isChangingPage=true;
                                 changePage(i);
                                 return false;
                             // },50)
-                        }
-                    }
                 }
             }, false);
             //监听touchend，监听touch结束，可判断是上滑，还是下滑
