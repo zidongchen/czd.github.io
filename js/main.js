@@ -91,9 +91,6 @@ $(document).ready(function() {
                 //获取滑动屏幕时的Y
                 touch = e.targetTouches[0];
                 moveY = touch.pageY - startY;//变化的量
-            }, false);
-            //监听touchend，监听touch结束，可判断是上滑，还是下滑
-            document.addEventListener('touchend', function(e){
                 if(isMenuClosed){
                     if(moveY < 0){//向上
                         if (i< pages){
@@ -117,6 +114,10 @@ $(document).ready(function() {
                         }
                     }
                 }
+            }, false);
+            //监听touchend，监听touch结束，可判断是上滑，还是下滑
+            document.addEventListener('touchend', function(e){
+
             }, false);
         }
         // 非移动设备
