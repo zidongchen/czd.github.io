@@ -5,6 +5,7 @@ $(document).ready(function() {
     var moveY = 0;
     var isMenuClosed = true;
     var timeOutFlag=null;
+    var pages=4;
 
 
     var winHeight = document.documentElement.clientHeight
@@ -24,42 +25,46 @@ $(document).ready(function() {
                 resetPageWriting();
                 // document.getElementById("darkness").load();
                 $(".page1>.page-writing").addClass("active");
-                $(".pages-container").css("top","00");
+                $(".page1").css("top","00%");
                 $(".change-num-container").css("top","00");
                 $(".prev-page").css("opacity","0");
-                $(".next-page").css("opacity","0.5");
+                $(".next-page").css("opacity","1");
                 break;
             case 2 :
                 resetPageWriting();
                 $(".page2>.page-writing").addClass("active");
-                $(".pages-container").css("top","-100%");
+                $(".page1").css("top","-100%");
+                $(".page2").css("top","00%");
                 $(".change-num-container").css("top","-2.5rem");
-                $(".prev-page").css("opacity","0.5");
-                $(".next-page").css("opacity","0.5");
+                $(".prev-page").css("opacity","1");
+                $(".next-page").css("opacity","1");
                 break;
             case 3 :
                 resetPageWriting();
                 $(".page3>.page-writing").addClass("active");
-                $(".pages-container").css("top","-200%");
+                $(".page2").css("top","-100%");
+                $(".page3").css("top","00%");
+                $(".pages-container").css("top","0%");
                 $(".change-num-container").css("top","-5rem");
-                $(".prev-page").css("opacity","0.5");
-                $(".next-page").css("opacity","0.5");
+                $(".prev-page").css("opacity","1");
+                $(".next-page").css("opacity","1");
+                $(".cover-1").removeClass("go-up");
+                $(".page-icon-container").removeClass("go-up");
                 break;
             case 4 :
                 resetPageWriting();
                 $(".page4>.page-writing").addClass("active");
-                $(".pages-container").css("top","-300%");
+                $(".pages-container").css("top","-40%");
                 $(".change-num-container").css("top","-7.5rem");
-                $(".prev-page").css("opacity","0.5");
-                $(".next-page").css("opacity","0.5");
-                $(".cover-1").removeClass("go-up");
-                $(".page-icon-container").removeClass("go-up");
-                $(".page-icon-container").removeClass("go-up");
+                $(".prev-page").css("opacity","1");
+                $(".next-page").css("opacity","0");
+                $(".cover-1").addClass("go-up");
+                $(".page-icon-container").addClass("go-up");
                 break;
             case 5 :
                 resetPageWriting();
                 $(".pages-container").css("top","-340%");
-                $(".prev-page").css("opacity","0.5");
+                $(".prev-page").css("opacity","1");
                 $(".next-page").css("opacity","0");
                 $(".cover-1").addClass("go-up");
                 $(".page-icon-container").addClass("go-up");
@@ -91,7 +96,7 @@ $(document).ready(function() {
             document.addEventListener('touchend', function(e){
                 if(isMenuClosed){
                     if(moveY < 0){//向上
-                        if (i<5){
+                        if (i< pages){
                             if(timeOutFlag!=null){
                                 clearTimeout(timeOutFlag);
                             }
@@ -130,7 +135,7 @@ $(document).ready(function() {
                                 changePage(i);
                             },50)
                         }
-                        else if (e.wheelDelta / 120 < 0 && i < 5 ) {
+                        else if (e.wheelDelta / 120 < 0 && i < pages ) {
                             // 滚轮向下
                             if(timeOutFlag!=null){
                                 clearTimeout(timeOutFlag);
@@ -142,7 +147,7 @@ $(document).ready(function() {
                         }
                     }
                     else if (e.detail) {
-                        if (e.detail / 3 < 0 ) {
+                        if (e.detail / 3 < 0 && i > 1) {
                             // 滚轮向上
                             if(timeOutFlag!=null){
                                 clearTimeout(timeOutFlag);
@@ -152,7 +157,7 @@ $(document).ready(function() {
                                 changePage(i);
                             },50)
                         }
-                        else if (e.detail / 3 > 0) {
+                        else if (e.detail / 3 > 0 && i < pages) {
                             // 滚轮向下
                             if(timeOutFlag!=null){
                                 clearTimeout(timeOutFlag);
@@ -185,7 +190,7 @@ $(document).ready(function() {
         }
     });
     $(".next-page").on("click",function () {
-        if (i<5){
+        if (i< pages){
             if(timeOutFlag!=null){
                 clearTimeout(timeOutFlag);
             }
