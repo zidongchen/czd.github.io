@@ -19,6 +19,20 @@ $(document).ready(function() {
   function resetPageWriting() {
     $(".page-writing").removeClass("active");
   }
+  function hideCover(){
+    $(".prev-page").css("opacity", "1");
+    $(".next-page").css("opacity", "0");
+    $(".cover-1").addClass("go-up");
+    $(".page-icon-container").addClass("go-up");
+    $(".pages-container").css("top", "-40%");
+  }
+  function showCover(){
+    $(".cover-1").removeClass("go-up");
+    $(".page-icon-container").removeClass("go-up");
+    $(".prev-page").css("opacity", "1");
+    $(".next-page").css("opacity", "1");
+    $(".pages-container").css("top", "0");
+  }
   // 切换页面
   function changePage(i) {
     switch (i) {
@@ -45,30 +59,13 @@ $(document).ready(function() {
         $(".page3>.page-writing").addClass("active");
         $(".page2").css("top", "-100%");
         $(".page3").css("top", "00%");
-        $(".pages-container").css("top", "0%");
         $(".change-num-container").css("top", "-5rem");
-        $(".prev-page").css("opacity", "1");
-        $(".next-page").css("opacity", "1");
-        $(".cover-1").removeClass("go-up");
-        $(".page-icon-container").removeClass("go-up");
+        showCover();
         break;
       case 4:
         resetPageWriting();
-        $(".page4>.page-writing").addClass("active");
-        $(".pages-container").css("top", "-40%");
-        $(".change-num-container").css("top", "-7.5rem");
-        $(".prev-page").css("opacity", "1");
-        $(".next-page").css("opacity", "0");
-        $(".cover-1").addClass("go-up");
-        $(".page-icon-container").addClass("go-up");
+        hideCover();
         break;
-      case 5:
-        resetPageWriting();
-        $(".pages-container").css("top", "-340%");
-        $(".prev-page").css("opacity", "1");
-        $(".next-page").css("opacity", "0");
-        $(".cover-1").addClass("go-up");
-        $(".page-icon-container").addClass("go-up");
     }
 
   }
@@ -93,25 +90,13 @@ $(document).ready(function() {
       touch = e.targetTouches[0];
       moveY = touch.pageY - startY; //变化的量
       if (isMenuClosed && moveY < -100 && i < pages && !isChangingPage) {
-        // if(timeOutFlag!=null){
-        //     clearTimeout(timeOutFlag);
-        // }
-        // timeOutFlag=setTimeout(function(){
         i += 1;
         isChangingPage = true;
         changePage(i);
-
-        // },50)
       } else if (isMenuClosed && moveY > 100 && i > 1 && !isChangingPage) { //向下
-        // if(timeOutFlag!=null){
-        //     clearTimeout(timeOutFlag);
-        // }
-        // timeOutFlag=setTimeout(function(){
         i -= 1;
         isChangingPage = true;
         changePage(i);
-
-        // },50)
       }
     }, false);
     //监听touchend，监听touch结束，可判断是上滑，还是下滑
@@ -170,9 +155,12 @@ $(document).ready(function() {
   }
   // 注册事件
   if (document.addEventListener) {
+    //W3C
     document.addEventListener('DOMMouseScroll', scrollFunc, false);
-  } //W3C
-  window.onmousewheel = document.onmousewheel = scrollFunc; //IE/Opera/Chrome/Safari
+  }
+    //IE/Opera/Chrome/Safari
+    window.onmousewheel = document.onmousewheel = scrollFunc;
+
 
   // 右下角点击
   $(".prev-page").on("click", function() {

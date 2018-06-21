@@ -1,3 +1,7 @@
+@font-face {
+  src: url(./fonts/Montserrat-Regular.ttf);
+  font-family: Montserrat;
+}
 body,
 html {
   position: fixed;
@@ -5,7 +9,7 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: 'Poppins' , Serif;
+  font-family: Montserrat;
   touch-action: none;
   left: 0;
   right: 0;
@@ -47,7 +51,7 @@ ul {
     top: 0;
     width: 106px;
     height: 20px;
-    background: url("images/SVG/logo.svg") no-repeat;
+    background: url("./images/SVG/logo-black.svg") no-repeat;
   }
 }
 
@@ -71,7 +75,7 @@ ul {
     .icon-bar {
       position: absolute;
       right: 0;
-      background-color: #ffffff;
+      background-color: #111111;
       transition: 0.5s;
     }
 
@@ -127,7 +131,7 @@ ul {
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
-  transition: 0.7s ease-in-out;
+  transition: 0.9s ease-in-out 0s;
   overflow: hidden;
 
   .menu-list {
@@ -150,7 +154,7 @@ ul {
       a {
         position: relative;
         text-decoration: none;
-        color: #eeeeee;
+        color: #111111;
         opacity: 1;
         transition: 0.5s ease-in-out;
       }
@@ -160,11 +164,10 @@ ul {
         display: block;
         position: absolute;
         left: 0;
-        bottom: -2px;
+        top: -2px;
         width: 0;
         height: 2px;
-        background: #ffffff;
-        opacity: 0.5;
+        background: #111111;
         transition: 0.5s ease-in-out;
       }
 
@@ -182,7 +185,7 @@ ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #eeeeee;
   }
 
   li:nth-child(1) {
@@ -218,7 +221,7 @@ ul {
   bottom: 2.5rem;
   width: 5rem;
   height: 1.25rem;
-  color: #ffffff;
+  color: #111111;
   overflow: hidden;
 
   .change-num-container {
@@ -237,7 +240,7 @@ ul {
   }
 
   .unchange-num-container {
-    width: 2.5rem;
+    width: 2.6rem;
     height: 1.25rem;
     position: absolute;
     left: 2.5rem;
@@ -253,7 +256,7 @@ ul {
   right: 2.5rem;
   bottom: 14.5rem;
   font-size: 1rem;
-  color: #ffffff;
+  color: #111111;
   transform: rotate(90deg) translate(0,1.5rem);
   transform-origin: right bottom;
 }
@@ -263,7 +266,7 @@ ul {
   position: absolute;
   top: 2.5rem;
   right: 30%;
-  color: #ffffff;
+  color: #111111;
   font-size: 1rem;
   opacity: 0.8;
 }
@@ -357,14 +360,17 @@ ul {
     height: 100%;
     overflow: hidden;
     transition: 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #eeeeee;
   }
 
   .picture {
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #333333;
+    top: 50%;
+    left: 2.5rem;
+    transform: translate(0%,-50%);
+    height: 40%;
+    width: 40%;
+    background: #111111;
 
     .background-img {
       position: absolute;
@@ -401,25 +407,25 @@ ul {
 
   .page-writing {
     position: absolute;
-    width: 60%;
-    height: auto;
-    left: 50%;
-    transform: translate(-50%,0);
-    bottom: 14.5rem;
-    color: #eeeeee;
+    width: 40%;
+    height: 40%;
+    right: 2.5rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: #111111;
     opacity: 0;
     text-decoration: none;
     transition: 0.5s 0.6s;
     cursor: default;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: left;
 
     h1 {
       position: relative;
       top: 20px;
       margin: 0 0 1rem;
       padding: 0;
-      font-size: 4rem;
+      font-size: 2.5rem;
       line-height: 4rem;
       transition: 0.5s 0.5s;
       font-weight: 200;
@@ -435,33 +441,27 @@ ul {
     }
 
     .readmore {
-      position: relative;
-      top: 20px;
+      position: absolute;
+      bottom: 0;
       display: inline-block;
-      line-height: 2.5rem;
       font-size: 1rem;
       text-align: center;
-      padding: 0.25rem 1rem;
-      margin-top: 100px;
-      border: 1px solid #eeeeee;
       cursor: pointer;
       border-radius: 2px;
-      overflow: hidden;
-      color: #eeeeee;
-      transition: 0.5s 0.5s;
-      background: rgba(200,200,200,0);
+      color: #111111;
+      transition: 0.5s;
     }
 
     .readmore::before {
       content: "";
       display: block;
-      position: relative;
+      position: absolute;
       left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: #eeeeee;
-      opacity: 0;
+      top: -2px;
+      width: 0;
+      height: 2px;
+      background: #111111;
+      opacity: 1;
       transition: 0.5s;
     }
   }
@@ -478,17 +478,10 @@ ul {
     }
 
     .readmore {
-      top: 0;
     }
 
     .readmore:hover::before {
-      opacity: 1;
-    }
-
-    .readmore:hover {
-      opacity: 1;
-      color: #424242;
-      background: rgba(200,200,200,1);
+      width: 100%;
     }
   }
 }
@@ -500,7 +493,7 @@ footer {
   height: 40%;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #111111;
   z-index: 1;
 
   .menu-list {
@@ -527,10 +520,10 @@ footer {
         display: block;
         position: absolute;
         left: 0;
-        bottom: -2px;
+        top: -2px;
         width: 0;
         height: 2px;
-        background: #ffffff;
+        background: #eeeeee;
         opacity: 1;
         transition: 0.5s ease-in-out;
       }
@@ -559,7 +552,7 @@ footer {
     right: 2.5rem;
     width: 106px;
     height: 20px;
-    background: url("images/SVG/logo.svg");
+    background: url("./images/SVG/logo.svg");
     opacity: 0.5;
   }
 }
@@ -576,7 +569,7 @@ footer {
     left: 2.5rem;
 
     .logo {
-      background: url("images/SVG/logo-small.svg") no-repeat;
+      background: url("images/SVG/logo-black-small.svg") no-repeat;
     }
   }
 
@@ -591,14 +584,14 @@ footer {
 @media screen and (max-width: 479px) {
   body,
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .logo-container {
     left: 2.5rem;
 
     .logo {
-      background: url("images/SVG/logo-small.svg") no-repeat;
+      background: url("images/SVG/logo-black-small.svg") no-repeat;
     }
   }
 
