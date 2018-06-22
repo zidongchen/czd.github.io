@@ -2,6 +2,14 @@
   src: url(./fonts/Montserrat-Regular.ttf);
   font-family: Montserrat;
 }
+@font-face {
+  src: url(./fonts/nevis.ttf);
+  font-family: nevis;
+}
+@font-face {
+  src: url(./fonts/Bodoni.ttf);
+  font-family: Bodoni;
+}
 body,
 html {
   position: fixed;
@@ -9,7 +17,7 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  font-family: Montserrat;
+  font-family: Bodoni;
   touch-action: none;
   left: 0;
   right: 0;
@@ -432,12 +440,11 @@ ul {
     }
 
     p {
-      position: relative;
-      top: 20px;
       margin: 0;
       padding: 0 0 20px;
       font-size: 1rem;
       transition: 0.5s 0.5s;
+      color: #999999;
     }
 
     .readmore {
@@ -473,9 +480,6 @@ ul {
       top: 0;
     }
 
-    p {
-      top: 0;
-    }
 
     .readmore {
     }
