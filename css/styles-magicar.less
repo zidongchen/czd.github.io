@@ -5,6 +5,7 @@
   background: url("../images/SVG/back-icon.svg");
   width: 40px;
   height: 40px;
+  z-index: 9999;
 }
 
 .main-container {
@@ -25,7 +26,10 @@
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 100px;
+    margin-top: 120px;
+    padding: 20px;
+    background: #ffffff;
+
 
     .content {
       position: relative;
@@ -34,11 +38,15 @@
     }
 
     p {
-      padding: 10px 20px;
       box-sizing: border-box;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       -webkit-margin-before: 0;
       -webkit-margin-after: 0;
+      padding:20px;
+    }
+    img {
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .cl3x1 {
@@ -56,6 +64,7 @@
     .cl3x2 {
       width: 100%;
     }
+
     .float-left {
       float: left;
     }
@@ -64,6 +73,7 @@
       float: right;
     }
   }
+
 }
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
@@ -89,6 +99,7 @@
       left: 50%;
       transform: translateX(-50%);
       padding-top: 100px;
+
       .cl3x1 {
         width: 100%;
       }
@@ -132,6 +143,7 @@
       left: 50%;
       transform: translateX(-50%);
       padding-top: 100px;
+
       .cl3x1 {
         width: 100%;
       }
