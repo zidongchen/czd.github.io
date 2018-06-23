@@ -6,7 +6,7 @@ $(document).ready(function() {
   var isChangingPage = false;
   var timeOutFlag = null;
   var pages = 4;
-
+  var isMenuClosed=true;
 
   var winHeight = document.documentElement.clientHeight;
 
@@ -146,6 +146,7 @@ $(document).ready(function() {
         }
       }
     };
+      // 注册事件
     if (document.addEventListener) {
       //W3C
       document.addEventListener('DOMMouseScroll', scrollFunc, false);
@@ -153,7 +154,7 @@ $(document).ready(function() {
       //IE/Opera/Chrome/Safari
       window.onmousewheel = document.onmousewheel = scrollFunc;
   }
-  // 注册事件
+
 
 
 
