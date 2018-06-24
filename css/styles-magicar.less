@@ -9,21 +9,23 @@
 }
 
 .main-container {
+  position: absolute;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
   background: #eeeeee;
-
+  transition: 1.2s ease-in-out;
+  z-index: 2;
 
   #tittle {
-    position: absolute;
+    position: fixed;
     display: block;
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
   }
 
-  .content-container {
+  article {
     position: relative;
     width: 50%;
     left: 50%;
@@ -46,8 +48,9 @@
       margin-bottom: 0;
       -webkit-margin-before: 0;
       -webkit-margin-after: 0;
-      padding:20px;
+      padding: 20px;
     }
+
     img {
       padding: 20px;
       box-sizing: border-box;
@@ -65,10 +68,6 @@
       width: 33.3%;
     }
 
-    .cl3x2 {
-      width: 100%;
-    }
-
     .float-left {
       float: left;
     }
@@ -77,33 +76,19 @@
       float: right;
     }
   }
-
-
+}
+.main-container.go-up {
+  transform: translateY(-40vh);
 }
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
-@media screen and (max-width: 979px) and (min-width: 768px) {}
-@media screen and (max-width: 767px) and (min-width: 480px) {
-  body,
-  html {
-    font-size: 12px;
-  }
-
-  .logo-container {
-    left: 2.5rem;
-
-    .logo {
-      background: url("../images/SVG/logo-black-small.svg") no-repeat;
-    }
-  }
-
+@media screen and (max-width: 979px) and (min-width: 768px) {
   .main-container {
-    .content-container {
+    article {
       position: relative;
       width: 70%;
       left: 50%;
       transform: translateX(-50%);
-      padding-top: 100px;
 
       .cl3x1 {
         width: 100%;
@@ -118,12 +103,26 @@
       }
     }
   }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .main-container {
+    article {
+      position: relative;
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
 
-  footer {
-    .logo {
-      width: 53px;
-      height: 10px;
-      background: none;
+      .cl3x1 {
+        width: 100%;
+      }
+
+      .cl2x1 {
+        width: 100%;
+      }
+
+      .cl1x1 {
+        width: 100%;
+      }
     }
   }
 }
@@ -142,12 +141,11 @@
   }
 
   .main-container {
-    .content-container {
+    article {
       position: relative;
       width: 90%;
       left: 50%;
       transform: translateX(-50%);
-      padding-top: 100px;
 
       .cl3x1 {
         width: 100%;
@@ -160,14 +158,6 @@
       .cl1x1 {
         width: 100%;
       }
-    }
-  }
-
-  footer {
-    .logo {
-      width: 53px;
-      height: 10px;
-      background: none;
     }
   }
 }
