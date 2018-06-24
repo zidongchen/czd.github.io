@@ -83,11 +83,11 @@ $(document).ready(function() {
       //获取滑动屏幕时的Y
       touch = e.targetTouches[0];
       moveY = touch.pageY - startY; //变化的量
-      if (isMenuClosed && moveY < -100 && i < pages && !isChangingPage) {
+      if (isMenuClosed && moveY < -50 && i < pages && !isChangingPage) {
         i += 1;
         isChangingPage = true;
         changePage(i);
-      } else if (isMenuClosed && moveY > 100 && i > 1 && !isChangingPage) { //向下
+      } else if (isMenuClosed && moveY > 50 && i > 1 && !isChangingPage) { //向下
         i -= 1;
         isChangingPage = true;
         changePage(i);
