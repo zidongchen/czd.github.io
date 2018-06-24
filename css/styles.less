@@ -34,7 +34,20 @@ ul {
 a {
   text-decoration: none;
 }
-
+a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 0;
+  height: 2px;
+  background: #111111;
+  transition: 0.5s ease-in-out;
+}
+a:hover::after {
+  width: 100%;
+}
 p {
   font-family: "Arial";
 }
@@ -169,30 +182,8 @@ p {
 
       a {
         position: relative;
-        text-decoration: none;
         color: #111111;
-        opacity: 1;
         transition: 0.5s ease-in-out;
-      }
-
-      a:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -2px;
-        width: 0;
-        height: 2px;
-        background: #111111;
-        transition: 0.5s ease-in-out;
-      }
-
-      a:hover {
-        opacity: 1;
-      }
-
-      a:hover::after {
-        width: 100%;
       }
     }
   }
@@ -238,7 +229,7 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #111111;
-  z-index: -1;
+  z-index: 1;
 
   .menu-list {
     position: absolute;
@@ -248,36 +239,16 @@ footer {
     padding: 0;
 
     li {
+      position: relative;
       font-size: 2rem;
       margin-bottom: 10px;
-
       a {
         position: relative;
-        text-decoration: none;
         color: #eeeeee;
-        opacity: 1;
         transition: 0.5s ease-in-out;
       }
-
       a:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -2px;
-        width: 0;
-        height: 2px;
         background: #eeeeee;
-        opacity: 1;
-        transition: 0.5s ease-in-out;
-      }
-
-      a:hover {
-        opacity: 1;
-      }
-
-      a:hover::after {
-        width: 100%;
       }
     }
   }
