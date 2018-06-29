@@ -81,7 +81,7 @@ $(document).ready(function() {
       moveY = 0;
       touch = e.targetTouches[0];
       startY = touch.pageY;
-    }, false);
+    });
     //监听 touchmove事件，可计算出滑动的距离
     document.addEventListener('touchmove', function(e) {
       //获取滑动屏幕时的Y
