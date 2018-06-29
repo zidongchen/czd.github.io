@@ -47,7 +47,7 @@ $(document).ready(function() {
         $(".page2>.page-writing").addClass("active");
         $(".page1").addClass("hidepage");
         $(".page2").removeClass("hidepage");
-        $(".change-num-container").css("transform", "translateY(-2.5rem)");
+        $(".change-num-container").css("transform", "translateY(-2.5em)");
         $(".prev-page").css("opacity", "1");
         showCover();
         break;
@@ -57,7 +57,7 @@ $(document).ready(function() {
         // $(".page3>.page-writing").addClass("active");
         // $(".page2").addClass("hidepage");
         // $(".page3").removeClass("hidepage");
-        // $(".change-num-container").css("transform", "translateY(-5rem)");
+        // $(".change-num-container").css("transform", "translateY(-5em)");
 
         break;
       case 4:
