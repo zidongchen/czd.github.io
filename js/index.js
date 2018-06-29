@@ -5,7 +5,7 @@ $(document).ready(function() {
   var moveY = 0;
   var isChangingPage = false;
   var timeOutFlag = null;
-  var pages = 4;
+  var pages = 3;
   var isMenuClosed = true;
 
   var winHeight = document.documentElement.clientHeight;
@@ -49,14 +49,16 @@ $(document).ready(function() {
         $(".page2").removeClass("hidepage");
         $(".change-num-container").css("transform", "translateY(-2.5rem)");
         $(".prev-page").css("opacity", "1");
+        showCover();
         break;
       case 3:
         resetPageWriting();
-        $(".page3>.page-writing").addClass("active");
-        $(".page2").addClass("hidepage");
-        $(".page3").removeClass("hidepage");
-        $(".change-num-container").css("transform", "translateY(-5rem)");
-        showCover();
+        hideCover();
+        // $(".page3>.page-writing").addClass("active");
+        // $(".page2").addClass("hidepage");
+        // $(".page3").removeClass("hidepage");
+        // $(".change-num-container").css("transform", "translateY(-5rem)");
+
         break;
       case 4:
         resetPageWriting();
