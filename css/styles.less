@@ -10,9 +10,11 @@
   src: url("../fonts/Bodoni.ttf");
   font-family: Bodoni;
 }
-
-body,
 html {
+  font-size: 16px;
+}
+
+body {
   position: fixed;
   margin: 0;
   width: 100%;
@@ -35,6 +37,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 a:after {
   content: "";
   display: block;
@@ -46,9 +49,11 @@ a:after {
   background: #111111;
   transition: 0.5s ease-in-out;
 }
+
 a:hover::after {
   width: 100%;
 }
+
 p {
   font-family: "Arial";
   line-height: 2;
@@ -242,11 +247,13 @@ footer {
       position: relative;
       font-size: 2rem;
       margin-bottom: 10px;
+
       a {
         position: relative;
         color: #efefef;
         transition: 0.5s ease-in-out;
       }
+
       a:after {
         background: #efefef;
       }
@@ -281,9 +288,8 @@ footer {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
-  body,
   html {
-    font-size: 16px;
+    font-size: 8px;
   }
 
   .logo-container {
@@ -291,19 +297,15 @@ footer {
       background: url("../images/SVG/logo-black-small.svg") no-repeat;
     }
   }
-
   footer {
     .logo {
-      width: 53px;
-      height: 10px;
       background: none;
     }
   }
 }
 @media screen and (max-width: 479px) {
-  body,
   html {
-    font-size: 16px;
+    font-size: 8px;
   }
 
   .logo-container {
@@ -311,11 +313,8 @@ footer {
       background: url("../images/SVG/logo-black-small.svg") no-repeat;
     }
   }
-
   footer {
     .logo {
-      width: 53px;
-      height: 10px;
       background: none;
     }
   }
