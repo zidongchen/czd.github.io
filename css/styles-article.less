@@ -8,15 +8,31 @@
   z-index: 9999;
 }
 
-.main-container {
-  position: absolute;
+// .main-container {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   overflow-y: scroll;
+//   background: #efefef;
+//   transition: 1.2s ease-in-out;
+//   z-index: 2;
+body,
+html {
+  position: relative;
+  margin: 0;
   width: 100%;
   height: 100%;
+  font-family: Montserrat;
+  touch-action: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #efefef;
+  color: #111111;
+  font-size: 16px;
   overflow-y: scroll;
-  background: #efefef;
-  transition: 1.2s ease-in-out;
-  z-index: 2;
-
+}
   #tittle {
     position: fixed;
     display: block;
@@ -138,7 +154,7 @@
       float: right;
     }
   }
-}
+// }
 
 .main-container.go-up {
   transform: translateY(-40vh);
