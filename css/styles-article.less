@@ -1,27 +1,14 @@
-.back-icon {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 2.5rem;
-  background: url("../images/SVG/back-icon.svg");
-  width: 40px;
-  height: 40px;
-  z-index: 9999;
+html {
+  font-size: 16px;
+  overflow-y: scroll;
 }
-// .main-container {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   overflow-y: scroll;
-//   background: #efefef;
-//   transition: 1.2s ease-in-out;
-//   z-index: 2;
+
 body {
-  position: relative;
+  position: fixed;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: Montserrat;
-  touch-action: none;
   left: 0;
   right: 0;
   top: 0;
@@ -30,6 +17,17 @@ body {
   color: #111111;
   font-size: 16px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.back-icon {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  background: url("../images/SVG/back-icon.svg");
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
 }
 
 #tittle {
