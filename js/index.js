@@ -8,11 +8,8 @@ $(document).ready(function() {
   var pages = 3;
   var isMenuClosed = true;
 
-  var winHeight = document.documentElement.clientHeight;
-
-  window.addEventListener('resize', function(event) {
-    winHeight = document.documentElement.clientHeight;
-  });
+  var pageNum=UrlParm.parm("pageNum");
+    i=parseInt(pageNum);
 
   // 重置页面介绍文本
   function resetPageWriting() {
@@ -68,8 +65,7 @@ $(document).ready(function() {
 
   }
   // 注册第一页
-  $(".page1>.page-writing").addClass("active");
-
+    changePage(i);
   /*滑动事件*/
   // 移动设备
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
