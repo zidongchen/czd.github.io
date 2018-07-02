@@ -9,8 +9,12 @@ $(document).ready(function() {
   var isMenuClosed = true;
 
   var pageNum=UrlParm.parm("pageNum");
-    i=parseInt(pageNum);
-
+  if(pageNum){
+        i=parseInt(pageNum);
+  }
+  else {
+    i=1;
+  }
   // 重置页面介绍文本
   function resetPageWriting() {
     $(".page-writing").removeClass("active");

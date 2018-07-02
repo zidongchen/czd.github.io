@@ -50,5 +50,5 @@ UrlParm = function() { // url参数
    } catch (e) {}
    return map;
   }
- }
+};
 }();
