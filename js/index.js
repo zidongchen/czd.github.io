@@ -1,6 +1,6 @@
 $(document).ready(function() {
   "use strict";
-  var i = 1;
+  var pageNum = 1;
   var startY = 0;
   var moveY = 0;
   var isChangingPage = false;
@@ -8,16 +8,43 @@ $(document).ready(function() {
   var pages = 3;
   var isMenuClosed = true;
 
-  var pageNum=UrlParm.parm("pageNum");
-  if(pageNum){
-        i=parseInt(pageNum);
+  // 返回时返回指定页面
+  var pageNumGet = UrlParm.parm("pageNum");
+  if (pageNumGet) {
+    pageNum = parseInt(pageNumGet);
+  } else {
+    pageNum = 1;
   }
-  else {
-    i=1;
+  var prevPage = pageNum - 1;
+  // 显示当前页面介绍文本
+  function changePages() {
+    if (pageNum < pages&&pageNum>1) {
+      $(".page-writing").removeClass("active");
+      prevPage = pageNum - 1;
+      $(".page" + pageNum + "").removeClass("hidepage");
+      $(".page" + prevPage + "").addClass("hidepage");
+      $(".page" + pageNum + ">.page-writing").addClass("active");
+      showCover();
+      $(".prev-page").css("opacity", "1");
+    }
+    if (pageNum == 1) {
+      $(".page-writing").removeClass("active");
+      prevPage = pageNum - 1;
+      $(".page" + pageNum + "").removeClass("hidepage");
+      $(".page" + prevPage + "").addClass("hidepage");
+      $(".page" + pageNum + ">.page-writing").addClass("active");
+      $(".prev-page").css("opacity", "0");
+    }
+    if (pageNum == pages) {
+      $(".next-page").css("opacity", "0");
+      hideCover();
+    }
+
   }
-  // 重置页面介绍文本
-  function resetPageWriting() {
-    $(".page-writing").removeClass("active");
+
+  function changePageNum() {
+    $(".dot").removeClass("active");
+    $(".dot:nth-child(" + pageNum + ")").addClass("active");
   }
 
   function hideCover() {
@@ -34,42 +61,12 @@ $(document).ready(function() {
     $(".pages-container").removeClass("go-up");
   }
   // 切换页面
-  function changePage(i) {
-    switch (i) {
-      case 1:
-        resetPageWriting();
-        $(".page1>.page-writing").addClass("active");
-        $(".page1").removeClass("hidepage");
-        $(".change-num-container").css("transform", "translateY(0)");
-        $(".prev-page").css("opacity", "0");
-        break;
-      case 2:
-        resetPageWriting();
-        $(".page2>.page-writing").addClass("active");
-        $(".page1").addClass("hidepage");
-        $(".page2").removeClass("hidepage");
-        $(".change-num-container").css("transform", "translateY(-2.5em)");
-        $(".prev-page").css("opacity", "1");
-        showCover();
-        break;
-      case 3:
-        resetPageWriting();
-        hideCover();
-        // $(".page3>.page-writing").addClass("active");
-        // $(".page2").addClass("hidepage");
-        // $(".page3").removeClass("hidepage");
-        // $(".change-num-container").css("transform", "translateY(-5em)");
-
-        break;
-      case 4:
-        resetPageWriting();
-        hideCover();
-        break;
-    }
-
+  function changePage() {
+    changePages();
+    changePageNum();
   }
   // 注册第一页
-    changePage(i);
+  changePage(pageNum);
   /*滑动事件*/
   // 移动设备
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -87,14 +84,14 @@ $(document).ready(function() {
       //获取滑动屏幕时的Y
       touch = e.targetTouches[0];
       moveY = touch.pageY - startY; //变化的量
-      if (isMenuClosed && moveY < -50 && i < pages && !isChangingPage) {
-        i += 1;
+      if (isMenuClosed && moveY < -50 && pageNum < pages && !isChangingPage) {
+        pageNum += 1;
         isChangingPage = true;
-        changePage(i);
-      } else if (isMenuClosed && moveY > 50 && i > 1 && !isChangingPage) { //向下
-        i -= 1;
+        changePage(pageNum);
+      } else if (isMenuClosed && moveY > 50 && pageNum > 1 && !isChangingPage) { //向下
+        pageNum -= 1;
         isChangingPage = true;
-        changePage(i);
+        changePage(pageNum);
       }
     }, false);
     //监听touchend，监听touch结束，可判断是上滑，还是下滑
@@ -108,43 +105,43 @@ $(document).ready(function() {
       e = e || window.event;
       if (isMenuClosed) {
         if (e.wheelDelta) {
-          if (e.wheelDelta / 120 > 0 && i > 1) {
+          if (e.wheelDelta / 120 > 0 && pageNum > 1) {
             // 滚轮向上
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
             }
             timeOutFlag = setTimeout(function() {
-              i -= 1;
-              changePage(i);
+              pageNum -= 1;
+              changePage(pageNum);
             }, 50);
-          } else if (e.wheelDelta / 120 < 0 && i < pages) {
+          } else if (e.wheelDelta / 120 < 0 && pageNum < pages) {
             // 滚轮向下
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
             }
             timeOutFlag = setTimeout(function() {
-              i += 1;
-              changePage(i);
+              pageNum += 1;
+              changePage(pageNum);
             }, 50);
           }
         } else if (e.detail) {
-          if (e.detail / 3 < 0 && i > 1) {
+          if (e.detail / 3 < 0 && pageNum > 1) {
             // 滚轮向上
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
             }
             timeOutFlag = setTimeout(function() {
-              i -= 1;
-              changePage(i);
+              pageNum -= 1;
+              changePage(pageNum);
             }, 50);
-          } else if (e.detail / 3 > 0 && i < pages) {
+          } else if (e.detail / 3 > 0 && pageNum < pages) {
             // 滚轮向下
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
             }
             timeOutFlag = setTimeout(function() {
-              i += 1;
-              changePage(i);
+              pageNum += 1;
+              changePage(pageNum);
             }, 50);
           }
         }
@@ -160,15 +157,15 @@ $(document).ready(function() {
   }
   // 右下角点击
   $(".prev-page").on("click", function() {
-    if (i > 1) {
-      i -= 1;
-      changePage(i);
+    if (pageNum > 1) {
+      pageNum -= 1;
+      changePage(pageNum);
     }
   });
   $(".next-page").on("click", function() {
-    if (i < pages) {
-      i += 1;
-      changePage(i);
+    if (pageNum < pages) {
+      pageNum += 1;
+      changePage(pageNum);
     }
   });
   /*菜单事件*/

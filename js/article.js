@@ -1,12 +1,12 @@
 $(document).ready(function() {
   "use strict";
-  // var startY = 0;
-  // var moveY = 0;
-  // var isChangingPage = false;
-  // var timeOutFlag = null;
+  var startY = 0;
+  var moveY = 0;
+  var isChangingPage = false;
+  var timeOutFlag = null;
   var isMenuClosed = true;
-  // var viewH = $(".main-container").height();
-  // var contentH = $(".main-container").get(0).scrollHeight;
+  var scrollArticle =0;
+  // 
   // var scrollTop = $(".main-container").scrollTop();
   //
   // var winHeight = document.documentElement.clientHeight;
@@ -43,11 +43,6 @@ $(document).ready(function() {
   //     touch = e.targetTouches[0];
   //     moveY = touch.pageY - startY; //变化的量
   //     if (isMenuClosed && moveY < -50 && !isChangingPage) {
-  //       scrollTop = $(".main-container").scrollTop();
-  //       if (contentH - viewH - scrollTop <= -497) {
-  //         hideCover();
-  //       }
-  //
   //     } else if (isMenuClosed && moveY > 50 && !isChangingPage) { //向下
   //       showCover();
   //     }
@@ -63,28 +58,14 @@ $(document).ready(function() {
   //       if (e.wheelDelta) {
   //         if (e.wheelDelta / 120 > 0) {
   //           // 滚轮向上
-  //           if (timeOutFlag != null) {
-  //             clearTimeout(timeOutFlag);
-  //           }
-  //           timeOutFlag = setTimeout(function() {
-  //             showCover();
-  //           }, 50);
+  //           $("article").scrollTop(scrollArticle);
   //         } else if (e.wheelDelta / 120 < 0) {
   //           // 滚轮向下
+  //           scrollArticle+=1;
   //           scrollTop = $(".main-container").scrollTop();
+  //           $("article").scrollTop(scrollArticle);
   //           console.log("滚动--可见--内容");
-  //           console.log(scrollTop);
-  //           console.log(viewH);
-  //           console.log(contentH);
-  //           if (timeOutFlag != null) {
-  //             clearTimeout(timeOutFlag);
-  //           }
-  //           timeOutFlag = setTimeout(function() {
-  //             if (contentH - viewH - scrollTop <= -497) {
-  //               hideCover();
-  //
-  //             }
-  //           }, 50);
+  //           console.log(scrollArticle);
   //         }
   //       } else if (e.detail) {
   //         if (e.detail / 3 < 0) {

@@ -47,19 +47,23 @@ a:after {
   top: -2px;
   width: 0;
   height: 1px;
-  background: #efefef;
+  background: #b2b2b2;
   transition: 0.5s ease-in-out;
 }
 
 a:hover::after {
   width: 100%;
 }
-
+a.active::after {
+  width: 100%;
+}
 p {
   font-family: "Arial";
   line-height: 2;
 }
-
+h1 {
+  color: #ffffff;
+}
 .cover-1 {
   position: fixed;
   z-index: 9998;
@@ -72,7 +76,6 @@ p {
 }
 
 .cover-1.go-up {
-  //transform: translate(0,-240%);
   opacity: 0;
 }
 
@@ -107,27 +110,27 @@ p {
     height: 20px;
     cursor: pointer;
 
-    .icon-bar {
+    .bar {
       position: absolute;
       right: 0;
-      background-color: #efefef;
+      background-color: #b2b2b2;
       transition: 0.5s;
     }
 
-    .bar-1 {
+    .bar:nth-child(1) {
       width: 20px;
       height: 1px;
       top: 0;
       transform-origin: 0 0;
     }
 
-    .bar-2 {
+    .bar:nth-child(2){
       width: 20px;
       height: 1px;
       top: 9px;
     }
 
-    .bar-3 {
+    .bar:nth-child(3) {
       width: 20px;
       height: 1px;
       top: 18px;
@@ -136,22 +139,22 @@ p {
   }
 
   .menu-icon:hover {
-    .bar-2 {
+    .bar:nth-child(2) {
       width: 15px;
     }
   }
 
   .menu-icon.opened {
-    .bar-1 {
+    .bar:nth-child(1) {
       width: 21px;
       transform: translate(1px,2px) rotate(45deg);
     }
 
-    .bar-2 {
+    .bar:nth-child(2) {
       opacity: 0;
     }
 
-    .bar-3 {
+    .bar:nth-child(3) {
       width: 21px;
       transform: translate(0px,-1px) rotate(-45deg);
     }
@@ -188,7 +191,7 @@ p {
 
       a {
         position: relative;
-        color: #efefef;
+        color: #b2b2b2;
         transition: 0.5s ease-in-out;
       }
     }
@@ -219,7 +222,36 @@ p {
     }
   }
 }
-
+@keyframes line {
+  0%{
+    left: 0;
+    right: 0;
+    width: 0;
+  }
+  30%{
+    left: 0;
+    width: 100%;
+  }
+  60%{
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+.line {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -2px;
+  height: 1px;
+  background-color: #b2b2b2;
+  animation: line 3s infinite ease-in-out;
+}
 footer {
   display: block;
   position: absolute;
@@ -244,19 +276,19 @@ footer {
 
       a {
         position: relative;
-        color: #efefef;
+        color: #b2b2b2;
         transition: 0.5s ease-in-out;
       }
 
       a:after {
-        background: #efefef;
+        background: #b2b2b2;
       }
     }
   }
 
   span {
     font-size: 1rem;
-    color: #efefef;
+    color: #b2b2b2;
     position: absolute;
     bottom: 2.5rem;
     left: 2.5rem;
