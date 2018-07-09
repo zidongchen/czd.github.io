@@ -54,16 +54,20 @@ a:after {
 a:hover::after {
   width: 100%;
 }
+
 a.active::after {
   width: 100%;
 }
+
 p {
   font-family: "Arial";
   line-height: 2;
 }
+
 h1 {
   color: #ffffff;
 }
+
 .cover-1 {
   position: fixed;
   z-index: 9998;
@@ -82,14 +86,14 @@ h1 {
 .logo-container {
   left: 2.5rem;
   top: 2.5rem;
-  width: 106px;
-  height: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
 
   .logo {
     left: 0;
     top: 0;
-    width: 106px;
-    height: 20px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: url("../images/SVG/logo.svg") no-repeat;
   }
 }
@@ -124,7 +128,7 @@ h1 {
       transform-origin: 0 0;
     }
 
-    .bar:nth-child(2){
+    .bar:nth-child(2) {
       width: 20px;
       height: 1px;
       top: 9px;
@@ -223,26 +227,30 @@ h1 {
   }
 }
 @keyframes line {
-  0%{
+  0% {
     left: 0;
     right: 0;
     width: 0;
   }
-  30%{
+
+  30% {
     left: 0;
     width: 100%;
   }
-  60%{
+
+  60% {
     left: auto;
     right: 0;
     width: 100%;
   }
-  100%{
+
+  100% {
     width: 0;
     left: auto;
     right: 0;
   }
 }
+
 .line {
   position: absolute;
   width: 100%;
@@ -252,6 +260,7 @@ h1 {
   background-color: #b2b2b2;
   animation: line 3s infinite ease-in-out;
 }
+
 footer {
   display: block;
   position: absolute;
@@ -299,51 +308,27 @@ footer {
     position: absolute;
     bottom: 2.5rem;
     right: 2.5rem;
-    width: 106px;
-    height: 20px;
-    background: url("../images/SVG/logo.svg");
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/SVG/logo.svg") no-repeat;
     opacity: 0.5;
   }
 }
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
 @media screen and (max-width: 979px) and (min-width: 768px) {
-  .logo-container {
-    .logo {
-      background: url("../images/SVG/logo-small.svg") no-repeat;
-    }
-  }
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html {
-    font-size: 8px;
-  }
-
-  .logo-container {
-    .logo {
-      background: url("../images/SVG/logo-small.svg") no-repeat;
-    }
-  }
-
-  footer {
-    .logo {
-      background: none;
-    }
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 479px) {
   html {
     font-size: 8px;
   }
-
-  .logo-container {
-    .logo {
-      background: url("../images/SVG/logo-small.svg") no-repeat;
-    }
-  }
-
-  footer {
-    .logo {
+  footer{
+    .logo{
       background: none;
     }
   }
