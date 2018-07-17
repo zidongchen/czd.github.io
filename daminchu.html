@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <!--    本地js-->
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="js/article.min.js"></script>
   <script src="./js/getUrlParam.js"></script>
 </head>
@@ -46,40 +47,48 @@
       <h1>Daminchu</h1>
     </div>
     <article>
-      <p class="info">2018</p>
-      <p class="info">Curriculum</p>
-      <p class="info">Service System | Business model</p>
-      <p id="" class="content cl12 float-left">Daminchu is a curricular work when I first contacted the Service design and Business model.The teacher,Ying Hu,required us to design a realized service system for Intelligent Communities.It's a teamwork with 4 teamates and the part of me is to design
-        the service system and calculate a sustainable business model.
-      </p>
-
+      <div class="intro content cl12 float-left">
+        <p class="">Daminchu is a curricular work when I first contacted the Service design and Business model.The teacher,Ying Hu,required us to design a realized service system for Intelligent Communities.It's a teamwork with 4 teamates and the part of me is to
+          design the service system and calculate a sustainable business model.
+        </p>
+        <div class="info-container">
+          <p class="info">Service System | Business model</p>
+        </div>
+      </div>
       <h2>Persona</h2>
       <div class="content cl12 float-left">
-        <img id="" class=" cl12 float-left" src="./images/daminchu/persona1.png" alt="">
-        <img id="" class=" cl12 float-left" src="./images/daminchu/persona2.png" alt="">
+        <img id="" class=" cl12 float-left lazy" data-original="./images/daminchu/persona1.png" alt="">
+        <img id="" class=" cl12 float-left lazy" data-original="./images/daminchu/persona2.png" alt="">
       </div>
       <div class="content cl12 float-left">
         <h2>Solution</h2>
-        <img id="solution" class=" cl12 float-left" src="./images/daminchu/solution.png" alt="">
+        <img id="solution" class="cl12 float-left lazy" data-original="./images/daminchu/solution.png" alt="">
         <p id="" class=" cl12 float-right">
           Daminchu is a platform on which housewife can release plan of dishes today and others can ask her to cook one more and pay for it.
         </p>
       </div>
       <h2>Storyboard</h2>
-      <img src="./images/daminchu/storyboardA.jpg" alt="" class="cl12">
-      <img src="./images/daminchu/storyboardB.jpg" alt="" class="content cl12">
+      <img data-original="./images/daminchu/storyboardA.jpg" alt="" class="cl12 lazy">
+      <img data-original="./images/daminchu/storyboardB.jpg" alt="" class="content cl12 lazy">
       <h2>System Map</h2>
-      <img src="./images/daminchu/systemmap.png" alt="" class="content cl12">
+      <img data-original="./images/daminchu/systemmap.png" alt="" class="content cl12 lazy">
       <h2>Delivering the food</h2>
       <div class="content cl12 float-left">
-        <img src="./images/daminchu/deliverthefood.png" alt="" class="cl8 float-left">
+        <img data-original="./images/daminchu/deliverthefood.png" alt="" class="cl8 float-left lazy">
         <p class="cl4 float-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <h2>Business canvas</h2>
-      <img src="./images/daminchu/commercialcanvas.png" alt="" class="content cl12">
+      <img data-original="./images/daminchu/commercialcanvas.png" alt="" class="content cl12 lazy">
     </article>
 
   </div>
 </body>
-
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $(".lazy").lazyload({
+      container: $(".main-container"),
+      effect: "fadeIn"
+    });
+  });
+</script>
 </html>

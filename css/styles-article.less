@@ -27,6 +27,7 @@
 
 #next-project {
   position: fixed;
+  display: inline-block;
   bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -43,6 +44,29 @@
   background-size: cover;
   align-items: center;
 }
+.intro {
+  background: #efefef;
+  border-bottom: 0.5px solid #cccccc;
+}
+.info-container {
+  position: relative;
+  width: ceil(100%-5rem);
+  font-size: 0;
+  display: flex;
+  background: #111111;
+  left: 50%;
+  transform: translate(-50%,50%);
+  color: #b2b2b2;
+  .info {
+    display: inline-block;
+    flex: 1;
+    font-size: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: = height;
+  }
+}
+
 article {
   position: relative;
   width: 50%;
@@ -202,9 +226,6 @@ article {
     }
   }
 
-  #next-project {
-    right: 15%;
-  }
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html {
@@ -262,10 +283,6 @@ article {
     .cl1 {
       width: 8.3%;
     }
-  }
-
-  #next-project {
-    right: 2.5rem;
   }
 }
 @media screen and (max-width: 479px) {
@@ -330,9 +347,5 @@ article {
     .cl1 {
       width: 8.3%;
     }
-  }
-
-  #next-project {
-    right: 2.5rem;
   }
 }

@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <!--    本地js-->
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="./js/article.min.js"></script>
   <script src="./js/getUrlParam.js"></script>
 </head>
@@ -46,37 +47,47 @@
       <h1>Magicar</h1>
     </div>
     <article>
-      <p class="info">2018</p>
-      <p class="info">Curriculum</p>
-      <p class="info">Service System | UI | UX</p>
-      <p id="introduce" class="content cl12 float-left">Magicar is a real project when I attended the special topic design hosted by Wei Wang in 2018.The whole workshop continued for two weeks.I did the research with a teamate and drew a rough idea of automatic drive in theme parks by myself.</p>
-
-      <video class="video1 content cl12 float-left" src="videos/magicar-Wi-Fi(high).mp4" controls poster="./images/magicar/magicar.png">
+      <div class="intro content cl12 float-left">
+        <p class="">Magicar is a real project when I attended the special topic design hosted by Wei Wang in 2018.The whole workshop continued for two weeks.I did the research with a teamate and drew a rough idea of automatic drive in theme parks by myself.
+        </p>
+        <div class="info-container">
+          <p class="info">Service System | UI | UX</p>
+        </div>
+      </div>
+      <video class="video1 content cl12 float-left lazy" src="videos/magicar-Wi-Fi(high).mp4" controls poster="./images/magicar/magicar.png">
 
       </video>
       <h2>Research & Reflection</h2>
       <div class="content cl12 float-left">
-        <img id="time-energy" class=" cl6 float-left" src="./images/magicar/time-energy.png" alt="">
-        <p id="passage-time-energy" class=" cl6 float-left">
+        <img id="time-energy" class="cl6 float-left lazy" data-original="./images/magicar/time-energy.png" alt="">
+        <p id="passage-time-energy" class="cl6 float-left">
           Trough the fild research,we found that there is a number of strong willings to join the service when after a long walk between two game projects.It's the key to help the tourists to buy and accede to the service.
         </p>
       </div>
       <div class="content cl12 float-left">
-        <img id="ticket" class=" cl6 float-right" src="./images/magicar/ticket.png" alt="">
+        <img id="ticket" class="cl6 float-right lazy" data-original="./images/magicar/ticket.png" alt="">
         <p id="passage-ticket" class=" cl6 float-left">
           So,tourists' tickets which were able to store the data of tourists with a QR code on itself are the best running thread of the whole journey.
         </p>
       </div>
       <h2>System Map</h2>
-      <img src="./images/magicar/systemmap.png" alt="" class="content cl12">
+      <img data-original="./images/magicar/systemmap.png" alt="" class="content cl12 lazy">
       <h2>Journey Map</h2>
-      <img src="./images/magicar/journeymap.png" alt="" class="content cl12">
+      <img data-original="./images/magicar/journeymap.png" alt="" class="content cl12 lazy">
       <h2>UI </h2>
-      <img src="./images/magicar/ipad01.gif" alt="" class=" cl12">
+      <img data-original="./images/magicar/ipad01.gif" alt="" class="cl12 lazy">
       <p class="content cl12" style="text-align:center;">GUI inside the car for passenger</p>
     </article>
     <a href="./daminchu.html" id="next-project"><div class="line"></div>NEXT : Daminchu</a>
   </div>
 </body>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+  $(".lazy").lazyload({
+    container: $(".main-container"),
+    effect: "fadeIn"
+  });
+});
+</script>
 
 </html>
