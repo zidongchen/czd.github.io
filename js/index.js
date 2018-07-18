@@ -5,7 +5,7 @@ $(document).ready(function() {
   var moveY = 0;
   var isChangingPage = false;
   var timeOutFlag = null;
-  var pages = 3;
+  var pages = $(".pages").length + 1;
   var isMenuClosed = true;
 
   // 返回时返回指定页面
@@ -18,7 +18,7 @@ $(document).ready(function() {
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changePages() {
-    if (pageNum < pages&&pageNum>1) {
+    if (pageNum < pages && pageNum > 1) {
       $(".page-writing").removeClass("active");
       prevPage = pageNum - 1;
       $(".page" + pageNum + "").removeClass("hidepage");
