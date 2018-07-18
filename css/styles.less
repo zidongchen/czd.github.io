@@ -32,13 +32,17 @@ body {
 }
 
 ul {
+  padding: 0;
   list-style: none;
 }
 
 a {
   text-decoration: none;
+  position: relative;
 }
-
+a.active {
+  opacity: 0.2;
+}
 a:after {
   content: "";
   display: block;
