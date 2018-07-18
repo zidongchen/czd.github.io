@@ -111,8 +111,14 @@
     overflow: hidden;
     transition: 1.2s ease-in-out;
     background: #111111;
-    background-position: center center;
-    background-size: cover;
+
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+    }
   }
 
   .pages.hidepage {
@@ -140,7 +146,7 @@
     box-sizing: border-box;
     overflow: hidden;
 
-    .background-img {
+    .pic {
       position: absolute;
       top: 0;
       left: 0;
@@ -151,8 +157,10 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-color: #111111;
+      transition: 0.5s 0.5s;
     }
   }
+
   .page-writing {
     position: absolute;
     width: 50%;
@@ -222,6 +230,7 @@
       width: 100%;
     }
   }
+
 }
 
 .pages-container.go-up {

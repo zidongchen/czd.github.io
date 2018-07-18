@@ -44,8 +44,8 @@
   <!--<div class="tittle cover-1">Showcase</div>-->
   <!--<div class="scroll-down cover-1">Please Scroll Down</div>-->
   <div class="page-num-container cover-1">
-      <div class="dot active"></div>
-      <div class="dot"></div>
+    <div class="dot active"></div>
+    <div class="dot"></div>
   </div>
   <div class="page-icon-container">
     <div class="next-page"></div>
@@ -59,25 +59,29 @@
     </div>
   </div> -->
   <div class="pages-container">
-    <div class="page1 pages" style="background-image: url('./images/magicar/bg01.jpg')">
+    <div class="page1 pages">
       <a href="./magicar.html" class="picture">
-        <div class="background-img" style="background-image: url('./images/magicar/magicar.png');"></div>
+        <div class="pic" style="background-image: url('./images/magicar/magicar.png');"></div>
       </a>
       <div href="#" class="page-writing">
         <h1>Magicar</h1>
         <p>AutoMatic Drive System in Theme Park</p>
-        <a class="readmore" href="./magicar.html"><div class="line"></div>view  more</a>
+        <a class="readmore" href="./magicar.html">
+          <div class="line"></div>view more</a>
       </div>
+      <div class="bg" style="background-image: url('./images/magicar/bg01.jpg')"></div>
     </div>
-    <div class="page2 pages" style="background-image: url('./images/daminchu/bg01.jpg')">
+    <div class="page2 pages">
       <a href="./daminchu.html" class="picture">
-        <div class="background-img" style="background-image: url('./images/daminchu/daminchu.png');"></div>
+        <div class="pic" style="background-image: url('./images/daminchu/daminchu.png');"></div>
       </a>
       <div href="#" class="page-writing">
         <h1>Daminchu</h1>
         <p>Neighbour Kitchen</p>
-        <a href="./daminchu.html" class="readmore"><div class="line"></div>view more</a>
+        <a href="./daminchu.html" class="readmore">
+          <div class="line"></div>view more</a>
       </div>
+      <div class="bg" style="background-image: url('./images/daminchu/bg01.jpg')"></div>
     </div>
 
   </div>
@@ -93,7 +97,11 @@
 </body>
 <script type="text/javascript" charset="utf-8">
   $(function() {
-      $(".lazy").lazyload({effect: "fadeIn"});
-  });
+    $(".lazy").lazyload({
+      effect: "fadeIn",
+      events: "load"
+    });
+  })
 </script>
+
 </html>
