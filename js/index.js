@@ -8,12 +8,12 @@ $(document).ready(function() {
   var pages = $(".pages").length + 1;
   var isMenuClosed = true;
   // 返回时返回指定页面
-  var pageNumGet = UrlParm.parm("pageNum");
-  if (pageNumGet) {
-    pageNum = parseInt(pageNumGet);
-  } else {
-    pageNum = 1;
-  }
+  // var pageNumGet = UrlParm.parm("pageNum");
+  // if (pageNumGet) {
+  //   pageNum = parseInt(pageNumGet);
+  // } else {
+  //   pageNum = 1;
+  // }
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changeIndexPages() {
