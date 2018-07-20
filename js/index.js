@@ -7,7 +7,6 @@ $(document).ready(function() {
   var timeOutFlag = null;
   var pages = $(".pages").length + 1;
   var isMenuClosed = true;
-
   // 返回时返回指定页面
   var pageNumGet = UrlParm.parm("pageNum");
   if (pageNumGet) {
@@ -17,7 +16,7 @@ $(document).ready(function() {
   }
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
-  function changePages() {
+  function changeIndexPages() {
     if (pageNum < pages && pageNum > 1) {
       $(".page-writing").removeClass("active");
       prevPage = pageNum - 1;
@@ -39,10 +38,9 @@ $(document).ready(function() {
       $(".next-page").css("opacity", "0");
       hideCover();
     }
-
   }
 
-  function changePageNum() {
+  function changeIndexPageNum() {
     $(".dot").removeClass("active");
     $(".dot:nth-child(" + pageNum + ")").addClass("active");
   }
@@ -61,12 +59,11 @@ $(document).ready(function() {
     $(".pages-container").removeClass("go-up");
   }
   // 切换页面
-  function changePage() {
-    changePages();
-    changePageNum();
+  function changeIndexPage() {
+    changeIndexPages();
+    changeIndexPageNum();
   }
-  // 注册第一页
-  changePage(pageNum);
+  changeIndexPage();
   /*滑动事件*/
   // 移动设备
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -87,11 +84,11 @@ $(document).ready(function() {
       if (isMenuClosed && moveY < -50 && pageNum < pages && !isChangingPage) {
         pageNum += 1;
         isChangingPage = true;
-        changePage(pageNum);
+        changeIndexPage(pageNum);
       } else if (isMenuClosed && moveY > 50 && pageNum > 1 && !isChangingPage) { //向下
         pageNum -= 1;
         isChangingPage = true;
-        changePage(pageNum);
+        changeIndexPage(pageNum);
       }
     }, false);
     //监听touchend，监听touch结束，可判断是上滑，还是下滑
@@ -112,7 +109,7 @@ $(document).ready(function() {
             }
             timeOutFlag = setTimeout(function() {
               pageNum -= 1;
-              changePage(pageNum);
+              changeIndexPage(pageNum);
             }, 50);
           } else if (e.wheelDelta / 120 < 0 && pageNum < pages) {
             // 滚轮向下
@@ -121,7 +118,7 @@ $(document).ready(function() {
             }
             timeOutFlag = setTimeout(function() {
               pageNum += 1;
-              changePage(pageNum);
+              changeIndexPage(pageNum);
             }, 50);
           }
         } else if (e.detail) {
@@ -132,7 +129,7 @@ $(document).ready(function() {
             }
             timeOutFlag = setTimeout(function() {
               pageNum -= 1;
-              changePage(pageNum);
+              changeIndexPage(pageNum);
             }, 50);
           } else if (e.detail / 3 > 0 && pageNum < pages) {
             // 滚轮向下
@@ -141,7 +138,7 @@ $(document).ready(function() {
             }
             timeOutFlag = setTimeout(function() {
               pageNum += 1;
-              changePage(pageNum);
+              changeIndexPage(pageNum);
             }, 50);
           }
         }
@@ -156,20 +153,20 @@ $(document).ready(function() {
     window.onmousewheel = document.onmousewheel = scrollFunc;
   }
   // 右下角点击
-  $(".prev-page").on("click", function() {
+  $(document).on("click", ".prev-page", function() {
     if (pageNum > 1) {
       pageNum -= 1;
-      changePage(pageNum);
+      changeIndexPage(pageNum);
     }
   });
-  $(".next-page").on("click", function() {
+  $(document).on("click", ".next-page", function() {
     if (pageNum < pages) {
       pageNum += 1;
-      changePage(pageNum);
+      changeIndexPage(pageNum);
     }
   });
   /*菜单事件*/
-  $(".menu-icon-container").on("click", function() {
+  $(document).on("click", ".menu-icon-container", function() {
     if (isMenuClosed) {
       $(".menu-container").addClass("opened");
       $(".menu-icon").addClass("opened");

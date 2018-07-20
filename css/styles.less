@@ -30,6 +30,48 @@ body {
   font-size: 16px;
   touch-action: none;
 }
+main {
+  width: 100%;
+  height: 100%;
+
+  .main-content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cover-layer {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+  z-index: 10002;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.6s 1.8s;
+
+  .layer-logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 20px;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.6s 1.2s;
+  }
+}
+
+.page-is-changing .cover-layer {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.6s;
+}
+.page-is-changing .layer-logo-container {
+  opacity: 1 ;
+  transition: 0.6s 0.4s;
+}
 
 ul {
   padding: 0;
@@ -40,9 +82,11 @@ a {
   text-decoration: none;
   position: relative;
 }
+
 a.active {
   opacity: 0.2;
 }
+
 a:after {
   content: "";
   display: block;
@@ -82,6 +126,16 @@ h1 {
   -o-transition: ease-in-out 0.9s;
   transition: ease-in-out 0.9s;
 }
+.cover-2 {
+  position: fixed;
+  z-index: 9998;
+  opacity: 1;
+  -webkit-transition: ease-in-out 0.9s;
+  -moz-transition: ease-in-out 0.9s;
+  -ms-transition: ease-in-out 0.9s;
+  -o-transition: ease-in-out 0.9s;
+  transition: ease-in-out 0.9s;
+}
 
 .cover-1.go-up {
   opacity: 0;
@@ -90,16 +144,15 @@ h1 {
 .logo-container {
   left: 2.5rem;
   top: 2.5rem;
-  width:128px;
   height: 20px;
+}
 
-  .logo {
-    left: 0;
-    top: 0;
-    width: 128px;
-    height: 20px;
-    background: url("../images/SVG/logo.svg") no-repeat;
-  }
+.logo {
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 20px;
+  background: url("../images/SVG/logo.svg") no-repeat;
 }
 
 .menu-icon-container {
@@ -230,6 +283,16 @@ h1 {
     }
   }
 }
+
+.back-icon {
+  top: 2.5rem;
+  left: 2.5rem;
+  background: url("../images/SVG/back-icon.svg");
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
+}
+
 @keyframes line {
   0% {
     left: 0;
@@ -308,20 +371,17 @@ footer {
     opacity: 0.5;
   }
 
-  .logo {
+  .footer-logo-container {
     position: absolute;
     bottom: 2.5rem;
     right: 2.5rem;
-    width: 2.5rem;
     height: 20px;
-    background: url("../images/SVG/logo.svg") no-repeat;
     opacity: 0.5;
   }
 }
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
-@media screen and (max-width: 979px) and (min-width: 768px) {
-}
+@media screen and (max-width: 979px) and (min-width: 768px) {}
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html {
     font-size: 10px;
@@ -331,8 +391,9 @@ footer {
   html {
     font-size: 8px;
   }
-  footer{
-    .logo{
+
+  footer {
+    .logo {
       background: none;
     }
   }
