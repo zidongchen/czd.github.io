@@ -30,7 +30,7 @@ jQuery(document).ready(function(event) {
   function changePage(url, bool) {
     isAnimating = true;
     // trigger page animation
-    $('body').addClass('page-is-changing');
+    $(".cover-layer").fadeIn(500);
     loadNewContent(url, bool);
   }
 
@@ -45,7 +45,7 @@ jQuery(document).ready(function(event) {
 
       setTimeout(function() {
         //wait for the end of the transition on the loading bar before revealing the new content
-        $('body').removeClass('page-is-changing');
+        $(".cover-layer").fadeOut(500);
         $('main').html(section);
         if (isArticle()) {
           var scriptArticle = document.createElement("script");
@@ -75,7 +75,7 @@ jQuery(document).ready(function(event) {
         console.log("index" + isIndex());
         console.log("article" + isArticle());
         isAnimating = false;
-      }, 3000);
+      }, 1000);
 
       if (url != window.location && bool) {
         //add the new page to the window.history
