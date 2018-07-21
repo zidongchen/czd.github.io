@@ -168,11 +168,11 @@ $(document).ready(function() {
   /*菜单事件*/
   $(document).on("click", ".menu-icon-container", function() {
     if (isMenuClosed) {
-      $(".menu-container").addClass("opened");
+      $(".menu-container").fadeIn(500);
       $(".menu-icon").addClass("opened");
       isMenuClosed = false;
     } else {
-      $(".menu-container").removeClass("opened");
+      $(".menu-container").fadeOut(500);
       $(".menu-icon").removeClass("opened");
       isMenuClosed = true;
     }

@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   <link rel="stylesheet" type="text/css" href="./css/index.css" />
   <link rel="stylesheet" type="text/css" href="./css/contact.css" />
-
+  <link rel="stylesheet" type="text/css" href="./css/article.css" />
 </head>
 
 <body>
@@ -36,7 +36,7 @@
           <li><a href="##" class="active">CONTACT</a></li>
         </ul>
       </div>
-      <a href="javascript:history.go(-1)">
+      <a href="./index.html" data-type="page-transition">
         <div class="back-icon cover-2"></div>
       </a>
       <div class="selfIntro-container">
@@ -74,9 +74,22 @@
       </footer>
     </div>
   </main>
+
+  <div class="cover-layer">
+    <div class="layer-logo-container">
+      <div></div>
+    </div>
+  </div>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/contact.min.js"></script>
-  <script src="./libs/changingPage.js"></script>
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="./js/index.min.js"></script>
+  <script type="text/javascript" src="./js/contact.min.js"></script>
+  <script type="text/javascript" src="./libs/changingPage.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      $(".cover-layer").fadeOut(500);
+    }
+  </script>
 </body>
 
 </html>

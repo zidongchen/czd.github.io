@@ -2,32 +2,48 @@ $(document).ready(function() {
   var isMenuClosed = true;
   var $selfintro;
   var selfIntroHeight = 0;
-  $(document).on("click","#hi", function() {
+  var i = 1;
+  var selfIntroLg = $(".selfIntro").length ;
+  $(document).on("click", "#hi", function() {
     $("#hi").hide();
     setTimeout(function() {
       $(".skip").fadeIn(500);
     }, 4000);
     setTimeout(function() {
       $(".skip").fadeOut(500);
-    }, 24000);
+    }, 22000);
     setTimeout(function() {
-      $(".selfIntro-container").css("overflow-y","scroll");
-    }, 38000);
-    for (var i = 1; i < $(".selfIntro").length + 1; i++) {
-      $selfintro = $("#selfIntro" + i + "");
-      selfIntroHeight += $selfintro.outerHeight(true);
-      $(".selfIntro-container").animate({
-        scrollTop: selfIntroHeight
-      }, 3000, "linear",$selfintro.delay((i - 1) * 2000).fadeIn(1000));
-    }
+      $(".selfIntro-container").css("overflow-y", "scroll");
+    }, 28000);
+    showSelfIntro();
   });
-  $(document).on("click",".skip",function() {
+
+  function scrollSelfIntro() {
+    $(".selfIntro-container").animate({
+      scrollTop: selfIntroHeight
+    }, 2000, "linear");
+    console.log(i);
+    if (i < selfIntroLg) {
+      console.log("a");
+      i += 1;
+      showSelfIntro();
+    }
+  }
+
+  function showSelfIntro() {
+    $selfintro = $("#selfIntro" + i + "");
+    selfIntroHeight += $selfintro.outerHeight(true);
+    $selfintro.delay((i - 1) * 1500).fadeIn(1000, scrollSelfIntro());
+  }
+
+  $(document).on("click", ".skip", function() {
     $(".selfIntro").stop(true);
     $(".selfIntro-container").stop(true);
     $(".selfIntro-container").animate({
-      scrollTop: selfIntroHeight},1000);
+      scrollTop: selfIntroHeight
+    }, 1000);
     $(".selfIntro").fadeIn();
-    $(".selfIntro-container").css("overflow-y","scroll");
+    $(".selfIntro-container").css("overflow-y", "scroll");
     $(".skip").fadeOut(500);
   });
 });

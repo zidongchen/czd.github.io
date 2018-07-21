@@ -239,9 +239,7 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.9s ease-in-out 0s;
+  display: none;
   background-color: #111111;
 
   .menu-list {
@@ -259,7 +257,7 @@ h1 {
       top: 20px;
       font-size: 3rem;
       margin-bottom: 2rem;
-      opacity: 0;
+      opacity: 1;
 
       a {
         position: relative;
@@ -283,9 +281,6 @@ h1 {
 }
 
 .menu-container.opened {
-  opacity: 1;
-  pointer-events: auto;
-  width: 100%;
 
   .menu-list {
     li {
