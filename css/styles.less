@@ -13,6 +13,7 @@
 
 html {
   font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -50,7 +51,6 @@ main {
   top: 0;
   left: 0;
   // transition: 0.6s 1.8s;
-
   .layer-logo-container {
     position: absolute;
     left: 50%;
@@ -58,8 +58,9 @@ main {
     height: 20px;
     width: 38px;
     transform: translate(-50%,-50%);
-    -webkit-mask-image:url(../images/SVG/logo.png);
+    -webkit-mask-image: url("../images/SVG/logo.png");
     background-color: #333333;
+
     div {
       position: absolute;
       width: 100%;
@@ -281,7 +282,6 @@ h1 {
 }
 
 .menu-container.opened {
-
   .menu-list {
     li {
       top: 0;
