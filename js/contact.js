@@ -3,7 +3,6 @@ $(document).ready(function() {
   var $selfintro;
   var selfIntroHeight = 0;
   var i = 1;
-  var selfIntroLg = $(".selfIntro").length ;
   $(document).on("click", "#hi", function() {
     $("#hi").hide();
     setTimeout(function() {
@@ -23,7 +22,7 @@ $(document).ready(function() {
       scrollTop: selfIntroHeight
     }, 2000, "linear");
     console.log(i);
-    if (i < selfIntroLg) {
+    if (i < $(".selfIntro").length) {
       console.log("a");
       i += 1;
       showSelfIntro();
