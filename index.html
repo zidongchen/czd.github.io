@@ -103,7 +103,10 @@
   <script type="text/javascript" src="./libs/changingPage.min.js"></script>
   <script type="text/javascript">
     window.onload=function(){
-      $(".cover-layer").fadeOut(500);
+      setTimeout(function(){
+        $(".cover-layer").fadeOut(500);
+      },1000);
+
     }
   </script>
 </body>
