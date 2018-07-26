@@ -1,32 +1,55 @@
 .page-num-container {
   display: block;
   position: absolute;
-  left: 2.5rem;
+  right: 2.5rem;
   bottom: 2.5rem;
-  width:10px;
+  width: 40px;
   color: #b2b2b2;
 
+
   .dot {
-    display:block;
+    display: block;
     background: #b2b2b2;
     width: 10px;
     height: 1px;
     font-size: 0;
-    margin: 0.25rem;
-    bottom: 0;
+    margin-top: 0.25rem;
     transition: 1.2s ease-in-out;
+    float: right;
   }
+
   .dot.active {
     width: 40px;
   }
 }
-
+@keyframes nextPageIcon{
+  0%{
+    height: 0;
+    top: 0;
+    bottom: auto;
+  }
+  33.3%{
+    height: 40px;
+    top: 0;
+    bottom: auto;
+  }
+  66.6%{
+    height: 40px;
+    top: auto;
+    bottom: 0;
+  }
+  100%{
+    height: 0;
+    top: auto;
+    bottom: 0;
+  }
+}
 .page-icon-container {
   position: absolute;
   bottom: 2.5rem;
-  right: 2.5rem;
+  left: 2.5rem;
   width: 40px;
-  height: 100%;
+  height: 40px;
   z-index: 9998;
   transition: 1.2s ease-in-out;
 
@@ -56,12 +79,13 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-    background: url("../images/SVG/next-icon.svg") no-repeat;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
     transition: 0.3s ease-in-out;
+    background: #b2b2b2;
+    animation: nextPageIcon 3s infinite ease-in-out;
   }
 
   .prev-page:after {
@@ -94,6 +118,17 @@
   opacity: 1;
 }
 
+.scroll-down {
+  width: 200px;
+  height: 20px;
+  position: fixed;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  transform: rotate(-90deg) translate(-20px,0);
+  transform-origin: left top;
+  color: #b2b2b2;
+}
+
 .pages-container {
   width: 100%;
   height: 100%;
@@ -123,6 +158,7 @@
   .pages.hidepage {
     transform: translateY(-100%);
   }
+
   .pages:nth-child(1) {
     z-index: 6;
   }
@@ -134,6 +170,7 @@
   .pages:nth-child(3) {
     z-index: 4;
   }
+
   .picture {
     position: absolute;
     top: 50%;
@@ -163,7 +200,7 @@
   .page-writing {
     position: absolute;
     width: 50%;
-    height: 50%;
+    height: 20%;
     left: 50%;
     top: 50%;
     transform: translate(0,-50%);
@@ -194,18 +231,21 @@
       transition: 0.5s 0.5s;
       transform: translateY(10px);
     }
-
     .readmore {
+      width: 40px;
+      height: 40px;
       position: absolute;
-      bottom: 2.5rem;
-      display: inline-block;
-      font-size: 1em;
-      text-align: center;
-      cursor: pointer;
-      border-radius: 2px;
+      top: 28px;
+      right: 5rem;
       transition: 0.5s 0.5s;
       transform: translateY(10px);
-      color: inherit;
+    }
+    .view-icon {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -8px;
+      background: url("../images/SVG/view-icon.svg") ;
     }
   }
 
@@ -223,12 +263,7 @@
     .readmore {
       transform: translateY(0px);
     }
-
-    .readmore:hover::before {
-      width: 100%;
-    }
   }
-
 }
 
 .pages-container.go-up {
@@ -236,20 +271,19 @@
 }
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
-@media screen and (max-width: 979px) and (min-width: 768px) {
-
-}
+@media screen and (max-width: 979px) and (min-width: 768px) {}
 @media screen and (max-width: 767px) and (min-width: 480px) {
   .pages-container {
     .pages {
       .picture {
-        height: 40%;
+        height: 30%;
         width: 100%;
         top: 30%;
         left: 0;
       }
+
       .page-writing {
-        height: 40%;
+        height: 30%;
         width: 100%;
         top: 70%;
         left: 0;
@@ -266,8 +300,9 @@
         top: 30%;
         left: 0;
       }
+
       .page-writing {
-        height: 40%;
+        height: 30%;
         width: 100%;
         top: 70%;
         left: 0;
