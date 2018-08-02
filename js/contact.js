@@ -7,7 +7,7 @@ $(document).ready(function() {
     $("#hi").hide();
     setTimeout(function() {
       $(".skip").fadeIn(500);
-    }, 4000);
+    }, 2000);
     setTimeout(function() {
       $(".skip").fadeOut(500);
     }, 22000);

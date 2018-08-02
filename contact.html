@@ -74,7 +74,6 @@
       </footer>
     </div>
   </main>
-
   <div class="cover-layer">
     <div class="layer-logo-container">
       <div></div>
@@ -89,6 +88,10 @@
     window.onload = function() {
       $(".cover-layer").fadeOut(500);
     }
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
   </script>
 </body>
 

@@ -8,9 +8,10 @@
   height: 2.5rem;
   text-align: center;
   color: #ffffff;
+  z-index: 2;
 
   h1 {
-    margin:0;
+    margin: 0;
     font-size: 2.5rem;
   }
 }
@@ -23,11 +24,12 @@
   transform: translateX(-50%);
   line-height: 1;
   color: #ffffff;
+  z-index: 2;
 }
 
 .article-main-container {
   position: relative;
-  overflow-y:scroll;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
   background-color: #111111;
@@ -35,36 +37,45 @@
   background-size: cover;
   align-items: center;
 }
-.intro {
-  background: #efefef;
-  border-bottom: 0.5px solid #cccccc;
-}
-.info-container {
-  position: relative;
-  width: 70%;
-  font-size: 0;
-  display: flex;
-  background: #111111;
-  left: 50%;
-  transform: translate(-50%,50%);
-  color: #ffffff;
-  .info {
-    display: inline-block;
-    flex: 1;
-    font-size: 10px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: = height;
-  }
-}
+
 
 article {
   position: relative;
   width: 50%;
   box-sizing: border-box;
-  margin: 120px auto 120px auto;
+  margin: 120px auto;
   background: #ffffff;
-  z-index: 2;
+  z-index: 3;
+
+  .intro {
+    position: relative;
+    background: #efefef;
+    border-bottom: 0.5px solid #cccccc;
+    width: 100%;
+    height: 70vh;
+    background-position: center center;
+    background-size: cover;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .info-container {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    font-size: 0;
+    display: flex;
+    background: #111111;
+    left: 50%;
+    transform: translate(-50%,50%);
+
+    .info {
+      display: inline-block;
+      flex: 1;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
 
   .content {
     position: relative;
@@ -95,15 +106,18 @@ article {
     padding: 20px;
     box-sizing: border-box;
   }
+
   a {
     font-size: 0.85rem;
     color: #111111;
     margin: 20px;
     box-sizing: border-box;
   }
+
   ul {
     padding: 0;
   }
+
   li {
     font-family: Arial;
     margin-bottom: 20px;
@@ -167,7 +181,6 @@ article {
     float: right;
   }
 }
-
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
 @media screen and (max-width: 979px) and (min-width: 768px) {
@@ -227,7 +240,6 @@ article {
       width: 8.3%;
     }
   }
-
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html {

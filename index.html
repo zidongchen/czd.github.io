@@ -47,32 +47,24 @@
       </div>
       <div class="page-icon-container">
         <div class="next-page"></div>
-        <!-- <div class="prev-page"></div> -->
       </div>
       <div class="pages-container">
         <div class="page1 pages">
-          <!-- <a href="./magicar.html" data-type="page-transition" class="picture">
-            <div class="pic" style="background-image: url('./images/magicar/magicar.png');"></div>
-          </a> -->
-          <a class="page-writing" data-type="page-transition" href="./magicar.html">
-            <p>2018 Curricular</p>
-            <h1>Automatic drive system in theme Park. <strong>MAGICAR</strong> </h1>
-            <p class="readmore">view more</p>
-          </a>
-          <div class="bg" style="background-image: url('./images/magicar/bg01.jpg')"></div>
-        </div>
-        <div class="page2 pages">
-          <!-- <a href="./daminchu.html" data-type="page-transition" class="picture">
-            <div class="pic" style="background-image: url('./images/daminchu/daminchu.png');"></div>
-          </a> -->
-          <a class="page-writing" data-type="page-transition" href="./magicar.html">
+          <a class="page-writing" data-type="page-transition" href="./daminchu.html">
             <p>2018 Curricular</p>
             <h1>Sharing homemade dishes in <strong>DAMINCHU</strong></h1>
             <p class="readmore">view more</p>
           </a>
           <div class="bg" style="background-image: url('./images/daminchu/bg01.jpg')"></div>
         </div>
-
+        <div class="page2 pages">
+          <a class="page-writing" data-type="page-transition" href="./magicar.html">
+            <p>2018 Curricular</p>
+            <h1>Taking <strong>MAGICAR</strong> in theme Park.  </h1>
+            <p class="readmore">view more</p>
+          </a>
+          <div class="bg" style="background-image: url('./images/magicar/bg01.jpg')"></div>
+        </div>
       </div>
       <footer>
         <ul class="menu-list">
@@ -80,7 +72,7 @@
           <li><a href="##">WORKS</a></li>
           <li><a href="./contact.html" data-type="page-transition">CONTACT</a></li>
         </ul>
-        <span class="copyright">Copyright © 2015 ZidongChen. All Rights Reserved.</span>
+        <span class="copyright">Copyright © 2018 ZidongChen. All Rights Reserved.</span>
         <div class="footer-logo-container">
           <div class="logo"></div>
         </div>
@@ -104,8 +96,11 @@
       setTimeout(function(){
         $(".cover-layer").fadeOut(500);
       },1000);
-
     }
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
   </script>
 </body>
 

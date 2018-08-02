@@ -72,8 +72,6 @@ jQuery(document).ready(function(event) {
         function isArticle() {
           return $(".main-content").hasClass('./daminchu') || $(".main-content").hasClass('./magicar');
         }
-        console.log("index" + isIndex());
-        console.log("article" + isArticle());
         isAnimating = false;
       }, 1000);
 
