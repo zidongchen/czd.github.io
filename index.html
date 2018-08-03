@@ -42,9 +42,14 @@
       <!--<div class="tittle cover-1">Showcase</div>-->
       <div class="scroll-down cover-1">Scroll Down</div>
       <div class="page-num-container cover-1">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="change-num-container">
+          <div><span>01</span></div>
+          <div><span>02</span></div>
+          <div><span>03</span></div>
+        </div>
+        <div class="unchange-num-container">
+          <span>- 03</span>
+        </div>
       </div>
       <div class="page-icon-container">
         <div class="next-page"></div>
@@ -105,10 +110,10 @@
   <script type="text/javascript" src="./js/contact.min.js"></script>
   <script type="text/javascript" src="./libs/changingPage.min.js"></script>
   <script type="text/javascript">
-    window.onload=function(){
-      setTimeout(function(){
+    window.onload = function() {
+      setTimeout(function() {
         $(".cover-layer").fadeOut(500);
-      },1000);
+      }, 1000);
     }
     $(".lazy").lazyload({
       container: $(".article-main-container"),

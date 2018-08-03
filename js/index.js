@@ -41,8 +41,9 @@ $(document).ready(function() {
   }
 
   function changeIndexPageNum() {
-    $(".dot").removeClass("active");
-    $(".dot:nth-child(" + pageNum + ")").addClass("active");
+    $(".change-num-container ").animate({
+      top: -(pageNum - 1) * 40
+    }, 500);
   }
 
   function hideCover() {
