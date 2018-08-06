@@ -5,59 +5,24 @@ $(document).ready(function() {
   var moveY = 0;
   var isChangingPage = false;
   var timeOutFlag = null;
-  var pages = $(".pages").length + 1;
+  var pages = $(".pages").length;
   var isMenuClosed = true;
-  // 返回时返回指定页面
-  // var pageNumGet = UrlParm.parm("pageNum");
-  // if (pageNumGet) {
-  //   pageNum = parseInt(pageNumGet);
-  // } else {
-  //   pageNum = 1;
-  // }
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changeIndexPages() {
-    if (pageNum < pages && pageNum > 1) {
+    if (pageNum <= pages && pageNum >= 1) {
       $(".page-writing").removeClass("active");
       prevPage = pageNum - 1;
       $(".page" + pageNum + "").removeClass("hidepage");
       $(".page" + prevPage + "").addClass("hidepage");
       $(".page" + pageNum + ">.page-writing").addClass("active");
-      showCover();
-      $(".prev-page").css("opacity", "1");
-    }
-    if (pageNum == 1) {
-      $(".page-writing").removeClass("active");
-      prevPage = pageNum - 1;
-      $(".page" + pageNum + "").removeClass("hidepage");
-      $(".page" + prevPage + "").addClass("hidepage");
-      $(".page" + pageNum + ">.page-writing").addClass("active");
-      $(".prev-page").css("opacity", "0");
-    }
-    if (pageNum == pages) {
-      $(".next-page").css("opacity", "0");
-      hideCover();
     }
   }
 
   function changeIndexPageNum() {
     $(".change-num-container ").animate({
       top: -(pageNum - 1) * 40
-    }, 500);
-  }
-
-  function hideCover() {
-    $(".next-page").css("opacity", "0");
-    $(".cover-1").addClass("go-up");
-    $(".page-icon-container").addClass("go-up");
-    $(".pages-container").addClass("go-up");
-  }
-
-  function showCover() {
-    $(".cover-1").removeClass("go-up");
-    $(".page-icon-container").removeClass("go-up");
-    $(".next-page").css("opacity", "1");
-    $(".pages-container").removeClass("go-up");
+    }, 700);
   }
   // 切换页面
   function changeIndexPage() {
