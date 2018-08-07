@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <main>
+  <main id="wrapper">
     <div class="contact main-content">
       <div class="menu-icon-container cover-2">
         <div class="menu-icon">
@@ -85,12 +85,17 @@
   <script type="text/javascript" src="./libs/changingPage.min.js"></script>
   <script type="text/javascript">
     window.onload = function() {
-      $(".cover-layer").fadeOut(500);
+      setTimeout(function() {
+        $(".cover-layer").fadeOut(500);
+      }, 1000);
+      var myScroll = new IScroll(".article-main-container",{
+            mouseWheel: true,
+      });
+      $(".lazy").lazyload({
+        container: $(".article-main-container"),
+        effect: "fadeIn"
+      });
     }
-    $(".lazy").lazyload({
-      container: $(".article-main-container"),
-      effect: "fadeIn"
-    });
   </script>
 </body>
 

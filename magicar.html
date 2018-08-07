@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <main>
+  <main id="wrapper">
     <div class="magicar main-content">
       <div class="menu-icon-container cover-2">
         <div class="menu-icon">
@@ -104,11 +104,14 @@
       setTimeout(function() {
         $(".cover-layer").fadeOut(500);
       }, 1000);
+      var myScroll = new IScroll(".article-main-container",{
+            mouseWheel: true,
+      });
+      $(".lazy").lazyload({
+        container: $(".article-main-container"),
+        effect: "fadeIn"
+      });
     }
-    $(".lazy").lazyload({
-      container: $(".article-main-container"),
-      effect: "fadeIn"
-    });
   </script>
 </body>
 
