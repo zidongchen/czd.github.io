@@ -1,5 +1,5 @@
 #title {
-  position: fixed;
+  position: absolute;
   display: block;
   width: 300px;
   left: 50%;
@@ -17,7 +17,7 @@
 }
 
 #next-project {
-  position: fixed;
+  position: absolute;
   display: inline-block;
   bottom: 2.5rem;
   left: 50%;
@@ -34,10 +34,13 @@
 .article-main-container {
   position: relative;
   width: 100%;
+  height: 100%;
   background-color: #fff;
   background-position: center center;
   background-size: cover;
   align-items: center;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 article {
