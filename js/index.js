@@ -10,24 +10,23 @@ $(document).ready(function() {
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changeIndexPages() {
-    if (pageNum <= pages && pageNum >= 1) {
+    if (pageNum <= pages && pageNum >= 1 && !isChangingPage) {
       $(".page-writing").removeClass("active");
-      prevPage = pageNum - 1;
-      $(".page" + pageNum + "").removeClass("hidepage");
-      $(".page" + prevPage + "").addClass("hidepage");
+      $(".pages-container").css("transform","translateY(" + -100 * (pageNum - 1) + "vh)");
       $(".page" + pageNum + ">.page-writing").addClass("active");
     }
   }
 
   function changeIndexPageNum() {
-    $(".change-num-container ").animate({
-      top: -(pageNum - 1) * 40
-    }, 700);
+    $(".change-num-container ").css("top", "" + -40 * (pageNum - 1) + "px");
   }
   // 切换页面
   function changeIndexPage() {
     changeIndexPages();
-    changeIndexPageNum();
+    changeIndexPageNum(function(){
+          isChangingPage=false;
+    });
+
   }
   changeIndexPage();
   /*滑动事件*/

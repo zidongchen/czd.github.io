@@ -13,6 +13,8 @@ $(document).ready(function() {
     }, 22000);
     setTimeout(function() {
       $(".selfIntro-container").css("overflow-y", "scroll");
+      $(".selfIntro").stop(true);
+      $(".selfIntro-container").stop(true);
     }, 28000);
     showSelfIntro();
   });

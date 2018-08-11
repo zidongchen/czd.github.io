@@ -11,9 +11,13 @@
   src: url("../fonts/Bodoni.ttf");
   font-family: Bodoni;
 }
+@font-face {
+  src: url("../fonts/Dodit.ttc");
+  font-family: Didot;
+}
 
 html {
-  font-size: 20px;
+  font-size: 16px;
   -webkit-tap-highlight-color: transparent;
   width: 100%;
   height: 100%;
@@ -24,14 +28,14 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: nevis;
+  font-family: Didot;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background-color: #FFFFFF;
   color: #333333;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 main {
@@ -105,7 +109,7 @@ a:target {
 }
 
 p {
-  font-family: "Arial";
+  font-family: "Bodoni";
   line-height: 2;
 }
 
@@ -124,14 +128,15 @@ p {
 .logo-container {
   left: 2.5rem;
   top: 2.5rem;
-  height: 40px;
+  height: 20px;
+  width: 113px;
 }
 
 .logo {
   left: 0;
   top: 0;
-  width: 120px;
-  height: 40px;
+  width: 113px;
+  height: 20px;
   background: url("../images/SVG/logo.svg") no-repeat;
 }
 
@@ -150,12 +155,13 @@ p {
     left: 0;
     width: 40px;
     height: 40px;
+    transition: 0.5s 0.2s;
 
     div {
       position: relative;
       width: 40px;
       height: 40px;
-      font-size: 16px;
+
     }
   }
 
@@ -183,7 +189,7 @@ p {
   transform: rotate(90deg) translate(0,20px);
   transform-origin: right bottom;
   text-align: right;
-  color: #f93;
+  color: #333;
 }
 
 .menu-icon-container {
@@ -194,7 +200,6 @@ p {
   height: 20px;
   cursor: pointer;
   z-index: 10000;
-  transform: translateY(20px);
 
   .menu-icon {
     position: absolute;
@@ -236,7 +241,6 @@ p {
     }
 
     .bar:nth-child(2) {
-
       opacity: 0;
     }
 
@@ -294,9 +298,10 @@ p {
   top: 2.5rem;
   left: 2.5rem;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   z-index: 9998;
+
   i {
     position: absolute;
     bottom: 0;
@@ -312,22 +317,22 @@ p {
   z-index: 4;
 
   .pages {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    transition: 1s ease-in-out;
     background: #FFF;
 
     .pic {
       position: absolute;
-      left: 2.5rem;
-      top: 20%;
-      width: 70%;
-      height: 70%;
+      left: 50%;
+      top: 50%;
+      width: 60vh;
+      height: 60vh;
+      transform: translate(-50%,-50%);
     }
 
     .shadow {
@@ -381,54 +386,55 @@ p {
   }
 
   .page-writing {
-    position: absolute;
-    width: 40%;
-    height: 70%;
-    left: 50%;
-    top: 20%;
+    position: relative;
+    display: block;
+    width: 60vh;
+    height: 60vh;
+    margin: 20vh auto;
     color: #ffffff;
     opacity: 0;
     transition: 0.5s 0.5s;
-    text-align: left;
-    align-items: left;
     box-sizing: border-box;
     cursor: pointer;
     z-index: 4;
 
     h1 {
-      position: relative;
-      top: 0;
+      position: absolute;
+      top: -3rem;
       padding: 0;
-      margin-top: 20px;
-      font-size: 3.5rem;
+      font-size: 1rem;
       font-weight: 200;
       transform: translateY(10px);
       transition: 0.5s 0.5s;
-      color: #f93;
-      text-shadow: 3px 3px 0 #111;
+      color: #333;
     }
 
     p {
+      position: absolute;
+      top: 0;
+      left: 0;
       padding: 0;
       font-size: 1em;
-      transform: translateY(10px);
+      transform: rotate(90deg);
+      transform-origin: left top;
       transition: 0.5s 0.5s;
+      color: #333;
     }
 
     .readmore {
-      width: 70%;
       position: absolute;
-      left: 0;
+      display: block;
+      width: 7.5rem;
+      right: 15px;
       bottom: 20px;
-      background-color: #f93;
       color: #fff;
       padding: 10px;
-      margin: 0;
-      transform-origin: left;
+      transform-origin: right bottom;
+      transform: rotate(90deg);
       transition: 0.5s 0.5s;
       overflow: hidden;
+      background-color: #f93;
       box-shadow: 3px 3px 0 0 #111;
-      transform: scaleX(0);
     }
 
     strong {
@@ -438,18 +444,18 @@ p {
 
   .page-writing.active {
     opacity: 1;
-
-    h1 {
-      transform: translateY(0px);
-    }
-
-    p {
-      transform: translateY(0px);
-    }
-
-    .readmore {
-      transform: scaleX(1);
-    }
+    //
+    // h1 {
+    //   transform: translateY(0px);
+    // }
+    //
+    // p {
+    //   transform: translateY(0px);
+    // }
+    //
+    // .readmore {
+    //   transform: scaleX(1);
+    // }
   }
 }
 @media screen and (min-width: 1600px) {}
@@ -463,14 +469,14 @@ p {
   .pages-container {
     .pages {
       .page-writing {
-        width: 90%;
-        height: 50%;
-        top: 35%;
-        left: 10%;
+        height: 40vh;
+        width: 40vh;
+                margin: 30vh auto;
       }
 
       .pic {
-        width: 100%;
+        height: 40vh;
+        width: 40vh;
       }
 
       .bg-video {
@@ -487,14 +493,14 @@ p {
   .pages-container {
     .pages {
       .page-writing {
-        width: 90%;
-        height: 50%;
-        top: 35%;
-        left: 10%;
+        height: 40vh;
+        width: 40vh;
+        margin: 30vh auto;
       }
 
       .pic {
-        width: 100%;
+        height: 40vh;
+        width: 40vh;
       }
 
       .bg-video {
