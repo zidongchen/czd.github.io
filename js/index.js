@@ -10,7 +10,7 @@ $(document).ready(function() {
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changeIndexPages() {
-    if (pageNum <= pages && pageNum >= 1 && !isChangingPage) {
+    if (pageNum <= pages && pageNum >= 1) {
       $(".page-writing").removeClass("active");
       $(".pages-container").css("top","" + -100 * (pageNum - 1) + "vh");
       $(".page" + pageNum + ">.page-writing").addClass("active");
