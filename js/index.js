@@ -12,7 +12,7 @@ $(document).ready(function() {
   function changeIndexPages() {
     if (pageNum <= pages && pageNum >= 1 && !isChangingPage) {
       $(".page-writing").removeClass("active");
-      $(".pages-container").css("transform","translateY(" + -100 * (pageNum - 1) + "vh)");
+      $(".pages-container").css("top","" + -100 * (pageNum - 1) + "vh)");
       $(".page" + pageNum + ">.page-writing").addClass("active");
     }
   }
