@@ -43,11 +43,11 @@ $(document).ready(function() {
       //获取滑动屏幕时的Y
       touch = e.targetTouches[0];
       moveY = touch.pageY - startY; //变化的量
-      if (isMenuClosed && moveY < -50 && pageNum <= pages && !isChangingPage) {
+      if (isMenuClosed && moveY < -50 && pageNum < pages && !isChangingPage) {
         pageNum += 1;
         isChangingPage = true;
         changeIndexPage(pageNum);
-      } else if (isMenuClosed && moveY > 50 && pageNum >= 1 && !isChangingPage) { //向下
+      } else if (isMenuClosed && moveY > 50 && pageNum > 1 && !isChangingPage) { //向下
         pageNum -= 1;
         isChangingPage = true;
         changeIndexPage(pageNum);
@@ -64,7 +64,7 @@ $(document).ready(function() {
       e = e || window.event;
       if (isMenuClosed) {
         if (e.wheelDelta) {
-          if (e.wheelDelta / 120 > 0 && pageNum >= 1) {
+          if (e.wheelDelta / 120 > 0 && pageNum > 1) {
             // 滚轮向上
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
@@ -73,7 +73,7 @@ $(document).ready(function() {
               pageNum -= 1;
               changeIndexPage(pageNum);
             }, 50);
-          } else if (e.wheelDelta / 120 < 0 && pageNum <= pages) {
+          } else if (e.wheelDelta / 120 < 0 && pageNum < pages) {
             // 滚轮向下
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
@@ -84,7 +84,7 @@ $(document).ready(function() {
             }, 50);
           }
         } else if (e.detail) {
-          if (e.detail / 3 < 0 && pageNum >= 1) {
+          if (e.detail / 3 < 0 && pageNum > 1) {
             // 滚轮向上
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);
@@ -93,7 +93,7 @@ $(document).ready(function() {
               pageNum -= 1;
               changeIndexPage(pageNum);
             }, 50);
-          } else if (e.detail / 3 > 0 && pageNum <= pages) {
+          } else if (e.detail / 3 > 0 && pageNum < pages) {
             // 滚轮向下
             if (timeOutFlag != null) {
               clearTimeout(timeOutFlag);

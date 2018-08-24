@@ -18,7 +18,7 @@
 }
 
 #next-project {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   bottom: 2.5rem;
   left: 50%;
@@ -50,6 +50,7 @@ article {
   box-sizing: border-box;
   margin: 200px auto;
   background: #ffffff;
+z-index: 3;
 
   .intro {
     position: relative;
@@ -115,7 +116,10 @@ article {
     font-size: 0.85rem;
     color: #111111;
     margin: 20px;
+    padding: 20px;
     box-sizing: border-box;
+    background: #f93;
+    box-shadow: #333 3px 3px;
   }
 
   ul {
