@@ -23,9 +23,7 @@ $(document).ready(function() {
   // 切换页面
   function changeIndexPage() {
     changeIndexPages();
-    changeIndexPageNum(function(){
-          isChangingPage=false;
-    });
+    changeIndexPageNum();
 
   }
   changeIndexPage();
