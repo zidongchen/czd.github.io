@@ -1,13 +1,13 @@
 $(document).ready(function() {
   "use strict";
   var isMenuClosed = true;
-  $(".menu-icon-container").on("click", function() {
+  $(document).on("click", ".menu-icon-container", function() {
     if (isMenuClosed) {
-      $(".menu-container").addClass("opened");
+      $(".menu-container").fadeIn(500);
       $(".menu-icon").addClass("opened");
       isMenuClosed = false;
     } else {
-      $(".menu-container").removeClass("opened");
+      $(".menu-container").fadeOut(500);
       $(".menu-icon").removeClass("opened");
       isMenuClosed = true;
     }

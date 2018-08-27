@@ -319,6 +319,17 @@ p {
   };
 }
 
+.partname {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  font-size: 10rem;
+  color: #f93;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  z-index: -1;
+}
+
 .pages-container {
   width: 100%;
   position: relative;
@@ -469,42 +480,75 @@ p {
     // }
   }
 }
+
 .works-container {
   width: 100%;
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+
   .works {
     width: 50%;
-    margin:  0 auto;
+    margin: 0 auto;
+    padding: 200px 0;
   }
+
   .works-item {
-    box-shadow: #333 30px 30px;
-    margin: 100px;
-    padding: 0;
+    padding: 20px;
+    margin: 2rem;
     font-size: 0;
+
     img {
       width: 100%;
+      box-shadow: #333 3px 3px;
       margin: 0;
     }
   }
-  .worklevel1 {
-    width:25%
-  }
-  .worklevel2 {
-    width:50%
-  }
-  .worklevel3 {
-    width:75%
-  }
-  .worklevel4 {
-      width:100%
-    }
-}
 
+  .worklevel1 {
+    width: 25%;
+  }
+
+  .worklevel2 {
+    width: 50%;
+  }
+
+  .worklevel3 {
+    width: 75%;
+  }
+
+  .worklevel4 {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1600px) {}
 @media screen and (max-width: 1200px) and (min-width: 980px) {}
-@media screen and (max-width: 979px) and (min-width: 768px) {}
+@media screen and (max-width: 979px) and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .works-container {
+    .works {
+      width: 70%;
+    }
+
+    .worklevel1 {
+      width: 75%;
+    }
+
+    .worklevel2 {
+      width: 75%;
+    }
+
+    .worklevel3 {
+      width: 75%;
+    }
+
+    .worklevel4 {
+      width: 75%;
+    }
+  }
+}
 @media screen and (max-width: 767px) and (min-width: 480px) {
   html {
     font-size: 16px;
@@ -526,6 +570,28 @@ p {
       .bg-video {
         display: none;
       }
+    }
+  }
+
+  .works-container {
+    .works {
+      width: 70%;
+    }
+
+    .worklevel1 {
+      width: 75%;
+    }
+
+    .worklevel2 {
+      width: 75%;
+    }
+
+    .worklevel3 {
+      width: 75%;
+    }
+
+    .worklevel4 {
+      width: 75%;
     }
   }
 }
@@ -550,6 +616,28 @@ p {
       .bg-video {
         display: none;
       }
+    }
+  }
+
+  .works-container {
+    .works {
+      width: 100%;
+    }
+
+    .worklevel1 {
+      width: 75%;
+    }
+
+    .worklevel2 {
+      width: 75%;
+    }
+
+    .worklevel3 {
+      width: 75%;
+    }
+
+    .worklevel4 {
+      width: 75%;
     }
   }
 }
