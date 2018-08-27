@@ -6,7 +6,7 @@ $(document).ready(function() {
   var isChangingPage = false;
   var timeOutFlag = null;
   var pages = $(".pages").length;
-  var isMenuClosed = true;
+
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
   function changeIndexPages() {
@@ -127,16 +127,5 @@ $(document).ready(function() {
       changeIndexPage(pageNum);
     }
   });
-  /*菜单事件*/
-  $(document).on("click", ".menu-icon-container", function() {
-    if (isMenuClosed) {
-      $(".menu-container").fadeIn(500);
-      $(".menu-icon").addClass("opened");
-      isMenuClosed = false;
-    } else {
-      $(".menu-container").fadeOut(500);
-      $(".menu-icon").removeClass("opened");
-      isMenuClosed = true;
-    }
-  });
+
 });

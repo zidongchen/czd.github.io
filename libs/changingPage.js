@@ -47,23 +47,29 @@ jQuery(document).ready(function(event) {
         //wait for the end of the transition on the loading bar before revealing the new content
         $(".cover-layer").fadeOut(500);
         $('main').html(section);
-        if (isArticle()) {
-          var scriptArticle = document.createElement("script");
-          scriptArticle.type = "text/javascript";
-          scriptArticle.src = "./libs/jquery.lazyload.min.js";
-          document.getElementsByTagName('head')[0].appendChild(scriptArticle);
-          scriptArticle.onload = function() {
-            $(".lazy").lazyload({
-              container: $(".article-main-container"),
-              effect: "fadeIn"
-            });
-          };
-        } else if (isIndex()) {
-          var scriptIndex = document.createElement("script");
-          scriptIndex.type = "text/javascript";
-          scriptIndex.src = "./js/index.js";
-          document.getElementsByTagName('head')[0].appendChild(scriptIndex);
-        }
+        var scriptLazyload = document.createElement("script");
+        scriptLazyload.type = "text/javascript";
+        scriptLazyload.src = "./libs/jquery.lazyload.min.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptLazyload);
+        scriptLazyload.onload = function() {
+          $(".lazy").lazyload({
+            container: $(".article-main-container"),
+            effect: "fadeIn"
+          });
+
+        };
+        var scriptIndex = document.createElement("script");
+        scriptIndex.type = "text/javascript";
+        scriptIndex.src = "./js/index.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptIndex);
+        var scriptMenu = document.createElement("script");
+        scriptIndex.type = "text/javascript";
+        scriptIndex.src = "./js/index.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptMenu);
+        scriptLazyload.onload = function() {
+          isMenuClosed = true;
+        };
+
 
         function isIndex() {
           return $(".main-content").hasClass('./index') || $(".main-content").hasClass('index');

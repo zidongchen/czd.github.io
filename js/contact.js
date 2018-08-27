@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  var isMenuClosed = true;
   var $selfintro;
   var selfIntroHeight = 0;
   var i = 1;
