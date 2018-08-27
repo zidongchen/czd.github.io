@@ -1,19 +1,17 @@
 #title {
   position: absolute;
   display: block;
-  width: 300px;
-  left: 50%;
+  left: 40%;
   top: 2.5rem;
-  transform: translateX(-50%) translateZ(0);
-  -webkit-transform: translateX(-50%) translateZ(0);
-  height: 2.5rem;
+  transform: rotate(90deg);
+  transform-origin: top left;
   text-align: center;
   color: #f93;
   z-index: 2;
 
   h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 8rem;
   }
 }
 
@@ -48,34 +46,30 @@ article {
   position: relative;
   width: 50%;
   box-sizing: border-box;
-  margin: 200px auto;
+  margin: 70vh auto 200px auto;
   background: #ffffff;
-z-index: 3;
+  z-index: 3;
 
   .intro {
     position: relative;
-    background: #333;
+    background: #fff;
     width: 100%;
     background-position: center center;
     align-items: center;
-    color: #ffffff;
+    color: #333;
     padding-bottom: 150px;
     margin-bottom: 150px;
   }
 
   .info-container {
     position: absolute;
-    width: 70%;
     bottom: 0;
-    font-size: 0;
-    display: flex;
-    background: #f93;
     left: 50%;
     transform: translate(-50%,50%);
 
     .info {
-      display: inline-block;
-      flex: 1;
+      padding: 20px;
+      background: #f93;
       font-size: 0.75rem;
       text-align: center;
     }
