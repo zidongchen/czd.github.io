@@ -62,11 +62,12 @@ jQuery(document).ready(function(event) {
         scriptIndex.type = "text/javascript";
         scriptIndex.src = "./js/index.js";
         document.getElementsByTagName('head')[0].appendChild(scriptIndex);
+        
         var scriptMenu = document.createElement("script");
-        scriptIndex.type = "text/javascript";
-        scriptIndex.src = "./js/index.js";
+        scriptMenu.type = "text/javascript";
+        scriptMenu.src = "./js/index.js";
         document.getElementsByTagName('head')[0].appendChild(scriptMenu);
-        scriptLazyload.onload = function() {
+        scriptMenu.onload = function() {
           isMenuClosed = true;
         };
 
