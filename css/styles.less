@@ -52,16 +52,12 @@ main {
 // index
 @keyframes loading {
   0% {
-    transform: scaleX(0.4);
-  }
-  20% {
-    transform: scaleX(0.4);
-  }
-  90% {
-    transform: scaleX(1);
+    transform: scaleX(0);
+    transform-origin: left center;
   }
   100% {
     transform: scaleX(1);
+    transform-origin: left center;
   }
 }
 
@@ -76,21 +72,20 @@ main {
 
   .layer-logo-container {
     position: absolute;
-    left: 50%;
+    left: -10vw;
     top: 50%;
     height: 24vw;
     width: 120vw;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
     -webkit-mask-image: url("../images/SVG/logo-white.svg");
-
     div {
       position: absolute;
       bottom: 0;
       height: 100%;
       width: 100%;
       background-color: #ffffff;
-      animation: loading 1.5s alternate infinite;
-      transform-origin: left center;
+      animation: loading 2s alternate infinite;
+
     }
   }
 }
@@ -293,7 +288,7 @@ p {
       display: block;
       position: relative;
       font-size: 3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
       opacity: 1;
 
       a {
@@ -356,7 +351,65 @@ p {
     height: 100vh;
     overflow: hidden;
     background: #FFF;
+  }
 
+  .pages.hidepage {
+    transform: translateY(-100%);
+  }
+
+  .page-writing {
+    position: relative;
+    display: block;
+    width: 60vh;
+    height: 60vh;
+    margin: 20vh auto;
+    color: #ffffff;
+    opacity: 0;
+    transition: 0.5s 0.5s;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    h1 {
+      position: absolute;
+      top: -3rem;
+      padding: 0;
+      font-size: 2rem;
+      font-weight: 200;
+      transform: translateY(40px);
+      transition: 0.5s 0.8s;
+      color: #333;
+          z-index: 2;
+    }
+
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      font-size: 1em;
+      transform: rotate(90deg) translateY(-40px);
+      transform-origin: left top;
+      transition: 0.5s 0.8s;
+      color: #333;
+          z-index: 2;
+    }
+
+    .readmore {
+      position: absolute;
+      display: block;
+      width: auto;
+      right: 15px;
+      bottom: 20px;
+      color: #fff;
+      padding: 10px;
+      transform-origin: right bottom;
+      transform: rotate(90deg) translate(0,0);
+      transition: 0.3s;
+      overflow: hidden;
+      background-color: #f93;
+      box-shadow: 3px 3px 0 0 #111;
+          z-index: 4;
+    }
     .pic {
       position: absolute;
       left: 50%;
@@ -364,6 +417,7 @@ p {
       width: 60vh;
       height: 60vh;
       transform: translate(-50%,-50%);
+      z-index:3;
     }
 
     .shadow {
@@ -391,81 +445,12 @@ p {
     .bg-image {
       background-position: center center;
       background-size: cover;
-      z-index: 1;
+      z-index: 3;
     }
 
     .bg-video {
       object-fit: cover;
-      z-index: 2;
-    }
-  }
-
-  .pages.hidepage {
-    transform: translateY(-100%);
-  }
-
-  .pages:nth-child(1) {
-    z-index: 6;
-  }
-
-  .pages:nth-child(2) {
-    z-index: 5;
-  }
-
-  .pages:nth-child(3) {
-    z-index: 4;
-  }
-
-  .page-writing {
-    position: relative;
-    display: block;
-    width: 60vh;
-    height: 60vh;
-    margin: 20vh auto;
-    color: #ffffff;
-    opacity: 0;
-    transition: 0.5s 0.5s;
-    box-sizing: border-box;
-    cursor: pointer;
-    z-index: 4;
-
-    h1 {
-      position: absolute;
-      top: -3rem;
-      padding: 0;
-      font-size: 2rem;
-      font-weight: 200;
-      transform: translateY(-20px);
-      transition: 0.5s 0.5s;
-      color: #333;
-    }
-
-    p {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0;
-      font-size: 1em;
-      transform: rotate(90deg);
-      transform-origin: left top;
-      transition: 0.5s 0.5s;
-      color: #333;
-    }
-
-    .readmore {
-      position: absolute;
-      display: block;
-      width: auto;
-      right: 15px;
-      bottom: 20px;
-      color: #fff;
-      padding: 10px;
-      transform-origin: right bottom;
-      transform: rotate(90deg) translate(0,0);
-      transition: 0.3s;
-      overflow: hidden;
-      background-color: #f93;
-      box-shadow: 3px 3px 0 0 #111;
+      z-index: 4;
     }
 
     strong {
@@ -475,8 +460,14 @@ p {
 
   .page-writing.active {
     opacity: 1;
+    h1 {
+      transform: translateY(-20px);
+    }
+    p {
+      transform: rotate(90deg) translateY(0px);
+    }
   }
-  .page-writing:hover {
+  .page-writing.active:hover {
     .readmore {
       transform: rotate(90deg) translate(3px,3px);
       box-shadow: 0px 0px 0 0 #111;
