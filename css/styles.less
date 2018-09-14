@@ -55,6 +55,7 @@ main {
     transform: scaleX(0);
     transform-origin: left center;
   }
+
   100% {
     transform: scaleX(1);
     transform-origin: left center;
@@ -78,6 +79,7 @@ main {
     width: 120vw;
     transform: translate(0,-50%);
     -webkit-mask-image: url("../images/SVG/logo-white.svg");
+
     div {
       position: absolute;
       bottom: 0;
@@ -85,7 +87,6 @@ main {
       width: 100%;
       background-color: #ffffff;
       animation: loading 2s alternate infinite;
-
     }
   }
 }
@@ -99,7 +100,6 @@ a {
   text-decoration: none;
   position: relative;
 }
-
 a:checked,
 a:focus,
 a:target {
@@ -292,6 +292,7 @@ p {
       opacity: 1;
 
       a {
+          box-shadow: #333 0px 0px;
         position: relative;
         color: #fff;
         transition: 0.5s ease-in-out;
@@ -378,7 +379,7 @@ p {
       transform: translateY(40px);
       transition: 0.5s 0.8s;
       color: #333;
-          z-index: 2;
+      z-index: 2;
     }
 
     p {
@@ -391,7 +392,7 @@ p {
       transform-origin: left top;
       transition: 0.5s 0.8s;
       color: #333;
-          z-index: 2;
+      z-index: 2;
     }
 
     .readmore {
@@ -408,8 +409,9 @@ p {
       overflow: hidden;
       background-color: #f93;
       box-shadow: 3px 3px 0 0 #111;
-          z-index: 4;
+      z-index: 4;
     }
+
     .pic {
       position: absolute;
       left: 50%;
@@ -417,7 +419,7 @@ p {
       width: 60vh;
       height: 60vh;
       transform: translate(-50%,-50%);
-      z-index:3;
+      z-index: 3;
     }
 
     .shadow {
@@ -460,17 +462,20 @@ p {
 
   .page-writing.active {
     opacity: 1;
+
     h1 {
       transform: translateY(-20px);
     }
+
     p {
       transform: rotate(90deg) translateY(0px);
     }
   }
+
   .page-writing.active:hover {
     .readmore {
       transform: rotate(90deg) translate(3px,3px);
-      box-shadow: 0px 0px 0 0 #111;
+      box-shadow: 0 0 0 0 #111;
     }
   }
 }
@@ -499,8 +504,9 @@ p {
       box-shadow: #333 3px 3px;
       transition: 0.5s;
     }
+
     span {
-        transform: translate(3px,3px);
+      transform: translate(3px,3px);
       color: #fff;
       font-size: 1rem;
       position: absolute;
@@ -515,15 +521,15 @@ p {
       opacity: 0;
       transition: 0.5s;
     }
-
   }
 
   .works-item:hover span {
     opacity: 1;
   }
+
   .works-item:hover img {
     transform: translate(3px,3px);
-    box-shadow: #333 0px 0px;
+    box-shadow: #333 0 0;
   }
 
   .worklevel1 {
@@ -548,6 +554,7 @@ p {
   html {
     font-size: 16px;
   }
+
   .works-container {
     .works {
       width: 70%;
@@ -568,6 +575,10 @@ p {
     .worklevel4 {
       width: 75%;
     }
+  }
+
+  .pc-only {
+    display: none;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 480px) {
@@ -615,6 +626,10 @@ p {
       width: 75%;
     }
   }
+
+  .pc-only {
+    display: none;
+  }
 }
 @media screen and (max-width: 479px) {
   html {
@@ -660,5 +675,9 @@ p {
     .worklevel4 {
       width: 75%;
     }
+  }
+
+  .pc-only {
+    display: none;
   }
 }
