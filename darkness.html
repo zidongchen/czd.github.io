@@ -39,12 +39,12 @@
         <i class="fa fa-angle-left"></i>
       </a>
       <div id="title">
-        <h1>Darkness</h1>
+        <h1>FITGHTING IN DARKNESS</h1>
       </div>
 
       <div class="article-main-container">
-        <a href="./daminchu.html" data-type="page-transition" id="next-project">
-        NEXT : DAMINCHU</a>
+        <a href="./magicar.html" data-type="page-transition" id="next-project">
+        NEXT : MARICAR</a>
         <article>
           <div class="intro">
             <p class="">When I brought my MBP a year ago,there are't many games on MacOS,so I decided to make a game for myself...
@@ -65,7 +65,7 @@
           <p  class="content cl12" >
             In the circle with the player as the center, one enemy formation area is randomly generated, and multiple enemies are generated at random positions within the area.The player needs to go to the area and destroy the enemy.
           </p>
-          <a href="./darkness-demo/darkness-demo.html" class="content pc-only" target="_blank">Have a try</a>
+          <a href="./darkness-demo/darkness-demo.html" id="playdarkness" class="content pc-only" target="_blank">Have a try</a>
           <h2>Epilogue</h2>
           <p class="content cl12">Making a game is a big big big project,I made a little demo and set the endless mode which I can play when I feel tired after working,it is funny.The project are still going and I will design new enemys,attack mode,bullet and so on...</p>
 
@@ -87,8 +87,6 @@
   <script type="text/javascript" src="./js/contact.min.js"></script>
   <script type="text/javascript" src="./js/menu.min.js"></script>
   <script type="text/javascript" src="./libs/changingPage.min.js"></script>
-  <script src="TemplateData/UnityProgress.js"></script>
-  <script src="Build/UnityLoader.js"></script>
   <script>
 
   </script>
@@ -102,7 +100,6 @@
       container: $(".article-main-container"),
       effect: "fadeIn"
     });
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/darkness.json", {onProgress: UnityProgress});
   </script>
 </body>
 

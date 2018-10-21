@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, target-densitydpi=device-dpi" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="full-screen" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="ZIDONG" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>ZIDONG | 陈子东的个人网站</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="bookmark icon" href="favicon.ico" />
+  <!--    样式表-->
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./css/contact.css" />
+  <link rel="stylesheet" type="text/css" href="./css/article.css" />
+</head>
+
+<body>
+  <main id="wrapper">
+    <div class="daminchu main-content">
+      <div class="menu-icon-container cover-2">
+        <div class="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li><a href="./index.html" data-type="page-transition">SHOWCASE</a></li>
+          <li><a href="./otherworks.html" data-type="page-transition">OTHER WORKS</a></li>
+          <li><a href="./contact.html" data-type="page-transition">SAY HI</a></li>
+        </ul>
+      </div>
+      <a href="./otherworks.html" data-type="page-transition" class="back-icon cover-2">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <div id="title">
+        <h1>SOMETHING DAILY WITH MY GIRL</h1>
+      </div>
+
+      <div class="article-main-container">
+        <a href="./guisu.html" data-type="page-transition" id="next-project">
+        NEXT : GUISU</a>
+        <article>
+          <div class="intro">
+            <p class="">C4D
+            </p>
+            <div class="info-container">
+              <p class="info">Practice</p>
+            </div>
+          </div>
+            <img data-original="./images/c4d/01.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/02.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/03.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/04.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/05.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/06.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/07.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/08.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/09.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/10.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/11.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/12.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/13jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/15.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+            <img data-original="./images/c4d/16.jpg" src="./images/preload.png" alt="" class="cl12 lazy" />
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div class="cover-layer">
+    <div class="layer-logo-container">
+      <div></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <!--    本地js-->
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="./js/index.min.js"></script>
+  <script type="text/javascript" src="./js/contact.min.js"></script>
+  <script type="text/javascript" src="./js/menu.min.js"></script>
+  <script type="text/javascript" src="./libs/changingPage.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      setTimeout(function() {
+        $(".cover-layer").fadeOut(500);
+      }, 1000);
+    }
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
+  </script>
+</body>
+
+</html>
