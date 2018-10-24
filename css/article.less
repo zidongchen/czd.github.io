@@ -8,29 +8,30 @@
   transform: rotate(90deg);
   transform-origin: top left;
   text-align: center;
-  color: #f93;
+  color: #333;
   z-index: 2;
 
   h1 {
     text-align: left;
     margin: 0;
-    font-size: 8rem;
-    line-height: 8rem;
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
 #next-project {
   position: fixed;
   display: inline-block;
-  bottom: 2.5rem;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   line-height: 1;
   color: #fff;
   z-index: 2;
-  background-color: #f93;
+  background-color: #333;
   padding: 10px;
-  box-shadow: 3px 3px #111;
+  box-shadow: 3px 3px #fff;
+  box-sizing: border-box;
 }
 
 .article-main-container {
@@ -52,12 +53,12 @@ article {
   margin: 70vh auto 100px;
   background: #ffffff;
   z-index: 3;
-  border: 1px #333 solid;
+  border: 3px #333 solid;
   padding: 0;
 
   .intro {
     position: relative;
-    background: #111;
+    background: #333;
     width: 100%;
     background-position: center center;
     align-items: center;
@@ -71,11 +72,12 @@ article {
     bottom: 0;
     left: 50%;
     transform: translate(-50%,50%);
+    border:3px solid #fff;
 
     .info {
       color: #fff;
       padding: 20px;
-      background: #f93;
+      background: #333;
       font-size: 14px;
       text-align: center;
     }
@@ -108,7 +110,6 @@ article {
   }
 
   h2 {
-    text-shadow: 3px 3px #f93;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -119,8 +120,8 @@ article {
     margin: 20px;
     padding: 20px;
     box-sizing: border-box;
-    background: #f93;
-    box-shadow: #333 3px 3px;
+    background: #333;
+    // box-shadow: #333 3px 3px;
   }
 
   ul {
