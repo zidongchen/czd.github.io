@@ -36,7 +36,7 @@ body {
   background-color: #FFFFFF;
   color: #333333;
   font-size: 16px;
-  border: 20px solid #333;
+  border: 1.25rem solid #333;
   box-sizing: border-box;
 }
 
@@ -59,24 +59,10 @@ main {
 // index
 @keyframes loading {
   0% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-  10% {
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  50% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-  60% {
-    transform: scaleY(1);
-    transform-origin: bottom;
+    transform: translateY(-100%);
   }
   100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
+        transform: translateY(100%);
   }
 }
 
@@ -96,15 +82,15 @@ main {
     height: 80vh;
     width: 16vh;
     transform: translate(0,-50%);
+    overflow: hidden;
     // -webkit-mask-image: url("../images/SVG/logo-white.svg");
-
     div {
       position: absolute;
       bottom: 0;
       height: 100%;
       width: 100%;
       background-color: #333;
-      animation: loading 2s  infinite;
+      animation: loading 2s infinite;
     }
   }
 }
@@ -118,6 +104,7 @@ a {
   text-decoration: none;
   position: relative;
 }
+
 a:checked,
 a:focus,
 a:target {
@@ -144,15 +131,13 @@ p {
 .logo-container {
   left: 2.5rem;
   top: 2.5rem;
-  height: 20px;
-  width: 113px;
 }
 
 .logo {
   left: 0;
   top: 0;
-  width: 40px;
-  height: 120px;
+  width: 2.5rem;
+  height: 7.5rem;
   background: url("../images/SVG/logo.svg") no-repeat;
 }
 
@@ -263,6 +248,7 @@ p {
     .bar {
       background-color: #fff;
     }
+
     .bar:nth-child(1) {
       width: 21px;
       transform: translate(1px,2px) rotate(45deg);
@@ -315,7 +301,7 @@ p {
       opacity: 1;
 
       a {
-        box-shadow: #333 0px 0px;
+        box-shadow: #333 0 0;
         position: relative;
         color: #fff;
         transition: 0.5s ease-in-out;
@@ -386,37 +372,39 @@ p {
   .page-writing {
     position: relative;
     display: block;
-    width: 60vh;
-    height: 60vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100vh;
     color: #ffffff;
     opacity: 0;
     transition: 0.5s 0.5s;
     box-sizing: border-box;
-    cursor: pointer;
+
+    .page-intro {
+      position: absolute;
+      padding: 0;
+      left: 2.5rem;
+      top: 20%;
+      transform-origin: bottom left;
+      transform: rotate(90deg);
+    }
 
     h1 {
-      position: absolute;
-      top: -3rem;
+      display: inline-block;
       padding: 0;
+      margin: 0 10px 0 0;
       font-size: 2rem;
       font-weight: 200;
-      transform: translateY(40px);
       transition: 0.5s 0.8s;
       color: #333;
       z-index: 2;
     }
 
     p {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: inline-block;
       padding: 0;
+      margin: 0;
       font-size: 1em;
-      transform: rotate(90deg) translateY(-40px);
-      transform-origin: left top;
+      line-height: 1em;
       transition: 0.5s 0.8s;
       color: #333;
       z-index: 2;
@@ -426,16 +414,16 @@ p {
       position: absolute;
       display: block;
       width: auto;
-      right: 15px;
-      bottom: 20px;
+      left: 60%;
+      top: 70%;
       color: #fff;
-      padding:  10px 40px 10px 20px;
-      transform-origin: right bottom;
-      transform: rotate(90deg) translate(0,0);
+      padding: 10px 40px 10px 20px;
+      transform-origin: right top;
+      // transform: rotate(90deg);
       transition: 0.3s;
       background-color: #333;
+      box-sizing: content-box;
       // box-shadow: 3px 3px 0 0 #fff;
-      border: 3px solid #fff;
       z-index: 4;
     }
 
@@ -448,6 +436,10 @@ p {
       transform: translate(-50%,-50%);
       z-index: 3;
       overflow: hidden;
+      border-radius: 50%;
+      cursor: pointer;
+      border: #333 solid 0;
+      transition: 0.5s;
     }
 
     .shadow {
@@ -466,10 +458,12 @@ p {
 
     .bg {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      width: 110%;
+      height: 110%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      transition: 0.5s;
     }
 
     .bg-image {
@@ -492,18 +486,23 @@ p {
     opacity: 1;
 
     h1 {
-      transform: translateY(-20px);
+      // transform: translateY(20px);
     }
 
-    p {
-      transform: rotate(90deg) translateY(0px);
-    }
+    p {}
   }
 
-  .page-writing.active:hover {
+  .page-writing.active {
     .readmore {
-      transform: rotate(90deg) translate(3px,3px);
-      box-shadow: 0 0 0 0 #fff;
+      // box-shadow: 0 0 0 0 #fff;
+    }
+
+    .pic:hover {
+      border: #333 solid 5px;
+      .bg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -525,29 +524,29 @@ p {
     font-size: 0;
     position: relative;
     box-sizing: content-box;
+    border: 5px solid #333;
 
     img {
       transform: translate(0,0);
       width: 100%;
-      box-shadow: #333 3px 3px;
       transition: 0.5s;
     }
 
     span {
-      transform: translate(3px,3px);
+      // transform: translate(3px,3px);
       color: #fff;
       font-size: 1rem;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
       font-family: "Arial";
-      width: 100%;
-      height: 100%;
       background-color: #333;
       box-sizing: border-box;
       padding: 10px;
       opacity: 0;
       transition: 0.5s;
+      text-align: center;
     }
   }
 
@@ -556,8 +555,8 @@ p {
   }
 
   .works-item:hover img {
-    transform: translate(3px,3px);
-    box-shadow: #333 0 0;
+    // transform: translate(3px,3px);
+    // box-shadow: #333 0 0;
   }
 
   .worklevel1 {
@@ -582,10 +581,12 @@ p {
   html {
     font-size: 16px;
   }
+
   .menu-icon-container {
-    top: 40px;
-    right: 40px;
+    top: 60px;
+    right: 60px;
   }
+
   .works-container {
     .works {
       width: 70%;
@@ -616,13 +617,14 @@ p {
   html {
     font-size: 16px;
   }
+
+  .menu-icon-container {
+    top: 60px;
+    right: 60px;
+  }
+
   .pages-container {
     .pages {
-      .page-writing {
-        height: 40vh;
-        width: 40vh;
-      }
-
       .pic {
         height: 40vh;
         width: 40vh;
@@ -664,17 +666,14 @@ p {
   html {
     font-size: 8px;
   }
+
   .menu-icon-container {
-    top: 40px;
-    right: 40px;
+    top: 30px;
+    right: 30px;
   }
+
   .pages-container {
     .pages {
-      .page-writing {
-        height: 30vh;
-        width: 30vh;
-      }
-
       .pic {
         height: 30vh;
         width: 30vh;
