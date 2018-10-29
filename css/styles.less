@@ -394,9 +394,10 @@ p {
       margin: 0 10px 0 0;
       font-size: 2rem;
       font-weight: 200;
-      transition: 0.5s 0.8s;
+      transition: 0.2s;
       color: #333;
       z-index: 2;
+      opacity: 0;
     }
 
     p {
@@ -405,9 +406,10 @@ p {
       margin: 0;
       font-size: 1em;
       line-height: 1em;
-      transition: 0.5s 0.8s;
+      transition: 0.2s;
       color: #333;
       z-index: 2;
+      opacity: 0;
     }
 
     .readmore {
@@ -433,13 +435,13 @@ p {
       top: 50%;
       width: 60vh;
       height: 60vh;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%) scale(0.5);
       z-index: 3;
       overflow: hidden;
       border-radius: 50%;
       cursor: pointer;
       border: #333 solid 0;
-      transition: 0.5s;
+      transition:  1s;
     }
 
     .shadow {
@@ -486,17 +488,18 @@ p {
     opacity: 1;
 
     h1 {
-      // transform: translateY(20px);
+      opacity: 1;
+      transition:  0.5s 0.8s;
     }
 
-    p {}
-  }
-
-  .page-writing.active {
-    .readmore {
-      // box-shadow: 0 0 0 0 #fff;
+    p {
+      opacity: 1;
+      transition:  0.5s 0.8s;
     }
 
+    .pic {
+      transform: translate(-50%,-50%) scale(1);
+    }
     .pic:hover {
       border: #333 solid 5px;
       .bg {
