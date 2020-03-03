@@ -51,22 +51,22 @@
       </div>
       <div class="pages-container">
         <div class="page1 pages">
-          <div class="page-writing">
+          <div class="page-content">
             <div class="page-intro">
               <h1>DARKNESS</h1>
               <p>2018 Independent Game</p>
             </div>
 
             <!-- <span class="readmore">view more</span> -->
-            <div class="pic" data-type="page-transition" href="./darkness.html">
+            <a class="pic" data-type="page-transition" href="./darkness.html">
               <div class="bg bg-image" style="background-image: url('./images/darkness/bg01.jpg')"></div>
               <video src="./videos/darkness(low).mp4" autoplay="autoplay" poster="./images/darkness/bg01.jpg" class=" bg bg-video" loop="loop" media="(min-width: 768px)" id="bg-video">
               </video>
-            </div>
+            </a>
           </div>
         </div>
         <div class="page2 pages">
-          <div class="page-writing">
+          <div class="page-content">
             <div class="page-intro">
               <h1>MAGICAR</h1>
               <p>2018 Curricular</p>
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div class="page3 pages">
-          <div class="page-writing">
+          <div class="page-content">
             <div class="page-intro">
               <h1>DAMINCHU</h1>
               <p>2018 Curricular</p>
@@ -100,22 +100,7 @@
   </div>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <!--    本地js-->
-  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="./js/index.min.js"></script>
-  <script type="text/javascript" src="./js/contact.min.js"></script>
-  <script type="text/javascript" src="./js/menu.min.js"></script>
-  <script type="text/javascript" src="./libs/changingPage.min.js"></script>
-  <script type="text/javascript">
-    window.onload = function() {
-      setTimeout(function() {
-        $(".cover-layer").fadeOut(500);
-      }, 1000);
-    }
-    $(".lazy").lazyload({
-      container: $(".article-main-container"),
-      effect: "fadeIn"
-    });
-  </script>
 </body>
 
 </html>

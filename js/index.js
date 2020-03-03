@@ -6,14 +6,52 @@ $(document).ready(function() {
   var isChangingPage = false;
   var timeOutFlag = null;
   var pages = $(".pages").length;
-
   var prevPage = pageNum - 1;
+
+  // 加载js
+  var scriptMenu = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/menu.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptMenu);
+  scriptMenu.onload = function() {
+    isMenuClosed = true;
+  };
+
+  var scriptGetUrlParam = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/getUrlParam.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptGetUrlParam);
+
+  var scriptContact = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/contact.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptContact);
+
+  var scriptChangingPage = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./libs/changingPage.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptChangingPage);
+
+  var scriptLazyload = document.createElement("script");
+  scriptLazyload.type = "text/javascript";
+  scriptLazyload.src = "./libs/jquery.lazyload.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptLazyload);
+  scriptLazyload.onload = function() {
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
+  };
+  setTimeout(function() {
+      $(".cover-layer").addClass("hide");
+  }, 1000);
+  //首页
   // 显示当前页面介绍文本
   function changeIndexPages() {
     if (pageNum <= pages && pageNum >= 1) {
-      $(".page-writing").removeClass("active");
+      $(".page-content").removeClass("active");
       $(".pages-container").css("transform","translateY(" + -33.333 * (pageNum - 1) + "%)");
-      $(".page" + pageNum + ">.page-writing").addClass("active");
+      $(".page" + pageNum + ">.page-content").addClass("active");
     }
   }
 

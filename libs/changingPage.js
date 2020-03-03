@@ -1,7 +1,6 @@
 jQuery(document).ready(function(event) {
   var isAnimating = false,
-    firstLoad = false;
-
+  firstLoad = false;
   //trigger smooth transition from the actual page to the new one
   $('main').on('click', '[data-type="page-transition"]', function(event) {
     event.preventDefault();
@@ -10,8 +9,8 @@ jQuery(document).ready(function(event) {
     //if the page is not already being animated - trigger animation
     if (!isAnimating) changePage(newPage, true);
     firstLoad = true;
+    return false;
   });
-
   //detect the 'popstate' event - e.g. user clicking the back button
   $(window).on('popstate', function() {
     if (firstLoad) {
@@ -30,8 +29,11 @@ jQuery(document).ready(function(event) {
   function changePage(url, bool) {
     isAnimating = true;
     // trigger page animation
-    $(".cover-layer").fadeIn(500);
-    loadNewContent(url, bool);
+      loadNewContent(url, bool);
+    setTimeout(function(){
+      $(".cover-layer").removeClass("hide");
+    },500)
+    console.log(1);
   }
 
   function loadNewContent(url, bool) {
@@ -45,7 +47,7 @@ jQuery(document).ready(function(event) {
 
       setTimeout(function() {
         //wait for the end of the transition on the loading bar before revealing the new content
-        $(".cover-layer").fadeOut(500);
+
         $('main').html(section);
         var scriptLazyload = document.createElement("script");
         scriptLazyload.type = "text/javascript";
@@ -58,20 +60,8 @@ jQuery(document).ready(function(event) {
           });
 
         };
-        var scriptIndex = document.createElement("script");
-        scriptIndex.type = "text/javascript";
-        scriptIndex.src = "./js/index.js";
-        document.getElementsByTagName('head')[0].appendChild(scriptIndex);
-        
-        var scriptMenu = document.createElement("script");
-        scriptMenu.type = "text/javascript";
-        scriptMenu.src = "./js/index.js";
-        document.getElementsByTagName('head')[0].appendChild(scriptMenu);
-        scriptMenu.onload = function() {
-          isMenuClosed = true;
-        };
 
-
+        isMenuClosed = true;
         function isIndex() {
           return $(".main-content").hasClass('./index') || $(".main-content").hasClass('index');
         }
@@ -80,8 +70,9 @@ jQuery(document).ready(function(event) {
           return $(".main-content").hasClass('./daminchu') || $(".main-content").hasClass('./magicar');
         }
         isAnimating = false;
+        $(".cover-layer").addClass("hide");
+        // changeIndexPage();
       }, 1000);
-
       if (url != window.location && bool) {
         //add the new page to the window.history
         //if the new page was triggered by a 'popstate' event, don't add it
@@ -89,7 +80,6 @@ jQuery(document).ready(function(event) {
           path: url
         }, '', url);
       }
-
     });
   }
 });
