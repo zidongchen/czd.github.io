@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 var pageNum = 1;
 var startY = 0;
 var moveY = 0;
@@ -30,12 +31,17 @@ $(document).ready(function() {
 =======
 $(document).ready(function() {
   "use strict";
+=======
+$(document).ready(function() {
+  "use strict";
+>>>>>>> parent of b3cf7f8... 7.7.1
   var pageNum = 1;
   var startY = 0;
   var moveY = 0;
   var isChangingPage = false;
   var timeOutFlag = null;
   var pages = $(".pages").length;
+<<<<<<< HEAD
 
   var prevPage = pageNum - 1;
   // 显示当前页面介绍文本
@@ -47,8 +53,66 @@ $(document).ready(function() {
     }
   }
 >>>>>>> parent of c9825f1... 7.7.0
+=======
+  var prevPage = pageNum - 1;
 
-  changeIndexPage()
+  // 加载js
+  var scriptMenu = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/menu.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptMenu);
+  scriptMenu.onload = function() {
+    isMenuClosed = true;
+  };
+
+  var scriptGetUrlParam = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/getUrlParam.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptGetUrlParam);
+
+  var scriptContact = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./js/contact.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptContact);
+
+  var scriptChangingPage = document.createElement("script");
+  scriptMenu.type = "text/javascript";
+  scriptMenu.src = "./libs/changingPage.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptChangingPage);
+>>>>>>> parent of b3cf7f8... 7.7.1
+
+  var scriptLazyload = document.createElement("script");
+  scriptLazyload.type = "text/javascript";
+  scriptLazyload.src = "./libs/jquery.lazyload.min.js";
+  document.getElementsByTagName('head')[0].appendChild(scriptLazyload);
+  scriptLazyload.onload = function() {
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
+  };
+  setTimeout(function() {
+      $(".cover-layer").addClass("hide");
+  }, 1000);
+  //首页
+  // 显示当前页面介绍文本
+  function changeIndexPages() {
+    if (pageNum <= pages && pageNum >= 1) {
+      $(".page-content").removeClass("active");
+      $(".pages-container").css("transform","translateY(" + -33.333 * (pageNum - 1) + "%)");
+      $(".page" + pageNum + ">.page-content").addClass("active");
+    }
+  }
+
+  function changeIndexPageNum() {
+    $(".change-num-container ").css("top", "" + -40 * (pageNum - 1) + "px");
+  }
+  // 切换页面
+  function changeIndexPage() {
+    changeIndexPages();
+    changeIndexPageNum();
+  }
+  changeIndexPage();
   /*滑动事件*/
   // 移动设备
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -75,6 +139,7 @@ $(document).ready(function() {
       } else if (isMenuClosed && moveY > 50 && pageNum > 1 && !isChangingPage) { //向下
         pageNum -= 1;
         isChangingPage = true;
+        changeIndexPage(pageNum);
       }
     }, false);
     //监听touchend，监听touch结束，可判断是上滑，还是下滑
@@ -151,41 +216,5 @@ $(document).ready(function() {
       changeIndexPage(pageNum);
     }
   });
-  // 加载js
-  var scriptMenu = document.createElement("script");
-  scriptMenu.type = "text/javascript";
-  scriptMenu.src = "./js/menu.min.js";
-  document.getElementsByTagName('head')[0].appendChild(scriptMenu);
-  scriptMenu.onload = function() {
-    isMenuClosed = true;
-  };
 
-  var scriptGetUrlParam = document.createElement("script");
-  scriptGetUrlParam.type = "text/javascript";
-  scriptGetUrlParam.src = "./js/getUrlParam.js";
-  document.getElementsByTagName('head')[0].appendChild(scriptGetUrlParam);
-
-  var scriptContact = document.createElement("script");
-  scriptContact.type = "text/javascript";
-  scriptContact.src = "./js/contact.min.js";
-  document.getElementsByTagName('head')[0].appendChild(scriptContact);
-
-  var scriptLazyload = document.createElement("script");
-  scriptLazyload.type = "text/javascript";
-  scriptLazyload.src = "./libs/jquery.lazyload.min.js";
-  document.getElementsByTagName('head')[0].appendChild(scriptLazyload);
-  scriptLazyload.onload = function() {
-    $(".lazy").lazyload({
-      container: $(".article-main-container"),
-      effect: "fadeIn"
-    });
-  };
-  setTimeout(function() {
-      $(".cover-layer").addClass("hide");
-  }, 1000);
-
-  var scriptChangingPage = document.createElement("script");
-  scriptChangingPage.type = "text/javascript";
-  scriptChangingPage.src = "./libs/changingPage.min.js";
-  document.getElementsByTagName('body')[0].appendChild(scriptChangingPage);
 });

@@ -3,13 +3,14 @@ jQuery(document).ready(function(event) {
     firstLoad = false;
 
   //trigger smooth transition from the actual page to the new one
-  $('main').on('click', '[data-type="page-transition"]', function(e) {
-    e.preventDefault();
+  $('main').on('click', '[data-type="page-transition"]', function(event) {
+    event.preventDefault();
     //detect which page has been selected
     var newPage = $(this).attr('href');
     //if the page is not already being animated - trigger animation
     if (!isAnimating) changePage(newPage, true);
     firstLoad = true;
+    return false;
   });
 
   //detect the 'popstate' event - e.g. user clicking the back button
@@ -31,6 +32,7 @@ jQuery(document).ready(function(event) {
     isAnimating = true;
     // trigger page animation
 <<<<<<< HEAD
+<<<<<<< HEAD
     $(".cover-layer").removeClass("hide");
     loadNewContent(url, bool);
     console.log("changePage");
@@ -38,6 +40,13 @@ jQuery(document).ready(function(event) {
     $(".cover-layer").fadeIn(500);
     loadNewContent(url, bool);
 >>>>>>> parent of c9825f1... 7.7.0
+=======
+      loadNewContent(url, bool);
+    setTimeout(function(){
+      $(".cover-layer").removeClass("hide");
+    },500)
+    console.log(1);
+>>>>>>> parent of b3cf7f8... 7.7.1
   }
 
   function loadNewContent(url, bool) {
@@ -56,11 +65,13 @@ jQuery(document).ready(function(event) {
         var scriptLazyload = document.createElement("script");
         scriptLazyload.type = "text/javascript";
         scriptLazyload.src = "./libs/jquery.lazyload.min.js";
+        document.getElementsByTagName('head')[0].appendChild(scriptLazyload);
         scriptLazyload.onload = function() {
           $(".lazy").lazyload({
             container: $(".article-main-container"),
             effect: "fadeIn"
           });
+
         };
         var scriptIndex = document.createElement("script");
         scriptIndex.type = "text/javascript";
@@ -86,9 +97,13 @@ jQuery(document).ready(function(event) {
         isAnimating = false;
 <<<<<<< HEAD
         $(".cover-layer").addClass("hide");
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of c9825f1... 7.7.0
+=======
+        // changeIndexPage();
+>>>>>>> parent of b3cf7f8... 7.7.1
       }, 1000);
 
       if (url != window.location && bool) {
@@ -98,8 +113,6 @@ jQuery(document).ready(function(event) {
           path: url
         }, '', url);
       }
-
     });
-    changeIndexPage();
   }
 });
