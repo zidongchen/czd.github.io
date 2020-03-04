@@ -58,14 +58,14 @@ jQuery(document).ready(function(event) {
           });
 
         };
-        var scriptIndex = document.createElement("script");
-        scriptIndex.type = "text/javascript";
-        scriptIndex.src = "./js/index.js";
-        document.getElementsByTagName('head')[0].appendChild(scriptIndex);
-        
+        // var scriptIndex = document.createElement("script");
+        // scriptIndex.type = "text/javascript";
+        // scriptIndex.src = "./js/index.js";
+        // document.getElementsByTagName('head')[0].appendChild(scriptIndex);
+
         var scriptMenu = document.createElement("script");
         scriptMenu.type = "text/javascript";
-        scriptMenu.src = "./js/index.js";
+        scriptMenu.src = "./js/index.min.js";
         document.getElementsByTagName('head')[0].appendChild(scriptMenu);
         scriptMenu.onload = function() {
           isMenuClosed = true;

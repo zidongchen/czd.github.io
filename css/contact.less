@@ -9,18 +9,23 @@
 
 #hi {
   position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%,-50%);
-  right: 2.5rem;
-  bottom: 2.5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
   padding: 20px;
-  background: #333;
-  // box-shadow: #333 3px 3px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
   display: inline-block;
   cursor: pointer;
   z-index: 9999;
-  color: #fff;
+  color: #202022;
+  border-radius: 20px;
+  transition: 0.5s;
+  text-align: center;
+  line-height:100px;
+}
+#hi:hover{
+  transform: translate(-50%,-50%) scale(0.9);
 }
 
 .selfIntro-writing {
@@ -40,9 +45,11 @@
     position: relative;
   }
   a {
-    color: #fff;
-    padding: 10px;
-    background-color: #333;
+    color: #202022;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    border-radius: 20px;
   }
 }
 .skip {
@@ -51,10 +58,12 @@
   bottom: 2.5rem;
   transform: translateX(-50%);
   text-align: center;
-  color: #fff;
+  color: #202022;
   z-index: 3;
   display: none;
   cursor: pointer;
-  padding: 10px;
-  background-color: #333;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 10px 20px;
 }

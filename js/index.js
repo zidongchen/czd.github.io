@@ -11,9 +11,9 @@ $(document).ready(function() {
   // 显示当前页面介绍文本
   function changeIndexPages() {
     if (pageNum <= pages && pageNum >= 1) {
-      $(".page-writing").removeClass("active");
+      $(".page-content").removeClass("active");
       $(".pages-container").css("transform","translateY(" + -33.333 * (pageNum - 1) + "%)");
-      $(".page" + pageNum + ">.page-writing").addClass("active");
+      $(".page" + pageNum + ">.page-content").addClass("active");
     }
   }
 
