@@ -81,7 +81,22 @@
 
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <!--    本地js-->
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="./js/index.min.js"></script>
+  <script type="text/javascript" src="./js/contact.min.js"></script>
+  <script type="text/javascript" src="./js/menu.min.js"></script>
+  <script type="text/javascript" src="./libs/changingPage.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      setTimeout(function() {
+        $(".cover-layer").fadeOut(500);
+      }, 1000);
+    }
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
+  </script>
 </body>
 
 </html>

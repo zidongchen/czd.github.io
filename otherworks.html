@@ -45,22 +45,22 @@
 
         <div class="works">
           <a href="./imuc.html" data-type="page-transition">
-            <div class="works-item works-item1"><img src="./images/otherworks/imuc.png" alt=""></img><span>IMUC intelligent community sports venue system design</span></div>
+            <div class="works-item worklevel3 float-right"><img src="./images/otherworks/imuc.png" alt=""></img><span>IMUC intelligent community sports venue system design</span></div>
           </a>
           <a href="./pspra.html" data-type="page-transition">
-            <div class="works-item works-item4"><img src="./images/otherworks/dengpao.png" alt=""></img><span>ps practice </span></div>
+            <div class="works-item worklevel1 float-right"><img src="./images/otherworks/dengpao.png" alt=""></img><span>ps practice </span></div>
           </a>
           <a href="./gemini.html" data-type="page-transition">
-            <div class="works-item works-item4"><img src="./images/otherworks/gemini.png" alt=""></img><span>GEMINI Computer stand product design </span></div>
+            <div class="works-item worklevel3 float-right"><img src="./images/otherworks/gemini.png" alt=""></img><span>GEMINI Computer stand product design </span></div>
           </a>
           <a href="./youlin.html" data-type="page-transition">
-            <div class="works-item works-item4"><img src="./images/otherworks/youling.png" alt=""></img><span>friendship neighborhood idle item sharing platform system design</span></div>
+            <div class="works-item worklevel2 float-right"><img src="./images/otherworks/youling.png" alt=""></img><span>friendship neighborhood idle item sharing platform system design</span></div>
           </a>
           <a href="./c4dpra.html" data-type="page-transition">
-            <div class="works-item works-item4"><img src="./images/otherworks/dang.png" alt=""></img><span>c4d practice</span></div>
+            <div class="works-item worklevel1 float-right"><img src="./images/otherworks/dang.png" alt=""></img><span>c4d practice</span></div>
           </a>
           <a href="./guisu.html" data-type="page-transition">
-            <div class="works-item works-item4"><img src="./images/otherworks/guisu.png" alt=""></img><span>College Student Advertising Design Competition</span></div>
+            <div class="works-item worklevel1 float-right"><img src="./images/otherworks/guisu.png" alt=""></img><span>College Student Advertising Design Competition</span></div>
           </a>
         </div>
       </div>
@@ -75,7 +75,22 @@
   
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <!--    本地js-->
+  <script type="text/javascript" src="./libs/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="./js/index.min.js"></script>
+  <script type="text/javascript" src="./js/contact.min.js"></script>
+  <script type="text/javascript" src="./js/menu.min.js"></script>
+  <script type="text/javascript" src="./libs/changingPage.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      setTimeout(function() {
+        $(".cover-layer").fadeOut(500);
+      }, 1000);
+    }
+    $(".lazy").lazyload({
+      container: $(".article-main-container"),
+      effect: "fadeIn"
+    });
+  </script>
 </body>
 
 </html>
