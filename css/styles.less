@@ -352,20 +352,33 @@ p {
   top: 2.5rem;
   left: 2.5rem;
   width: 40px;
-  height: 80px;
+  height: 40px;
   display: block;
   z-index: 9998;
-  background: @color-dark-primary;
+  background: #fff;
 
   i {
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 10px;
-    transform: translateX(-50%);
-    margin: 0 auto;
-    background: @color-dark-primary;
-    color: #fff;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: @color-dark-primary;
   }
+}
+.back-icon::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top:10%;
+  background-color: @color-dark-primary;
+  border-radius: 40px;
+  box-shadow: 0 0 40px @color-dark-primary;
+  z-index: -1;
+  background: none;
+  opacity: 0.5;
 }
 
 .partname {
