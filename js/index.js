@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var pageNum = 1;
 var startY = 0;
 var moveY = 0;
@@ -27,26 +26,6 @@ function changeIndexPageNum() {
 
 $(document).ready(function() {
   "use strict";
-=======
-$(document).ready(function() {
-  "use strict";
-  var pageNum = 1;
-  var startY = 0;
-  var moveY = 0;
-  var isChangingPage = false;
-  var timeOutFlag = null;
-  var pages = $(".pages").length;
-
-  var prevPage = pageNum - 1;
-  // 显示当前页面介绍文本
-  function changeIndexPages() {
-    if (pageNum <= pages && pageNum >= 1) {
-      $(".page-writing").removeClass("active");
-      $(".pages-container").css("transform","translateY(" + -33.333 * (pageNum - 1) + "%)");
-      $(".page" + pageNum + ">.page-writing").addClass("active");
-    }
-  }
->>>>>>> parent of c9825f1... 7.7.0
 
   changeIndexPage()
   /*滑动事件*/
